@@ -1,0 +1,4 @@
+#!/bin/bash
+
+podman build -t master-vo -f Containerfile .
+podman images | grep master-vo

@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Check if container is already running
+if podman ps --format "{{.Names}}" | grep -q "^master-vo-container$"; then
+    echo "Container master-vo-container is already running"
+    exit 1
+fi
+
+# Check if container exists but is stopped (also fail)
+if podman ps -a --format "{{.Names}}" | grep -q "^master-vo-container$"; then
+    echo "Container master-vo-container already exists (stopped). Remove it first with: podman rm master-vo-container"
+    exit 1
+fi
+
+podman run -it --rm \
+    --name master-vo-container \
+    -v ./ws:/workspace \
+    --userns=keep-id \
+    master-vo

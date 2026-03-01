@@ -1,0 +1,4 @@
+#!/bin/bash
+
+podman stop master-vo-container
+podman rm master-vo-container
