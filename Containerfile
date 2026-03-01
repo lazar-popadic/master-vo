@@ -93,6 +93,32 @@ RUN sudo apt-get update && \
 RUN sudo apt install -y \
     libboost-all-dev \
     libeigen3-dev 
+RUN sudo apt-get update && \
+    sudo apt-get install -y \
+    python3-opencv \
+    libopencv-dev \
+    && sudo apt-get clean
+RUN sudo apt-get update && \
+    sudo apt-get install -y \
+    python3-pip \
+    python3-dev \
+    && sudo apt-get clean && \
+    pip3 install opencv-python opencv-contrib-python --break-system-packages
+RUN sudo apt-get update && \
+    sudo apt-get install -y \
+    libopencv-core-dev \
+    libopencv-imgproc-dev \
+    libopencv-highgui-dev \
+    libopencv-calib3d-dev \
+    libopencv-features2d-dev \
+    libopencv-video-dev \
+    libopencv-videoio-dev \
+    cmake \
+    g++ \
+    libsuitesparse-dev \
+    qt5-qmake \
+    libqglviewer-dev-qt5 \
+    && sudo apt-get clean
 
 # Set the default command
 CMD ["/bin/bash"]
