@@ -12,8 +12,16 @@ if podman ps -a --format "{{.Names}}" | grep -q "^master-vo-container$"; then
     exit 1
 fi
 
+xhost +local:root
+
 podman run -it --rm \
     --name master-vo-container \
     -v ./ws:/workspace \
+    -v /tmp/.X11-unix:/tmp/.X11-unix:rw \
+    -v /dev/dri:/dev/dri:rw \
+    -e DISPLAY=$DISPLAY \
+    --network=host \
     --userns=keep-id \
     master-vo
+
+xhost -local:root

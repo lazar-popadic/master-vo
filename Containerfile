@@ -41,5 +41,58 @@ RUN sudo apt-get update && \
     sudo locale-gen en_US.UTF-8 && \
     sudo update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
 
+RUN sudo apt-get update && \
+    sudo apt-get install -y \
+    neovim \
+    btop \
+    ranger \
+    && sudo apt-get clean
+
+# X11 and GUI libraries
+RUN sudo apt-get update && \
+    sudo apt-get install -y \
+    x11-apps \
+    xauth \
+    libx11-6 \
+    libxext6 \
+    libxrender1 \
+    libxtst6 \
+    libxi6 \
+    libxkbcommon-x11-0 \
+    libgl1-mesa-dri \
+    libglx-mesa0 \
+    mesa-utils \
+    dbus-x11 \
+    && sudo apt-get clean
+
+# GTK support for GUI apps
+RUN sudo apt-get update && \
+    sudo apt-get install -y \
+    libgtk-3-0 \
+    libgtk-3-bin \
+    libcanberra-gtk3-module \
+    && sudo apt-get clean
+
+# Qt support for GUI apps
+RUN sudo apt-get update && \
+    sudo apt-get install -y \
+    libqt5core5a \
+    libqt5gui5 \
+    libqt5widgets5 \
+    qt5-gtk-platformtheme \
+    && sudo apt-get clean
+
+# Python GUI dependencies
+RUN sudo apt-get update && \
+    sudo apt-get install -y \
+    python3-tk \
+    python3-pyqt5 \
+    && sudo apt-get clean
+
+# SVO specific
+RUN sudo apt install -y \
+    libboost-all-dev \
+    libeigen3-dev 
+
 # Set the default command
 CMD ["/bin/bash"]
