@@ -1,0 +1,43 @@
+cam0:
+  cam_cx: 376.0
+  cam_cy: 240.0
+  cam_d0: 0.0
+  cam_d1: 0.0
+  cam_d2: 0.0
+  cam_d3: 0.0
+  cam_fx: 315.5
+  cam_fy: 315.5
+  cam_height: 480
+  cam_model: Pinhole
+  cam_width: 752
+  rx: 0.0
+  ry: 0.0
+  rz: 0.0
+  tx: 0.0
+  ty: 0.0
+  tz: 0.0
+dataset_is_blender: true
+dataset_name: sin2_tex2_h1_v8_d
+render_trajectory_max_frames: 10000
+rig: default
+rig_size: 1
+scene:
+  blender_scene: plane.blend
+  height_variation: 1.0
+  scene_name: plane
+  texture: seamless/2.jpg
+  texture_scale: 12
+scene_modifiers:
+  height_variation: 1.0
+  texture: seamless/2.jpg
+  texture_scale: 12
+trajectory:
+  fps: 50.0
+  generator: sine_2d
+  height: 2.0
+  length: 30.0
+  pitch: 0
+  speed: 8
+trajectory_modifiers:
+  pitch: 0
+  speed: 8
