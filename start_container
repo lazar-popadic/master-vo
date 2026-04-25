@@ -21,9 +21,9 @@ podman run -it --rm \
     -v /dev/dri:/dev/dri:rw \
     -e DISPLAY=$DISPLAY \
     --network=host \
+    --security-opt label=type:container_runtime_t \
+    --userns=keep-id \
     master-vo
 
 xhost -local:root
-
-#     --userns=keep-id \
 
