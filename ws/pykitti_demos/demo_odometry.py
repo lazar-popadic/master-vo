@@ -13,7 +13,7 @@ __email__ = "lee.clement@robotics.utias.utoronto.ca"
 basedir = '/workspace/kitti/dataset'
 
 # Specify the dataset to load
-sequence = '07'
+sequence = '09'
 
 # Load the data. Optionally, specify the frame range to load.
 temp = pykitti.odometry(basedir, sequence)
@@ -37,7 +37,7 @@ first_cam1 = next(iter(dataset.cam1))
 np.set_printoptions(precision=4, suppress=True)
 print('\nSequence: ' + str(dataset.sequence))
 print('\nFrame range: ' + str(dataset.frames))
-print('\nGray stereo pair baseline [m]: ' + str(dataset.calib.b_gray))
+# print('\nGray stereo pair baseline [m]: ' + str(dataset.calib.b_gray))
 
 # f, ax = plt.subplots(2, 2, figsize=(15, 5))
 # ax[0, 0].imshow(first_gray[0], cmap='gray')
