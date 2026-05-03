@@ -118,6 +118,7 @@ RUN sudo apt-get update && \
     libsuitesparse-dev \
     qt5-qmake \
     libqglviewer-dev-qt5 \
+    python3-venv \
     && sudo apt-get clean
 
 # Set the default command

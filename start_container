@@ -23,7 +23,9 @@ podman run -it --rm \
     --network=host \
     --security-opt label=type:container_runtime_t \
     --userns=keep-id \
-    master-vo
+    --entrypoint /workspace/entrypoint.sh \
+    master-vo \
+    /bin/bash
 
 xhost -local:root
 
