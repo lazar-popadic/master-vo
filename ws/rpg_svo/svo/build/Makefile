@@ -220,6 +220,19 @@ test_pose_optimizer/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_pose_optimizer.dir/build.make CMakeFiles/test_pose_optimizer.dir/build
 .PHONY : test_pose_optimizer/fast
 
+#=============================================================================
+# Target rules for targets named test_pipeline_kitty
+
+# Build rule for target.
+test_pipeline_kitty: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_pipeline_kitty
+.PHONY : test_pipeline_kitty
+
+# fast build rule for target.
+test_pipeline_kitty/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_pipeline_kitty.dir/build.make CMakeFiles/test_pipeline_kitty.dir/build
+.PHONY : test_pipeline_kitty/fast
+
 src/config.o: src/config.cpp.o
 .PHONY : src/config.o
 
@@ -676,6 +689,30 @@ test/test_pipeline.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_pipeline.dir/build.make CMakeFiles/test_pipeline.dir/test/test_pipeline.cpp.s
 .PHONY : test/test_pipeline.cpp.s
 
+test/test_pipeline_kitty.o: test/test_pipeline_kitty.cpp.o
+.PHONY : test/test_pipeline_kitty.o
+
+# target to build an object file
+test/test_pipeline_kitty.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_pipeline_kitty.dir/build.make CMakeFiles/test_pipeline_kitty.dir/test/test_pipeline_kitty.cpp.o
+.PHONY : test/test_pipeline_kitty.cpp.o
+
+test/test_pipeline_kitty.i: test/test_pipeline_kitty.cpp.i
+.PHONY : test/test_pipeline_kitty.i
+
+# target to preprocess a source file
+test/test_pipeline_kitty.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_pipeline_kitty.dir/build.make CMakeFiles/test_pipeline_kitty.dir/test/test_pipeline_kitty.cpp.i
+.PHONY : test/test_pipeline_kitty.cpp.i
+
+test/test_pipeline_kitty.s: test/test_pipeline_kitty.cpp.s
+.PHONY : test/test_pipeline_kitty.s
+
+# target to generate assembly for a file
+test/test_pipeline_kitty.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_pipeline_kitty.dir/build.make CMakeFiles/test_pipeline_kitty.dir/test/test_pipeline_kitty.cpp.s
+.PHONY : test/test_pipeline_kitty.cpp.s
+
 test/test_pose_optimizer.o: test/test_pose_optimizer.cpp.o
 .PHONY : test/test_pose_optimizer.o
 
@@ -738,6 +775,7 @@ help:
 	@echo "... test_feature_detection"
 	@echo "... test_matcher"
 	@echo "... test_pipeline"
+	@echo "... test_pipeline_kitty"
 	@echo "... test_pose_optimizer"
 	@echo "... test_sparse_img_align"
 	@echo "... src/config.o"
@@ -797,6 +835,9 @@ help:
 	@echo "... test/test_pipeline.o"
 	@echo "... test/test_pipeline.i"
 	@echo "... test/test_pipeline.s"
+	@echo "... test/test_pipeline_kitty.o"
+	@echo "... test/test_pipeline_kitty.i"
+	@echo "... test/test_pipeline_kitty.s"
 	@echo "... test/test_pose_optimizer.o"
 	@echo "... test/test_pose_optimizer.i"
 	@echo "... test/test_pose_optimizer.s"

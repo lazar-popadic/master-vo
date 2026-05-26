@@ -1,0 +1,21 @@
+[0;0m[INFO] SVO initialized[0;0m
+[0;0m[INFO] RESET[0;0m
+[0;0m[INFO] New Frame[0;0m
+[0;0m[INFO] New Frame received, timestamp=0 stage=1[0;0m
+[0;0m[INFO] Created new Frame. fts.size()=0[0;0m
+[0;0m[INFO] Calling processFirstFrame()[0;0m
+[0;0m[INFO] Init: Selected first frame.[0;0m
+[0;0m[INFO] processFirstFrame() returned[0;0m
+[0;0m[INFO] About to run visualization; new_frame_->fts_.size()=0[0;0m
+[0;0m[INFO] Calling cv::imshow/waitKey[0;0m
+QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-ubuntu'
+amdgpu: os_same_file_description couldn't determine if two DRM fds reference the same file description.
+If they do, bad things may happen!
+[0;0m[INFO] Returned from cv::imshow/waitKey[0;0m
+[0;0m[INFO] Frame: 0	 fps-avg = inf	 nObs = 0[0;0m
+[0;0m[INFO] New Frame[0;0m
+[0;0m[INFO] New Frame received, timestamp=0.01 stage=2[0;0m
+[0;0m[INFO] Created new Frame. fts.size()=0[0;0m
+[0;0m[INFO] Calling processSecondFrame()[0;0m
+[0;0m[INFO] KltHomographyInit::addSecondFrame called. px_ref_.size()=576[0;0m
+[0;0m[INFO] trackKlt: frame_ref img pyr levels=5 frame_cur img pyr levels=5[0;0m

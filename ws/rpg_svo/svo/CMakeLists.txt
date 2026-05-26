@@ -149,3 +149,6 @@ TARGET_LINK_LIBRARIES(test_sparse_img_align svo)
 
 ADD_EXECUTABLE(test_pose_optimizer test/test_pose_optimizer.cpp)
 TARGET_LINK_LIBRARIES(test_pose_optimizer svo) 
+
+ADD_EXECUTABLE(test_pipeline_kitty test/test_pipeline_kitty.cpp)
+TARGET_LINK_LIBRARIES(test_pipeline_kitty svo)

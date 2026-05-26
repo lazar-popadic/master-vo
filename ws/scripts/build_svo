@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+cd /workspace/rpg_svo/svo
+mkdir -p build && cd build
+cmake -DCMAKE_BUILD_TYPE=Debug \
+  -DSophus_DIR=/workspace/Sophus/build \
+  -Dfast_DIR=/workspace/fast/build \
+  -Dvikit_common_DIR=/workspace/rpg_vikit/vikit_common/build ..
+make -j$(nproc)

@@ -42,6 +42,7 @@ InitResult KltHomographyInit::addFirstFrame(FramePtr frame_ref)
 
 InitResult KltHomographyInit::addSecondFrame(FramePtr frame_cur)
 {
+  SVO_INFO_STREAM("KltHomographyInit::addSecondFrame called. px_ref_.size()="<<px_ref_.size());
   trackKlt(frame_ref_, frame_cur, px_ref_, px_cur_, f_ref_, f_cur_, disparities_);
   SVO_INFO_STREAM("Init: KLT tracked "<< disparities_.size() <<" features");
 
@@ -133,6 +134,7 @@ void trackKlt(
     vector<Vector3d>& f_cur,
     vector<double>& disparities)
 {
+  SVO_INFO_STREAM("trackKlt: frame_ref img pyr levels="<<frame_ref->img_pyr_.size() <<" frame_cur img pyr levels="<<frame_cur->img_pyr_.size());
   const double klt_win_size = 30.0;
   const int klt_max_iter = 30;
   const double klt_eps = 0.001;
@@ -140,6 +142,31 @@ void trackKlt(
   vector<float> error;
   vector<float> min_eig_vec;
   cv::TermCriteria termcrit(cv::TermCriteria::COUNT+cv::TermCriteria::EPS, klt_max_iter, klt_eps);
+
+  // Validate and filter point lists to avoid passing invalid points to OpenCV
+  int width = frame_ref->img_pyr_[0].cols;
+  int height = frame_ref->img_pyr_[0].rows;
+  std::vector<cv::Point2f> px_ref_filt; px_ref_filt.reserve(px_ref.size());
+  std::vector<cv::Point2f> px_cur_filt; px_cur_filt.reserve(px_cur.size());
+  std::vector<Vector3d> f_ref_filt; f_ref_filt.reserve(f_ref.size());
+  for(size_t i=0; i<px_ref.size() && i<px_cur.size(); ++i) {
+    const float x = px_ref[i].x; const float y = px_ref[i].y;
+    if(!std::isfinite(x) || !std::isfinite(y)) continue;
+    if(x < 0 || y < 0 || x >= width || y >= height) continue;
+    px_ref_filt.push_back(px_ref[i]);
+    px_cur_filt.push_back(px_cur[i]);
+    f_ref_filt.push_back(f_ref[i]);
+  }
+  if(px_ref_filt.empty()) {
+    SVO_WARN_STREAM("trackKlt: no valid keypoints after filtering. Skipping KLT.");
+    px_cur.clear(); f_cur.clear(); disparities.clear(); return;
+  }
+
+  // replace originals with filtered versions
+  px_ref.swap(px_ref_filt);
+  px_cur.swap(px_cur_filt);
+  f_ref.swap(f_ref_filt);
+
   cv::calcOpticalFlowPyrLK(frame_ref->img_pyr_[0], frame_cur->img_pyr_[0],
                            px_ref, px_cur,
                            status, error,

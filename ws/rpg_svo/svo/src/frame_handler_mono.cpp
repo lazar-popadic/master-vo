@@ -61,6 +61,8 @@ void FrameHandlerMono::addImage(const cv::Mat& img, const double timestamp)
   if(!startFrameProcessingCommon(timestamp))
     return;
 
+  SVO_INFO_STREAM("New Frame received, timestamp="<<timestamp<<" stage="<<stage_);
+
   // some cleanup from last iteration, can't do before because of visualization
   core_kfs_.clear();
   overlap_kfs_.clear();
@@ -69,19 +71,33 @@ void FrameHandlerMono::addImage(const cv::Mat& img, const double timestamp)
   SVO_START_TIMER("pyramid_creation");
   new_frame_.reset(new Frame(cam_, img.clone(), timestamp));
   SVO_STOP_TIMER("pyramid_creation");
+  SVO_INFO_STREAM("Created new Frame. fts.size()="<<new_frame_->fts_.size());
 
   // process frame
   UpdateResult res = RESULT_FAILURE;
-  if(stage_ == STAGE_DEFAULT_FRAME)
+  if(stage_ == STAGE_DEFAULT_FRAME) {
+    SVO_INFO_STREAM("Calling processFrame()");
     res = processFrame();
-  else if(stage_ == STAGE_SECOND_FRAME)
+    SVO_INFO_STREAM("processFrame() returned");
+  }
+  else if(stage_ == STAGE_SECOND_FRAME) {
+    SVO_INFO_STREAM("Calling processSecondFrame()");
     res = processSecondFrame();
-  else if(stage_ == STAGE_FIRST_FRAME)
+    SVO_INFO_STREAM("processSecondFrame() returned");
+  }
+  else if(stage_ == STAGE_FIRST_FRAME) {
+    SVO_INFO_STREAM("Calling processFirstFrame()");
     res = processFirstFrame();
-  else if(stage_ == STAGE_RELOCALIZING)
+    SVO_INFO_STREAM("processFirstFrame() returned");
+  }
+  else if(stage_ == STAGE_RELOCALIZING) {
+    SVO_INFO_STREAM("Calling relocalizeFrame()");
     res = relocalizeFrame(SE3(Matrix3d::Identity(), Vector3d::Zero()),
                           map_.getClosestKeyframe(last_frame_));
+    SVO_INFO_STREAM("relocalizeFrame() returned");
+  }
 
+  SVO_INFO_STREAM("About to run visualization; new_frame_->fts_.size()="<<new_frame_->fts_.size());
   // --- VISUALIZATION ---
   cv::Mat vis;
   cv::cvtColor(img, vis, cv::COLOR_GRAY2BGR);
@@ -95,8 +111,10 @@ void FrameHandlerMono::addImage(const cv::Mat& img, const double timestamp)
       }
   }
 
+  SVO_INFO_STREAM("Calling cv::imshow/waitKey");
   cv::imshow("SVO Visualizer", vis);
   cv::waitKey(1);
+  SVO_INFO_STREAM("Returned from cv::imshow/waitKey");
 
   // set last frame
   last_frame_ = new_frame_;

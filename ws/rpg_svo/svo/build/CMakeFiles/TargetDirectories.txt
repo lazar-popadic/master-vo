@@ -6,5 +6,6 @@
 /workspace/rpg_svo/svo/build/CMakeFiles/test_depth_filter.dir
 /workspace/rpg_svo/svo/build/CMakeFiles/test_sparse_img_align.dir
 /workspace/rpg_svo/svo/build/CMakeFiles/test_pose_optimizer.dir
+/workspace/rpg_svo/svo/build/CMakeFiles/test_pipeline_kitty.dir
 /workspace/rpg_svo/svo/build/CMakeFiles/edit_cache.dir
 /workspace/rpg_svo/svo/build/CMakeFiles/rebuild_cache.dir
