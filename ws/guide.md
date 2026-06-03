@@ -25,3 +25,11 @@ export SVO_DATASET_DIR=/workspace/datasets
 
 ### Valgrind test_pipeline
 valgrind --tool=memcheck --leak-check=full --show-reachable=yes --track-origins=yes --num-callers=20 --error-limit=no --log-file=/workspace/valgrind_test_pipeline_kitty.log /workspace/rpg_svo/svo/bin/test_pipeline_kitty /workspace/kitti/dataset/sequences/00 0 100
+
+
+## Conda
+### Activate
+eval "$(/workspace/miniorge3/bin/conda shell.bash hook)"
+### TSFormer-VVO
+conda create -n tsformer-vo python==3.8.0
+conda activate tsformer-vo
