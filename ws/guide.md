@@ -36,9 +36,4 @@ conda activate tsformer-vo
 ### KITTI Odometry Evaluation Toolbox
 conda env create -f kitti-odom-eval/requirement.yml -p kitti_eval
 conda activate /workspace/kitti_eval
-
-## 7-DOF optimization
-pip install evo
-tail -n +5 data/poses/01.txt > data/poses_trimmed/01.txt
-### Save as kitti
-evo_traj kitti models/Model3/checkpoint_model3_exp20/pred_poses/00.txt --ref data/poses_trimmed/00.txt -a --correct_scale --save_as_kitti
+python eval_odom.py --result result/TSformer-VO_model3/ --align scale_7dof
