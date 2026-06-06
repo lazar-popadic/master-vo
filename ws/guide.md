@@ -33,3 +33,9 @@ eval "$(/workspace/miniorge3/bin/conda shell.bash hook)"
 ### TSFormer-VVO
 conda create -n tsformer-vo python==3.8.0
 conda activate tsformer-vo
+
+## 7-DOF optimization
+pip install evo
+tail -n +5 data/poses/01.txt > data/poses_trimmed/01.txt
+### Save as kitti
+evo_traj kitti models/Model3/checkpoint_model3_exp20/pred_poses/00.txt --ref data/poses_trimmed/00.txt -a --correct_scale --save_as_kitti

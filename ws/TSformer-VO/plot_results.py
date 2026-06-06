@@ -126,9 +126,9 @@ def recover_trajectory_and_poses(poses):
 
 if __name__ == "__main__":
   
-    ckpt_path = "models/Model1"
-    ckpt_name = "checkpoint_model1_exp12"
-    sequences = ["01"]
+    ckpt_path = "models/Model3"
+    ckpt_name = "checkpoint_model3_exp20"
+    sequences = ["00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11"]
 
     # read hyperparameters and configuration
     with open(os.path.join(ckpt_path, "args.pkl"), 'rb') as f:
