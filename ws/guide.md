@@ -33,6 +33,9 @@ eval "$(/workspace/miniorge3/bin/conda shell.bash hook)"
 ### TSFormer-VVO
 conda create -n tsformer-vo python==3.8.0
 conda activate tsformer-vo
+### KITTI Odometry Evaluation Toolbox
+conda env create -f kitti-odom-eval/requirement.yml -p kitti_eval
+conda activate /workspace/kitti_eval
 
 ## 7-DOF optimization
 pip install evo
