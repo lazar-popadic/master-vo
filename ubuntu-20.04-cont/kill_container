@@ -1,0 +1,4 @@
+#!/bin/bash
+
+podman stop master-vo-ubuntu-20-container
+podman rm master-vo-ubuntu-20-container

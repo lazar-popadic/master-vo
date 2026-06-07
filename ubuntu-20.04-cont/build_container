@@ -1,0 +1,4 @@
+#!/bin/bash
+
+podman build -t master-vo-ubuntu-20 -f Containerfile .
+podman images | grep master-vo-ubuntu-20

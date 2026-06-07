@@ -1,0 +1,31 @@
+#!/bin/bash
+
+# Check if container is already running
+if podman ps --format "{{.Names}}" | grep -q "^master-vo-ubuntu-20-container$"; then
+    echo "Container master-vo-ubuntu-20-container is already running"
+    exit 1
+fi
+
+# Check if container exists but is stopped (also fail)
+if podman ps -a --format "{{.Names}}" | grep -q "^master-vo-ubuntu-20-container$"; then
+    echo "Container master-vo-ubuntu-20-container already exists (stopped). Remove it first with: podman rm master-vo-ubuntu-20-container"
+    exit 1
+fi
+
+xhost +local:root
+
+podman run -it --rm \
+    --name master-vo-ubuntu-20-container \
+    -v ./ws:/workspace:Z \
+    -v /tmp/.X11-unix:/tmp/.X11-unix:rw \
+    -v /dev/dri:/dev/dri:rw \
+    -e DISPLAY=$DISPLAY \
+    --network=host \
+    --security-opt label=type:container_runtime_t \
+    --userns=keep-id \
+    --entrypoint /workspace/entrypoint.sh \
+    master-vo-ubuntu-20 \
+    /bin/bash
+
+xhost -local:root
+

@@ -1,0 +1,3 @@
+#!/bin/bash
+
+podman exec -it -u ubuntu master-vo-ubuntu-20-container /bin/bash
