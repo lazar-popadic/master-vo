@@ -1,0 +1,13 @@
+prefix=/workspace/kitti_eval
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+modules=1
+
+Name: libXML
+Version: 2.9.9
+Description: libXML library version2.
+Requires:
+Libs: -L${libdir} -lxml2
+Libs.private:  -lpthread -L/workspace/kitti_eval/lib -lz -L/workspace/kitti_eval/lib -llzma -L/workspace/kitti_eval/lib -lm  
+Cflags: -I${includedir}/libxml2 -I/workspace/kitti_eval/include 

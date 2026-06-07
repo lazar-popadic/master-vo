@@ -1,0 +1,14 @@
+prefix=/workspace/kitti_eval
+exec_prefix=/workspace/kitti_eval
+libdir=/workspace/kitti_eval/lib
+includedir=/workspace/kitti_eval/include
+
+Name: FreeType 2
+URL: https://freetype.org
+Description: A free, high-quality, and portable font engine.
+Version: 22.1.16
+Requires:
+Requires.private: 
+Libs: -L${libdir} -lfreetype
+Libs.private: -lz -L/workspace/kitti_eval/lib -lpng16 -lm -lz -lm
+Cflags: -I${includedir}/freetype2
