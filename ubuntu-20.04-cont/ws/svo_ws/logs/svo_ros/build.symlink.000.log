@@ -1,0 +1,7 @@
+Symlinking /workspace/svo_ws/devel/lib/libsvo_nodelet.so
+Symlinking /workspace/svo_ws/devel/lib/libsvo_ros.so
+Symlinking /workspace/svo_ws/devel/lib/svo_ros/svo_node
+Symlinking /workspace/svo_ws/devel/lib/svo_ros/svo_benchmark
+Symlinking /workspace/svo_ws/devel/lib/pkgconfig/svo_ros.pc
+Symlinking /workspace/svo_ws/devel/share/svo_ros/cmake/svo_rosConfig-version.cmake
+Symlinking /workspace/svo_ws/devel/share/svo_ros/cmake/svo_rosConfig.cmake

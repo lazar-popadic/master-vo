@@ -1,0 +1,4 @@
+Symlinking /workspace/svo_ws/devel/lib/python3/dist-packages/vikit_py/__init__.py
+Symlinking /workspace/svo_ws/devel/lib/pkgconfig/vikit_py.pc
+Symlinking /workspace/svo_ws/devel/share/vikit_py/cmake/vikit_pyConfig.cmake
+Symlinking /workspace/svo_ws/devel/share/vikit_py/cmake/vikit_pyConfig-version.cmake

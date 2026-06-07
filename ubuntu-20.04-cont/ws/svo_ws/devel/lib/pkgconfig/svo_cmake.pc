@@ -1,0 +1,1 @@
+/workspace/svo_ws/devel/.private/svo_cmake/lib/pkgconfig/svo_cmake.pc

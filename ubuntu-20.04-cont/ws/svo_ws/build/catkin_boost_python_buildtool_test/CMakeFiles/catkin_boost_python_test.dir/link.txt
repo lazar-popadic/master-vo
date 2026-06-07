@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -Wall   -O3 -DNDEBUG  -shared -Wl,-soname,libcatkin_boost_python_test.so -o /workspace/svo_ws/devel/.private/catkin_boost_python_buildtool_test/lib/libcatkin_boost_python_test.so CMakeFiles/catkin_boost_python_test.dir/src/module.cpp.o  -lpython3.8 /usr/lib/x86_64-linux-gnu/libboost_python38.so.1.71.0 

@@ -1,0 +1,4 @@
+Symlinking /workspace/svo_ws/devel/lib/libsvo.so
+Symlinking /workspace/svo_ws/devel/lib/pkgconfig/svo.pc
+Symlinking /workspace/svo_ws/devel/share/svo/cmake/svoConfig-version.cmake
+Symlinking /workspace/svo_ws/devel/share/svo/cmake/svoConfig.cmake

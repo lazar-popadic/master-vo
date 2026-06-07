@@ -1,0 +1,104 @@
+Determining if the function sgemm_ exists failed with the following output:
+Change Dir: /workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_a2cfe/fast && make[3]: Entering directory '/workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src-build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_a2cfe.dir/build.make CMakeFiles/cmTC_a2cfe.dir/build
+make[4]: Entering directory '/workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a2cfe.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=sgemm_   -o CMakeFiles/cmTC_a2cfe.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_a2cfe
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a2cfe.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=sgemm_    -rdynamic CMakeFiles/cmTC_a2cfe.dir/CheckFunctionExists.c.o  -o cmTC_a2cfe 
+/usr/bin/ld: CMakeFiles/cmTC_a2cfe.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `sgemm_'
+collect2: error: ld returned 1 exit status
+make[4]: *** [CMakeFiles/cmTC_a2cfe.dir/build.make:87: cmTC_a2cfe] Error 1
+make[4]: Leaving directory '/workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src-build/CMakeFiles/CMakeTmp'
+make[3]: *** [Makefile:121: cmTC_a2cfe/fast] Error 2
+make[3]: Leaving directory '/workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src-build/CMakeFiles/CMakeTmp'
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_b178f/fast && make[3]: Entering directory '/workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src-build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_b178f.dir/build.make CMakeFiles/cmTC_b178f.dir/build
+make[4]: Entering directory '/workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b178f.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_b178f.dir/src.c.o   -c /workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src-build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_b178f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b178f.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_b178f.dir/src.c.o  -o cmTC_b178f 
+/usr/bin/ld: CMakeFiles/cmTC_b178f.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[4]: *** [CMakeFiles/cmTC_b178f.dir/build.make:87: cmTC_b178f] Error 1
+make[4]: Leaving directory '/workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src-build/CMakeFiles/CMakeTmp'
+make[3]: *** [Makefile:121: cmTC_b178f/fast] Error 2
+make[3]: Leaving directory '/workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src-build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_a3ee0/fast && make[3]: Entering directory '/workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src-build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_a3ee0.dir/build.make CMakeFiles/cmTC_a3ee0.dir/build
+make[4]: Entering directory '/workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a3ee0.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_a3ee0.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_a3ee0
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a3ee0.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_a3ee0.dir/CheckFunctionExists.c.o  -o cmTC_a3ee0  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+make[4]: *** [CMakeFiles/cmTC_a3ee0.dir/build.make:87: cmTC_a3ee0] Error 1
+make[4]: Leaving directory '/workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src-build/CMakeFiles/CMakeTmp'
+make[3]: *** [Makefile:121: cmTC_a3ee0/fast] Error 2
+make[3]: Leaving directory '/workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src-build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the function cheev_ exists failed with the following output:
+Change Dir: /workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_26ae3/fast && make[3]: Entering directory '/workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src-build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_26ae3.dir/build.make CMakeFiles/cmTC_26ae3.dir/build
+make[4]: Entering directory '/workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_26ae3.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=cheev_   -o CMakeFiles/cmTC_26ae3.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_26ae3
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_26ae3.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=cheev_    -rdynamic CMakeFiles/cmTC_26ae3.dir/CheckFunctionExists.c.o  -o cmTC_26ae3  /usr/lib/x86_64-linux-gnu/libblas.so 
+/usr/bin/ld: CMakeFiles/cmTC_26ae3.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `cheev_'
+collect2: error: ld returned 1 exit status
+make[4]: *** [CMakeFiles/cmTC_26ae3.dir/build.make:88: cmTC_26ae3] Error 1
+make[4]: Leaving directory '/workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src-build/CMakeFiles/CMakeTmp'
+make[3]: *** [Makefile:121: cmTC_26ae3/fast] Error 2
+make[3]: Leaving directory '/workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src-build/CMakeFiles/CMakeTmp'
+
+
+

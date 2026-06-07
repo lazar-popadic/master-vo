@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /workspace/svo_ws/devel/.private/catkin_boost_python_buildtool_test/setup.sh

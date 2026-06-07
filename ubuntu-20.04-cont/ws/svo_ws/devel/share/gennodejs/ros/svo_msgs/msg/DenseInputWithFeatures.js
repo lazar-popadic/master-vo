@@ -1,0 +1,1 @@
+/workspace/svo_ws/devel/.private/svo_msgs/share/gennodejs/ros/svo_msgs/msg/DenseInputWithFeatures.js

@@ -1,0 +1,8 @@
+prefix=/workspace/svo_ws/devel/.private/eigen_checks
+
+Name: eigen_checks
+Description: Description of eigen_checks
+Version: 0.0.1
+Cflags: -I/workspace/svo_ws/src/eigen_checks/include
+Libs: -L${prefix}/lib -leigen_checks
+Requires: 

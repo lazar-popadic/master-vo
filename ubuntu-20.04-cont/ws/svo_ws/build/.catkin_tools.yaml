@@ -1,0 +1,6 @@
+devel_space: /workspace/svo_ws/devel
+install: false
+install_space: /workspace/svo_ws/install
+profile: default
+source_space: /workspace/svo_ws/src
+workspace: /workspace/svo_ws

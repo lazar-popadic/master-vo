@@ -1,0 +1,4 @@
+Symlinking /workspace/svo_ws/devel/lib/libvikit_cameras.so
+Symlinking /workspace/svo_ws/devel/lib/pkgconfig/vikit_cameras.pc
+Symlinking /workspace/svo_ws/devel/share/vikit_cameras/cmake/vikit_camerasConfig.cmake
+Symlinking /workspace/svo_ws/devel/share/vikit_cameras/cmake/vikit_camerasConfig-version.cmake

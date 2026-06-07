@@ -1,0 +1,4 @@
+Symlinking /workspace/svo_ws/devel/lib/libfast.so
+Symlinking /workspace/svo_ws/devel/lib/pkgconfig/fast.pc
+Symlinking /workspace/svo_ws/devel/share/fast/cmake/fastConfig.cmake
+Symlinking /workspace/svo_ws/devel/share/fast/cmake/fastConfig-version.cmake

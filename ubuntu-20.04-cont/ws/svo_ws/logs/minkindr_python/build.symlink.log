@@ -1,0 +1,6 @@
+Symlinking /workspace/svo_ws/devel/lib/libminkindr_python.so
+Symlinking /workspace/svo_ws/devel/lib/python3/dist-packages/minkindr/__init__.py
+Symlinking /workspace/svo_ws/devel/lib/python3/dist-packages/minkindr/libminkindr_python.so
+Symlinking /workspace/svo_ws/devel/lib/pkgconfig/minkindr_python.pc
+Symlinking /workspace/svo_ws/devel/share/minkindr_python/cmake/minkindr_pythonConfig-version.cmake
+Symlinking /workspace/svo_ws/devel/share/minkindr_python/cmake/minkindr_pythonConfig.cmake

@@ -1,0 +1,8 @@
+Symlinking /workspace/svo_ws/devel/lib/libsvo_direct.so
+Symlinking /workspace/svo_ws/devel/lib/svo_direct/svo_test_edgelet_direction
+Symlinking /workspace/svo_ws/devel/lib/svo_direct/svo_test_edgelet_extraction
+Symlinking /workspace/svo_ws/devel/lib/svo_direct/svo_test_patch_score
+Symlinking /workspace/svo_ws/devel/lib/svo_direct/svo_test_feature_alignment
+Symlinking /workspace/svo_ws/devel/lib/pkgconfig/svo_direct.pc
+Symlinking /workspace/svo_ws/devel/share/svo_direct/cmake/svo_directConfig.cmake
+Symlinking /workspace/svo_ws/devel/share/svo_direct/cmake/svo_directConfig-version.cmake

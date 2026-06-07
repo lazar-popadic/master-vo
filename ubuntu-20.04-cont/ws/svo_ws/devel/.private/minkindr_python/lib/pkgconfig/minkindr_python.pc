@@ -1,0 +1,8 @@
+prefix=/workspace/svo_ws/devel/.private/minkindr_python
+
+Name: minkindr_python
+Description: Description of minkindr_python
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: catkin_boost_python_buildtool glog_catkin minkindr numpy_eigen

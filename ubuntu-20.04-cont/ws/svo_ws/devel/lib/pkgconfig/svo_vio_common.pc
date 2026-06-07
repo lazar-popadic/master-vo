@@ -1,0 +1,1 @@
+/workspace/svo_ws/devel/.private/svo_vio_common/lib/pkgconfig/svo_vio_common.pc

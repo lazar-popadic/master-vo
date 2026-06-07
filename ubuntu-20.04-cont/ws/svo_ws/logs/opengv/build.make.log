@@ -1,0 +1,89 @@
+[  0%] Built target std_msgs_generate_messages_py
+[  0%] Built target roscpp_generate_messages_nodejs
+[  0%] Built target roscpp_generate_messages_eus
+[  0%] Built target roscpp_generate_messages_py
+[  0%] Built target rosgraph_msgs_generate_messages_eus
+[  0%] Built target rosgraph_msgs_generate_messages_py
+[  0%] Built target roscpp_generate_messages_cpp
+[  0%] Built target roscpp_generate_messages_lisp
+[  0%] Built target std_msgs_generate_messages_eus
+[  0%] Built target rosgraph_msgs_generate_messages_cpp
+[  0%] Built target rosgraph_msgs_generate_messages_lisp
+[  0%] Built target std_msgs_generate_messages_nodejs
+[  0%] Built target rosgraph_msgs_generate_messages_nodejs
+[  0%] Built target std_msgs_generate_messages_lisp
+[  0%] Built target std_msgs_generate_messages_cpp
+[  1%] [32mBuilding CXX object CMakeFiles/opengv.dir/src/relative_pose/methods.cpp.o[0m
+[  2%] [32mBuilding CXX object CMakeFiles/opengv.dir/src/relative_pose/modules/main.cpp.o[0m
+[  3%] [32m[1mLinking CXX shared library /workspace/svo_ws/devel/.private/opengv/lib/libopengv.so[0m
+[ 67%] Built target opengv
+[35m[1mScanning dependencies of target random_generators[0m
+[ 70%] [32mBuilding CXX object CMakeFiles/random_generators.dir/test/time_measurement.cpp.o[0m
+[ 70%] [32mBuilding CXX object CMakeFiles/random_generators.dir/test/experiment_helpers.cpp.o[0m
+[ 70%] [32mBuilding CXX object CMakeFiles/random_generators.dir/test/random_generators.cpp.o[0m
+[ 70%] [32m[1mLinking CXX shared library /workspace/svo_ws/devel/.private/opengv/lib/librandom_generators.so[0m
+[ 70%] Built target random_generators
+[35m[1mScanning dependencies of target test_noncentral_relative_pose_sac[0m
+[35m[1mScanning dependencies of target test_multi_noncentral_relative_pose_sac[0m
+[35m[1mScanning dependencies of target test_relative_pose_sac[0m
+[35m[1mScanning dependencies of target test_triangulation[0m
+[35m[1mScanning dependencies of target test_relative_pose_rotationOnly_sac[0m
+[35m[1mScanning dependencies of target test_relative_pose_rotationOnly[0m
+[35m[1mScanning dependencies of target test_eigensolver_sac[0m
+[35m[1mScanning dependencies of target test_point_cloud[0m
+[ 70%] [32mBuilding CXX object CMakeFiles/test_point_cloud.dir/test/test_point_cloud.cpp.o[0m
+[ 71%] [32mBuilding CXX object CMakeFiles/test_relative_pose_rotationOnly.dir/test/test_relative_pose_rotationOnly.cpp.o[0m
+[ 72%] [32mBuilding CXX object CMakeFiles/test_relative_pose_rotationOnly_sac.dir/test/test_relative_pose_rotationOnly_sac.cpp.o[0m
+[ 73%] [32mBuilding CXX object CMakeFiles/test_eigensolver_sac.dir/test/test_eigensolver_sac.cpp.o[0m
+[ 74%] [32mBuilding CXX object CMakeFiles/test_triangulation.dir/test/test_triangulation.cpp.o[0m
+[ 75%] [32mBuilding CXX object CMakeFiles/test_relative_pose_sac.dir/test/test_relative_pose_sac.cpp.o[0m
+[ 76%] [32mBuilding CXX object CMakeFiles/test_multi_noncentral_relative_pose_sac.dir/test/test_multi_noncentral_relative_pose_sac.cpp.o[0m
+[ 77%] [32mBuilding CXX object CMakeFiles/test_noncentral_relative_pose_sac.dir/test/test_noncentral_relative_pose_sac.cpp.o[0m
+[35m[1mScanning dependencies of target test_eigensolver[0m
+[ 78%] [32mBuilding CXX object CMakeFiles/test_eigensolver.dir/test/test_eigensolver.cpp.o[0m
+[35m[1mScanning dependencies of target test_absolute_pose_sac[0m
+[ 79%] [32mBuilding CXX object CMakeFiles/test_absolute_pose_sac.dir/test/test_absolute_pose_sac.cpp.o[0m
+[ 79%] [32m[1mLinking CXX executable /workspace/svo_ws/devel/.private/opengv/lib/opengv/test_relative_pose_rotationOnly[0m
+[ 80%] [32m[1mLinking CXX executable /workspace/svo_ws/devel/.private/opengv/lib/opengv/test_point_cloud[0m
+[ 81%] [32m[1mLinking CXX executable /workspace/svo_ws/devel/.private/opengv/lib/opengv/test_triangulation[0m
+[ 81%] Built target test_relative_pose_rotationOnly
+[35m[1mScanning dependencies of target test_noncentral_absolute_pose_sac[0m
+[ 81%] Built target test_point_cloud
+[ 81%] [32mBuilding CXX object CMakeFiles/test_noncentral_absolute_pose_sac.dir/test/test_noncentral_absolute_pose_sac.cpp.o[0m
+[35m[1mScanning dependencies of target test_noncentral_relative_pose[0m
+[ 81%] Built target test_triangulation
+[ 82%] [32mBuilding CXX object CMakeFiles/test_noncentral_relative_pose.dir/test/test_noncentral_relative_pose.cpp.o[0m
+[35m[1mScanning dependencies of target test_point_cloud_sac[0m
+[ 84%] [32mBuilding CXX object CMakeFiles/test_point_cloud_sac.dir/test/test_point_cloud_sac.cpp.o[0m
+[ 85%] [32m[1mLinking CXX executable /workspace/svo_ws/devel/.private/opengv/lib/opengv/test_relative_pose_rotationOnly_sac[0m
+[ 86%] [32m[1mLinking CXX executable /workspace/svo_ws/devel/.private/opengv/lib/opengv/test_noncentral_relative_pose_sac[0m
+[ 87%] [32m[1mLinking CXX executable /workspace/svo_ws/devel/.private/opengv/lib/opengv/test_eigensolver_sac[0m
+[ 87%] Built target test_relative_pose_rotationOnly_sac
+[35m[1mScanning dependencies of target test_relative_pose[0m
+[ 87%] Built target test_eigensolver_sac
+[ 87%] Built target test_noncentral_relative_pose_sac
+[35m[1mScanning dependencies of target test_noncentral_absolute_pose[0m
+[ 88%] [32mBuilding CXX object CMakeFiles/test_relative_pose.dir/test/test_relative_pose.cpp.o[0m
+[35m[1mScanning dependencies of target test_absolute_pose[0m
+[ 89%] [32mBuilding CXX object CMakeFiles/test_noncentral_absolute_pose.dir/test/test_noncentral_absolute_pose.cpp.o[0m
+[ 90%] [32mBuilding CXX object CMakeFiles/test_absolute_pose.dir/test/test_absolute_pose.cpp.o[0m
+[ 90%] [32m[1mLinking CXX executable /workspace/svo_ws/devel/.private/opengv/lib/opengv/test_eigensolver[0m
+[ 90%] Built target test_eigensolver
+[ 91%] [32m[1mLinking CXX executable /workspace/svo_ws/devel/.private/opengv/lib/opengv/test_multi_noncentral_relative_pose_sac[0m
+[ 91%] Built target test_multi_noncentral_relative_pose_sac
+[ 92%] [32m[1mLinking CXX executable /workspace/svo_ws/devel/.private/opengv/lib/opengv/test_relative_pose_sac[0m
+[ 93%] [32m[1mLinking CXX executable /workspace/svo_ws/devel/.private/opengv/lib/opengv/test_absolute_pose_sac[0m
+[ 93%] Built target test_relative_pose_sac
+[ 93%] Built target test_absolute_pose_sac
+[ 94%] [32m[1mLinking CXX executable /workspace/svo_ws/devel/.private/opengv/lib/opengv/test_noncentral_absolute_pose[0m
+[ 95%] [32m[1mLinking CXX executable /workspace/svo_ws/devel/.private/opengv/lib/opengv/test_noncentral_absolute_pose_sac[0m
+[ 96%] [32m[1mLinking CXX executable /workspace/svo_ws/devel/.private/opengv/lib/opengv/test_noncentral_relative_pose[0m
+[ 96%] Built target test_noncentral_absolute_pose
+[ 97%] [32m[1mLinking CXX executable /workspace/svo_ws/devel/.private/opengv/lib/opengv/test_absolute_pose[0m
+[ 97%] Built target test_noncentral_relative_pose
+[ 97%] Built target test_noncentral_absolute_pose_sac
+[ 98%] [32m[1mLinking CXX executable /workspace/svo_ws/devel/.private/opengv/lib/opengv/test_relative_pose[0m
+[ 98%] Built target test_absolute_pose
+[ 98%] Built target test_relative_pose
+[100%] [32m[1mLinking CXX executable /workspace/svo_ws/devel/.private/opengv/lib/opengv/test_point_cloud_sac[0m
+[100%] Built target test_point_cloud_sac

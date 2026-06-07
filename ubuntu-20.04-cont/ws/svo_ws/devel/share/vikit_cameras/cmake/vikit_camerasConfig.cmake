@@ -1,0 +1,1 @@
+/workspace/svo_ws/devel/.private/vikit_cameras/share/vikit_cameras/cmake/vikit_camerasConfig.cmake

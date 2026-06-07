@@ -1,0 +1,1 @@
+/workspace/svo_ws/devel/.private/svo_msgs/include/svo_msgs/NbvTrajectory.h

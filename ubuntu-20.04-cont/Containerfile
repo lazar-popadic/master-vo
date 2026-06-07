@@ -111,5 +111,19 @@ RUN sudo DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true \
     sudo DEBIAN_FRONTEND=noninteractive apt-get install -y --allow-unauthenticated ros-noetic-desktop-full && \
     sudo apt-get clean
 
+# Additional ROS build tools and libraries
+RUN sudo apt-get update && \
+    sudo apt-get install -y \
+    python3-catkin-tools \
+    python3-vcstool \
+    python3-osrf-pycommon \
+    libglew-dev \
+    libopencv-dev \
+    libyaml-cpp-dev \
+    libblas-dev \
+    liblapack-dev \
+    libsuitesparse-dev \
+    && sudo apt-get clean
+
 # Source ROS setup in bashrc
 RUN echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc

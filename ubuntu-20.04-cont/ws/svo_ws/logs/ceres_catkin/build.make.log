@@ -1,0 +1,189 @@
+[ 12%] [34m[1mPerforming build step for 'ceres_src'[0m
+make[3]: warning: -j8 forced in submake: resetting jobserver mode.
+[  1%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/covariance_impl.cc.o[0m
+[  1%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/block_random_access_diagonal_matrix.cc.o[0m
+[  2%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/dense_normal_cholesky_solver.cc.o[0m
+[  3%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/dense_qr_solver.cc.o[0m
+[  3%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/dense_sparse_matrix.cc.o[0m
+[  3%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/dynamic_compressed_row_jacobian_writer.cc.o[0m
+[  4%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/dogleg_strategy.cc.o[0m
+[  5%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/dynamic_compressed_row_sparse_matrix.cc.o[0m
+[  6%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/dynamic_sparse_normal_cholesky_solver.cc.o[0m
+[  7%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/evaluator.cc.o[0m
+[  7%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/eigensparse.cc.o[0m
+[  8%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/file.cc.o[0m
+[  9%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/function_sample.cc.o[0m
+[  9%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/gradient_checker.cc.o[0m
+[ 10%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/gradient_checking_cost_function.cc.o[0m
+[ 11%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/gradient_problem.cc.o[0m
+[ 11%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/gradient_problem_solver.cc.o[0m
+[ 12%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/implicit_schur_complement.cc.o[0m
+[ 13%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/inner_product_computer.cc.o[0m
+[ 13%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/is_close.cc.o[0m
+[ 14%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/iterative_schur_complement_solver.cc.o[0m
+[ 15%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/levenberg_marquardt_strategy.cc.o[0m
+[ 16%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/lapack.cc.o[0m
+[ 16%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/line_search.cc.o[0m
+[ 17%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/line_search_direction.cc.o[0m
+[ 18%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/line_search_minimizer.cc.o[0m
+[ 18%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/line_search_preprocessor.cc.o[0m
+[ 19%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/linear_least_squares_problems.cc.o[0m
+[ 20%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/linear_operator.cc.o[0m
+[ 20%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/linear_solver.cc.o[0m
+[ 21%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/local_parameterization.cc.o[0m
+[ 22%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/loss_function.cc.o[0m
+[ 22%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/low_rank_inverse_hessian.cc.o[0m
+[ 23%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/minimizer.cc.o[0m
+[ 24%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/normal_prior.cc.o[0m
+[ 25%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/parallel_for_cxx.cc.o[0m
+[ 25%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/parallel_for_tbb.cc.o[0m
+[ 26%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/parallel_utils.cc.o[0m
+[ 27%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/parameter_block_ordering.cc.o[0m
+[ 27%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/partitioned_matrix_view.cc.o[0m
+[ 28%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/polynomial.cc.o[0m
+[ 29%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/preconditioner.cc.o[0m
+[ 29%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/preprocessor.cc.o[0m
+[ 30%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/problem.cc.o[0m
+[ 31%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/problem_impl.cc.o[0m
+[ 32%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/program.cc.o[0m
+[ 32%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/reorder_program.cc.o[0m
+[ 33%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/residual_block.cc.o[0m
+[ 34%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/residual_block_utils.cc.o[0m
+[ 34%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/schur_complement_solver.cc.o[0m
+[ 35%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/schur_eliminator.cc.o[0m
+[ 36%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/schur_jacobi_preconditioner.cc.o[0m
+[ 36%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/schur_templates.cc.o[0m
+[ 37%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/scratch_evaluate_preparer.cc.o[0m
+[ 38%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/single_linkage_clustering.cc.o[0m
+[ 38%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/solver.cc.o[0m
+[ 39%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/solver_utils.cc.o[0m
+[ 40%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/sparse_matrix.cc.o[0m
+[ 41%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/sparse_cholesky.cc.o[0m
+[ 41%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/sparse_normal_cholesky_solver.cc.o[0m
+[ 42%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/subset_preconditioner.cc.o[0m
+[ 43%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/split.cc.o[0m
+[ 43%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/stringprintf.cc.o[0m
+[ 44%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/suitesparse.cc.o[0m
+[ 45%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/thread_pool.cc.o[0m
+[ 45%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/thread_token_provider.cc.o[0m
+[ 46%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/triplet_sparse_matrix.cc.o[0m
+[ 47%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/trust_region_preprocessor.cc.o[0m
+[ 47%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/trust_region_minimizer.cc.o[0m
+[ 48%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/trust_region_step_evaluator.cc.o[0m
+[ 49%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/trust_region_strategy.cc.o[0m
+[ 50%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/types.cc.o[0m
+[ 50%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/visibility.cc.o[0m
+[ 51%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/visibility_based_preconditioner.cc.o[0m
+[ 52%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/wall_time.cc.o[0m
+[ 52%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/generated/partitioned_matrix_view_2_2_2.cc.o[0m
+[ 53%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/generated/partitioned_matrix_view_2_2_3.cc.o[0m
+[ 54%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/generated/partitioned_matrix_view_2_2_4.cc.o[0m
+[ 54%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/generated/partitioned_matrix_view_2_2_d.cc.o[0m
+[ 55%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/generated/partitioned_matrix_view_2_3_3.cc.o[0m
+[ 56%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/generated/partitioned_matrix_view_2_3_4.cc.o[0m
+[ 57%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/generated/partitioned_matrix_view_2_3_6.cc.o[0m
+[ 57%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/generated/partitioned_matrix_view_2_3_9.cc.o[0m
+[ 58%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/generated/partitioned_matrix_view_2_3_d.cc.o[0m
+[ 59%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/generated/partitioned_matrix_view_2_4_3.cc.o[0m
+[ 59%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/generated/partitioned_matrix_view_2_4_4.cc.o[0m
+[ 60%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/generated/partitioned_matrix_view_2_4_6.cc.o[0m
+[ 61%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/generated/partitioned_matrix_view_2_4_8.cc.o[0m
+[ 61%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/generated/partitioned_matrix_view_2_4_9.cc.o[0m
+[ 62%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/generated/partitioned_matrix_view_2_4_d.cc.o[0m
+[ 63%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/generated/partitioned_matrix_view_2_d_d.cc.o[0m
+[ 63%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/generated/partitioned_matrix_view_4_4_2.cc.o[0m
+[ 64%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/generated/partitioned_matrix_view_4_4_3.cc.o[0m
+[ 65%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/generated/partitioned_matrix_view_4_4_4.cc.o[0m
+[ 66%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/generated/partitioned_matrix_view_4_4_d.cc.o[0m
+[ 66%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/generated/partitioned_matrix_view_d_d_d.cc.o[0m
+[ 67%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/generated/schur_eliminator_2_2_2.cc.o[0m
+[ 68%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/generated/schur_eliminator_2_2_3.cc.o[0m
+[ 68%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/generated/schur_eliminator_2_2_4.cc.o[0m
+[ 69%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/generated/schur_eliminator_2_2_d.cc.o[0m
+[ 69%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/generated/schur_eliminator_2_3_4.cc.o[0m
+[ 70%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/generated/schur_eliminator_2_3_3.cc.o[0m
+[ 71%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/generated/schur_eliminator_2_3_6.cc.o[0m
+[ 72%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/generated/schur_eliminator_2_3_9.cc.o[0m
+[ 72%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/generated/schur_eliminator_2_3_d.cc.o[0m
+[ 73%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/generated/schur_eliminator_2_4_3.cc.o[0m
+[ 74%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/generated/schur_eliminator_2_4_4.cc.o[0m
+[ 75%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/generated/schur_eliminator_2_4_6.cc.o[0m
+[ 75%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/generated/schur_eliminator_2_4_8.cc.o[0m
+[ 76%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/generated/schur_eliminator_2_4_9.cc.o[0m
+[ 77%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/generated/schur_eliminator_2_4_d.cc.o[0m
+[ 77%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/generated/schur_eliminator_2_d_d.cc.o[0m
+[ 78%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/generated/schur_eliminator_4_4_2.cc.o[0m
+[ 79%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/generated/schur_eliminator_4_4_3.cc.o[0m
+[ 79%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/generated/schur_eliminator_4_4_4.cc.o[0m
+[ 80%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/generated/schur_eliminator_4_4_d.cc.o[0m
+[ 81%] [32mBuilding CXX object internal/ceres/CMakeFiles/ceres.dir/generated/schur_eliminator_d_d_d.cc.o[0m
+[ 82%] [32m[1mLinking CXX shared library ../../lib/libceres.so[0m
+/usr/bin/c++ -fPIC -fPIC -fopenmp -Wno-unknown-pragmas -Wno-sign-compare -Wno-unused-parameter -Wno-missing-field-initializers -O3 -DNDEBUG   -shared -Wl,-soname,libceres.so.1 -o ../../lib/libceres.so.1.14.0 CMakeFiles/ceres.dir/array_utils.cc.o CMakeFiles/ceres.dir/blas.cc.o CMakeFiles/ceres.dir/block_evaluate_preparer.cc.o CMakeFiles/ceres.dir/block_jacobi_preconditioner.cc.o CMakeFiles/ceres.dir/block_jacobian_writer.cc.o CMakeFiles/ceres.dir/block_random_access_dense_matrix.cc.o CMakeFiles/ceres.dir/block_random_access_diagonal_matrix.cc.o CMakeFiles/ceres.dir/block_random_access_matrix.cc.o CMakeFiles/ceres.dir/block_random_access_sparse_matrix.cc.o CMakeFiles/ceres.dir/block_sparse_matrix.cc.o CMakeFiles/ceres.dir/block_structure.cc.o CMakeFiles/ceres.dir/c_api.cc.o CMakeFiles/ceres.dir/canonical_views_clustering.cc.o CMakeFiles/ceres.dir/cgnr_solver.cc.o CMakeFiles/ceres.dir/callbacks.cc.o CMakeFiles/ceres.dir/compressed_col_sparse_matrix_utils.cc.o CMakeFiles/ceres.dir/compressed_row_jacobian_writer.cc.o CMakeFiles/ceres.dir/compressed_row_sparse_matrix.cc.o CMakeFiles/ceres.dir/conditioned_cost_function.cc.o CMakeFiles/ceres.dir/conjugate_gradients_solver.cc.o CMakeFiles/ceres.dir/context.cc.o CMakeFiles/ceres.dir/context_impl.cc.o CMakeFiles/ceres.dir/coordinate_descent_minimizer.cc.o CMakeFiles/ceres.dir/corrector.cc.o CMakeFiles/ceres.dir/covariance.cc.o CMakeFiles/ceres.dir/covariance_impl.cc.o CMakeFiles/ceres.dir/cxsparse.cc.o CMakeFiles/ceres.dir/dense_normal_cholesky_solver.cc.o CMakeFiles/ceres.dir/dense_qr_solver.cc.o CMakeFiles/ceres.dir/dense_sparse_matrix.cc.o CMakeFiles/ceres.dir/detect_structure.cc.o CMakeFiles/ceres.dir/dogleg_strategy.cc.o CMakeFiles/ceres.dir/dynamic_compressed_row_jacobian_writer.cc.o CMakeFiles/ceres.dir/dynamic_compressed_row_sparse_matrix.cc.o CMakeFiles/ceres.dir/dynamic_sparse_normal_cholesky_solver.cc.o CMakeFiles/ceres.dir/evaluator.cc.o CMakeFiles/ceres.dir/eigensparse.cc.o CMakeFiles/ceres.dir/file.cc.o CMakeFiles/ceres.dir/function_sample.cc.o CMakeFiles/ceres.dir/gradient_checker.cc.o CMakeFiles/ceres.dir/gradient_checking_cost_function.cc.o CMakeFiles/ceres.dir/gradient_problem.cc.o CMakeFiles/ceres.dir/gradient_problem_solver.cc.o CMakeFiles/ceres.dir/implicit_schur_complement.cc.o CMakeFiles/ceres.dir/inner_product_computer.cc.o CMakeFiles/ceres.dir/is_close.cc.o CMakeFiles/ceres.dir/iterative_schur_complement_solver.cc.o CMakeFiles/ceres.dir/levenberg_marquardt_strategy.cc.o CMakeFiles/ceres.dir/lapack.cc.o CMakeFiles/ceres.dir/line_search.cc.o CMakeFiles/ceres.dir/line_search_direction.cc.o CMakeFiles/ceres.dir/line_search_minimizer.cc.o CMakeFiles/ceres.dir/line_search_preprocessor.cc.o CMakeFiles/ceres.dir/linear_least_squares_problems.cc.o CMakeFiles/ceres.dir/linear_operator.cc.o CMakeFiles/ceres.dir/linear_solver.cc.o CMakeFiles/ceres.dir/local_parameterization.cc.o CMakeFiles/ceres.dir/loss_function.cc.o CMakeFiles/ceres.dir/low_rank_inverse_hessian.cc.o CMakeFiles/ceres.dir/minimizer.cc.o CMakeFiles/ceres.dir/normal_prior.cc.o CMakeFiles/ceres.dir/parallel_for_cxx.cc.o CMakeFiles/ceres.dir/parallel_for_tbb.cc.o CMakeFiles/ceres.dir/parallel_utils.cc.o CMakeFiles/ceres.dir/parameter_block_ordering.cc.o CMakeFiles/ceres.dir/partitioned_matrix_view.cc.o CMakeFiles/ceres.dir/polynomial.cc.o CMakeFiles/ceres.dir/preconditioner.cc.o CMakeFiles/ceres.dir/preprocessor.cc.o CMakeFiles/ceres.dir/problem.cc.o CMakeFiles/ceres.dir/problem_impl.cc.o CMakeFiles/ceres.dir/program.cc.o CMakeFiles/ceres.dir/reorder_program.cc.o CMakeFiles/ceres.dir/residual_block.cc.o CMakeFiles/ceres.dir/residual_block_utils.cc.o CMakeFiles/ceres.dir/schur_complement_solver.cc.o CMakeFiles/ceres.dir/schur_eliminator.cc.o CMakeFiles/ceres.dir/schur_jacobi_preconditioner.cc.o CMakeFiles/ceres.dir/schur_templates.cc.o CMakeFiles/ceres.dir/scratch_evaluate_preparer.cc.o CMakeFiles/ceres.dir/single_linkage_clustering.cc.o CMakeFiles/ceres.dir/solver.cc.o CMakeFiles/ceres.dir/solver_utils.cc.o CMakeFiles/ceres.dir/sparse_matrix.cc.o CMakeFiles/ceres.dir/sparse_cholesky.cc.o CMakeFiles/ceres.dir/sparse_normal_cholesky_solver.cc.o CMakeFiles/ceres.dir/subset_preconditioner.cc.o CMakeFiles/ceres.dir/split.cc.o CMakeFiles/ceres.dir/stringprintf.cc.o CMakeFiles/ceres.dir/suitesparse.cc.o CMakeFiles/ceres.dir/thread_pool.cc.o CMakeFiles/ceres.dir/thread_token_provider.cc.o CMakeFiles/ceres.dir/triplet_sparse_matrix.cc.o CMakeFiles/ceres.dir/trust_region_preprocessor.cc.o CMakeFiles/ceres.dir/trust_region_minimizer.cc.o CMakeFiles/ceres.dir/trust_region_step_evaluator.cc.o CMakeFiles/ceres.dir/trust_region_strategy.cc.o CMakeFiles/ceres.dir/types.cc.o CMakeFiles/ceres.dir/visibility.cc.o CMakeFiles/ceres.dir/visibility_based_preconditioner.cc.o CMakeFiles/ceres.dir/wall_time.cc.o CMakeFiles/ceres.dir/generated/partitioned_matrix_view_2_2_2.cc.o CMakeFiles/ceres.dir/generated/partitioned_matrix_view_2_2_3.cc.o CMakeFiles/ceres.dir/generated/partitioned_matrix_view_2_2_4.cc.o CMakeFiles/ceres.dir/generated/partitioned_matrix_view_2_2_d.cc.o CMakeFiles/ceres.dir/generated/partitioned_matrix_view_2_3_3.cc.o CMakeFiles/ceres.dir/generated/partitioned_matrix_view_2_3_4.cc.o CMakeFiles/ceres.dir/generated/partitioned_matrix_view_2_3_6.cc.o CMakeFiles/ceres.dir/generated/partitioned_matrix_view_2_3_9.cc.o CMakeFiles/ceres.dir/generated/partitioned_matrix_view_2_3_d.cc.o CMakeFiles/ceres.dir/generated/partitioned_matrix_view_2_4_3.cc.o CMakeFiles/ceres.dir/generated/partitioned_matrix_view_2_4_4.cc.o CMakeFiles/ceres.dir/generated/partitioned_matrix_view_2_4_6.cc.o CMakeFiles/ceres.dir/generated/partitioned_matrix_view_2_4_8.cc.o CMakeFiles/ceres.dir/generated/partitioned_matrix_view_2_4_9.cc.o CMakeFiles/ceres.dir/generated/partitioned_matrix_view_2_4_d.cc.o CMakeFiles/ceres.dir/generated/partitioned_matrix_view_2_d_d.cc.o CMakeFiles/ceres.dir/generated/partitioned_matrix_view_4_4_2.cc.o CMakeFiles/ceres.dir/generated/partitioned_matrix_view_4_4_3.cc.o CMakeFiles/ceres.dir/generated/partitioned_matrix_view_4_4_4.cc.o CMakeFiles/ceres.dir/generated/partitioned_matrix_view_4_4_d.cc.o CMakeFiles/ceres.dir/generated/partitioned_matrix_view_d_d_d.cc.o CMakeFiles/ceres.dir/generated/schur_eliminator_2_2_2.cc.o CMakeFiles/ceres.dir/generated/schur_eliminator_2_2_3.cc.o CMakeFiles/ceres.dir/generated/schur_eliminator_2_2_4.cc.o CMakeFiles/ceres.dir/generated/schur_eliminator_2_2_d.cc.o CMakeFiles/ceres.dir/generated/schur_eliminator_2_3_3.cc.o CMakeFiles/ceres.dir/generated/schur_eliminator_2_3_4.cc.o CMakeFiles/ceres.dir/generated/schur_eliminator_2_3_6.cc.o CMakeFiles/ceres.dir/generated/schur_eliminator_2_3_9.cc.o CMakeFiles/ceres.dir/generated/schur_eliminator_2_3_d.cc.o CMakeFiles/ceres.dir/generated/schur_eliminator_2_4_3.cc.o CMakeFiles/ceres.dir/generated/schur_eliminator_2_4_4.cc.o CMakeFiles/ceres.dir/generated/schur_eliminator_2_4_6.cc.o CMakeFiles/ceres.dir/generated/schur_eliminator_2_4_8.cc.o CMakeFiles/ceres.dir/generated/schur_eliminator_2_4_9.cc.o CMakeFiles/ceres.dir/generated/schur_eliminator_2_4_d.cc.o CMakeFiles/ceres.dir/generated/schur_eliminator_2_d_d.cc.o CMakeFiles/ceres.dir/generated/schur_eliminator_4_4_2.cc.o CMakeFiles/ceres.dir/generated/schur_eliminator_4_4_3.cc.o CMakeFiles/ceres.dir/generated/schur_eliminator_4_4_4.cc.o CMakeFiles/ceres.dir/generated/schur_eliminator_4_4_d.cc.o CMakeFiles/ceres.dir/generated/schur_eliminator_d_d_d.cc.o  -Wl,-rpath,/workspace/svo_ws/devel/lib: /workspace/svo_ws/devel/lib/libglog.so /workspace/svo_ws/devel/lib/libgflags.so -lpthread -lspqr -ltbbmalloc -ltbb -lcholmod -lccolamd -lcamd -lcolamd -lamd -llapack -lblas -lblas -lsuitesparseconfig -lrt -lcxsparse -llapack -lblas -lgomp -lpthread -ltbbmalloc -ltbb -lpthread -lspqr -lcholmod -lccolamd -lcamd -lcolamd -lamd -llapack -lblas -lsuitesparseconfig -lrt -lcxsparse -lgomp 
+[100%] Built target ceres
+[ 25%] [34m[1mPerforming install step for 'ceres_src'[0m
+make[3]: warning: -j8 forced in submake: resetting jobserver mode.
+[100%] Built target ceres
+[36mInstall the project...[0m
+-- Install configuration: "Release"
+-- Installing: /workspace/svo_ws/devel/.private/ceres_catkin/include/ceres/autodiff_cost_function.h
+-- Installing: /workspace/svo_ws/devel/.private/ceres_catkin/include/ceres/autodiff_local_parameterization.h
+-- Installing: /workspace/svo_ws/devel/.private/ceres_catkin/include/ceres/c_api.h
+-- Installing: /workspace/svo_ws/devel/.private/ceres_catkin/include/ceres/ceres.h
+-- Installing: /workspace/svo_ws/devel/.private/ceres_catkin/include/ceres/conditioned_cost_function.h
+-- Installing: /workspace/svo_ws/devel/.private/ceres_catkin/include/ceres/context.h
+-- Installing: /workspace/svo_ws/devel/.private/ceres_catkin/include/ceres/cost_function.h
+-- Installing: /workspace/svo_ws/devel/.private/ceres_catkin/include/ceres/cost_function_to_functor.h
+-- Installing: /workspace/svo_ws/devel/.private/ceres_catkin/include/ceres/covariance.h
+-- Installing: /workspace/svo_ws/devel/.private/ceres_catkin/include/ceres/crs_matrix.h
+-- Installing: /workspace/svo_ws/devel/.private/ceres_catkin/include/ceres/cubic_interpolation.h
+-- Installing: /workspace/svo_ws/devel/.private/ceres_catkin/include/ceres/dynamic_autodiff_cost_function.h
+-- Installing: /workspace/svo_ws/devel/.private/ceres_catkin/include/ceres/dynamic_cost_function.h
+-- Installing: /workspace/svo_ws/devel/.private/ceres_catkin/include/ceres/dynamic_cost_function_to_functor.h
+-- Installing: /workspace/svo_ws/devel/.private/ceres_catkin/include/ceres/dynamic_numeric_diff_cost_function.h
+-- Installing: /workspace/svo_ws/devel/.private/ceres_catkin/include/ceres/evaluation_callback.h
+-- Installing: /workspace/svo_ws/devel/.private/ceres_catkin/include/ceres/fpclassify.h
+-- Installing: /workspace/svo_ws/devel/.private/ceres_catkin/include/ceres/gradient_checker.h
+-- Installing: /workspace/svo_ws/devel/.private/ceres_catkin/include/ceres/gradient_problem.h
+-- Installing: /workspace/svo_ws/devel/.private/ceres_catkin/include/ceres/gradient_problem_solver.h
+-- Installing: /workspace/svo_ws/devel/.private/ceres_catkin/include/ceres/iteration_callback.h
+-- Installing: /workspace/svo_ws/devel/.private/ceres_catkin/include/ceres/jet.h
+-- Installing: /workspace/svo_ws/devel/.private/ceres_catkin/include/ceres/local_parameterization.h
+-- Installing: /workspace/svo_ws/devel/.private/ceres_catkin/include/ceres/loss_function.h
+-- Installing: /workspace/svo_ws/devel/.private/ceres_catkin/include/ceres/normal_prior.h
+-- Installing: /workspace/svo_ws/devel/.private/ceres_catkin/include/ceres/numeric_diff_cost_function.h
+-- Installing: /workspace/svo_ws/devel/.private/ceres_catkin/include/ceres/numeric_diff_options.h
+-- Installing: /workspace/svo_ws/devel/.private/ceres_catkin/include/ceres/ordered_groups.h
+-- Installing: /workspace/svo_ws/devel/.private/ceres_catkin/include/ceres/problem.h
+-- Installing: /workspace/svo_ws/devel/.private/ceres_catkin/include/ceres/rotation.h
+-- Installing: /workspace/svo_ws/devel/.private/ceres_catkin/include/ceres/sized_cost_function.h
+-- Installing: /workspace/svo_ws/devel/.private/ceres_catkin/include/ceres/solver.h
+-- Installing: /workspace/svo_ws/devel/.private/ceres_catkin/include/ceres/tiny_solver.h
+-- Installing: /workspace/svo_ws/devel/.private/ceres_catkin/include/ceres/tiny_solver_autodiff_function.h
+-- Installing: /workspace/svo_ws/devel/.private/ceres_catkin/include/ceres/tiny_solver_cost_function_adapter.h
+-- Installing: /workspace/svo_ws/devel/.private/ceres_catkin/include/ceres/types.h
+-- Installing: /workspace/svo_ws/devel/.private/ceres_catkin/include/ceres/version.h
+-- Installing: /workspace/svo_ws/devel/.private/ceres_catkin/include/ceres/internal/autodiff.h
+-- Installing: /workspace/svo_ws/devel/.private/ceres_catkin/include/ceres/internal/disable_warnings.h
+-- Installing: /workspace/svo_ws/devel/.private/ceres_catkin/include/ceres/internal/eigen.h
+-- Installing: /workspace/svo_ws/devel/.private/ceres_catkin/include/ceres/internal/fixed_array.h
+-- Installing: /workspace/svo_ws/devel/.private/ceres_catkin/include/ceres/internal/macros.h
+-- Installing: /workspace/svo_ws/devel/.private/ceres_catkin/include/ceres/internal/manual_constructor.h
+-- Installing: /workspace/svo_ws/devel/.private/ceres_catkin/include/ceres/internal/numeric_diff.h
+-- Installing: /workspace/svo_ws/devel/.private/ceres_catkin/include/ceres/internal/port.h
+-- Installing: /workspace/svo_ws/devel/.private/ceres_catkin/include/ceres/internal/reenable_warnings.h
+-- Installing: /workspace/svo_ws/devel/.private/ceres_catkin/include/ceres/internal/scoped_ptr.h
+-- Installing: /workspace/svo_ws/devel/.private/ceres_catkin/include/ceres/internal/variadic_evaluate.h
+-- Installing: /workspace/svo_ws/devel/.private/ceres_catkin/include/ceres/internal/config.h
+-- Installing: /workspace/svo_ws/devel/.private/ceres_catkin/lib/cmake/Ceres/CeresTargets.cmake
+-- Installing: /workspace/svo_ws/devel/.private/ceres_catkin/lib/cmake/Ceres/CeresTargets-release.cmake
+-- Installing: /workspace/svo_ws/devel/.private/ceres_catkin/lib/cmake/Ceres/CeresConfig.cmake
+-- Installing: /workspace/svo_ws/devel/.private/ceres_catkin/lib/cmake/Ceres/CeresConfigVersion.cmake
+-- Installing: /workspace/svo_ws/devel/.private/ceres_catkin/lib/cmake/Ceres/FindEigen.cmake
+-- Installing: /workspace/svo_ws/devel/.private/ceres_catkin/lib/cmake/Ceres/FindGlog.cmake
+-- Installing: /workspace/svo_ws/devel/.private/ceres_catkin/lib/cmake/Ceres/FindGflags.cmake
+-- Installing: /workspace/svo_ws/devel/.private/ceres_catkin/lib/libceres.so.1.14.0
+-- Installing: /workspace/svo_ws/devel/.private/ceres_catkin/lib/libceres.so.1
+-- Set runtime path of "/workspace/svo_ws/devel/.private/ceres_catkin/lib/libceres.so.1.14.0" to ""
+-- Installing: /workspace/svo_ws/devel/.private/ceres_catkin/lib/libceres.so
+[ 37%] [34m[1mCompleted 'ceres_src'[0m
+[100%] Built target ceres_src

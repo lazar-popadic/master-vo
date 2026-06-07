@@ -1,0 +1,1 @@
+/workspace/svo_ws/devel/.private/rpg_trajectory_evaluation/lib/pkgconfig/rpg_trajectory_evaluation.pc

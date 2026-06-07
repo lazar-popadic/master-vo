@@ -1,0 +1,6 @@
+Symlinking /workspace/svo_ws/devel/lib/libcatkin_boost_python_test.so
+Symlinking /workspace/svo_ws/devel/lib/python3/dist-packages/catkin_boost_python_test/libcatkin_boost_python_test.so
+Symlinking /workspace/svo_ws/devel/lib/python3/dist-packages/catkin_boost_python_test/__init__.py
+Symlinking /workspace/svo_ws/devel/lib/pkgconfig/catkin_boost_python_buildtool_test.pc
+Symlinking /workspace/svo_ws/devel/share/catkin_boost_python_buildtool_test/cmake/catkin_boost_python_buildtool_testConfig.cmake
+Symlinking /workspace/svo_ws/devel/share/catkin_boost_python_buildtool_test/cmake/catkin_boost_python_buildtool_testConfig-version.cmake

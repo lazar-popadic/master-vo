@@ -1,0 +1,4 @@
+Symlinking /workspace/svo_ws/devel/lib/pkgconfig/eigen_catkin.pc
+Symlinking /workspace/svo_ws/devel/share/eigen_catkin/cmake/eigen-extras.cmake
+Symlinking /workspace/svo_ws/devel/share/eigen_catkin/cmake/eigen_catkinConfig-version.cmake
+Symlinking /workspace/svo_ws/devel/share/eigen_catkin/cmake/eigen_catkinConfig.cmake
