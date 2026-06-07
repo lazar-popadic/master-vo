@@ -1,0 +1,85 @@
+{
+  "name": "libgfortran-ng",
+  "version": "7.3.0",
+  "build": "hdf63c60_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "subdir": "linux-64",
+  "fn": "libgfortran-ng-7.3.0-hdf63c60_0.conda",
+  "md5": "e3e10877b7ee2bdd3f67f6d4d4e32e00",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/libgfortran-ng-7.3.0-hdf63c60_0.conda",
+  "sha256": "5fc07f818aca5df283f804026f991a4e5db2b2e29959def155e36ce9b9b26def",
+  "depends": [],
+  "constrains": [],
+  "license": "GPL",
+  "timestamp": 1534628456385,
+  "size": 1030197,
+  "requested_spec": "libgfortran-ng==7.3.0=hdf63c60_0",
+  "package_tarball_full_path": "/workspace/miniorge3/pkgs/libgfortran-ng-7.3.0-hdf63c60_0.conda",
+  "extracted_package_dir": "/workspace/miniorge3/pkgs/libgfortran-ng-7.3.0-hdf63c60_0",
+  "files": [
+    "lib/libgfortran.so",
+    "lib/libgfortran.so.4",
+    "lib/libgfortran.so.4.0.0",
+    "share/licenses/libgfortran/RUNTIME.LIBRARY.EXCEPTION",
+    "x86_64-conda_cos6-linux-gnu/sysroot/lib/libgfortran.so",
+    "x86_64-conda_cos6-linux-gnu/sysroot/lib/libgfortran.so.4",
+    "x86_64-conda_cos6-linux-gnu/sysroot/lib/libgfortran.so.4.0.0"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "lib/libgfortran.so",
+        "path_type": "softlink",
+        "sha256": "aa1bcbdf4eaa9792a1612e6712654f5d2767a07b259ffe640e9f7d43b6dfb336",
+        "size_in_bytes": 5925928
+      },
+      {
+        "_path": "lib/libgfortran.so.4",
+        "path_type": "softlink",
+        "sha256": "aa1bcbdf4eaa9792a1612e6712654f5d2767a07b259ffe640e9f7d43b6dfb336",
+        "size_in_bytes": 5925928
+      },
+      {
+        "_path": "lib/libgfortran.so.4.0.0",
+        "path_type": "hardlink",
+        "sha256": "aa1bcbdf4eaa9792a1612e6712654f5d2767a07b259ffe640e9f7d43b6dfb336",
+        "size_in_bytes": 5925928,
+        "sha256_in_prefix": "aa1bcbdf4eaa9792a1612e6712654f5d2767a07b259ffe640e9f7d43b6dfb336"
+      },
+      {
+        "_path": "share/licenses/libgfortran/RUNTIME.LIBRARY.EXCEPTION",
+        "path_type": "hardlink",
+        "sha256": "9d6b43ce4d8de0c878bf16b54d8e7a10d9bd42b75178153e3af6a815bdc90f74",
+        "size_in_bytes": 3324,
+        "sha256_in_prefix": "9d6b43ce4d8de0c878bf16b54d8e7a10d9bd42b75178153e3af6a815bdc90f74"
+      },
+      {
+        "_path": "x86_64-conda_cos6-linux-gnu/sysroot/lib/libgfortran.so",
+        "path_type": "softlink",
+        "sha256": "aa1bcbdf4eaa9792a1612e6712654f5d2767a07b259ffe640e9f7d43b6dfb336",
+        "size_in_bytes": 5925928
+      },
+      {
+        "_path": "x86_64-conda_cos6-linux-gnu/sysroot/lib/libgfortran.so.4",
+        "path_type": "softlink",
+        "sha256": "aa1bcbdf4eaa9792a1612e6712654f5d2767a07b259ffe640e9f7d43b6dfb336",
+        "size_in_bytes": 5925928
+      },
+      {
+        "_path": "x86_64-conda_cos6-linux-gnu/sysroot/lib/libgfortran.so.4.0.0",
+        "path_type": "softlink",
+        "sha256": "aa1bcbdf4eaa9792a1612e6712654f5d2767a07b259ffe640e9f7d43b6dfb336",
+        "size_in_bytes": 5925928
+      }
+    ]
+  },
+  "link": {
+    "source": "/workspace/miniorge3/pkgs/libgfortran-ng-7.3.0-hdf63c60_0",
+    "type": 1
+  },
+  "requested_specs": [
+    "libgfortran-ng==7.3.0=hdf63c60_0"
+  ]
+}

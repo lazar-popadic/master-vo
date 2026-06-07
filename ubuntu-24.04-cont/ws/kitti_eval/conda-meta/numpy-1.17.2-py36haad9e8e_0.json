@@ -1,0 +1,42 @@
+{
+  "name": "numpy",
+  "version": "1.17.2",
+  "build": "py36haad9e8e_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "subdir": "linux-64",
+  "fn": "numpy-1.17.2-py36haad9e8e_0.conda",
+  "md5": "17f763c930294b82f100db8530254ddf",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/numpy-1.17.2-py36haad9e8e_0.conda",
+  "sha256": "e589dcf1f7e80410d101348b85010ab992ec01e8a216780c972e2f54fd81a4b0",
+  "depends": [
+    "blas 1.0 mkl",
+    "libgcc-ng >=7.3.0",
+    "libgfortran-ng >=7,<8.0a0",
+    "mkl >=2019.4,<2021.0a0",
+    "mkl-service >=2,<3.0a0",
+    "mkl_fft",
+    "mkl_random",
+    "numpy-base 1.17.2.*",
+    "python >=3.6,<3.7.0a0"
+  ],
+  "constrains": [],
+  "license": "BSD 3-Clause",
+  "timestamp": 1569435736573,
+  "size": 4510,
+  "requested_spec": "numpy==1.17.2=py36haad9e8e_0",
+  "package_tarball_full_path": "/workspace/miniorge3/pkgs/numpy-1.17.2-py36haad9e8e_0.conda",
+  "extracted_package_dir": "/workspace/miniorge3/pkgs/numpy-1.17.2-py36haad9e8e_0",
+  "files": [],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": []
+  },
+  "link": {
+    "source": "/workspace/miniorge3/pkgs/numpy-1.17.2-py36haad9e8e_0",
+    "type": 1
+  },
+  "requested_specs": [
+    "numpy==1.17.2=py36haad9e8e_0"
+  ]
+}

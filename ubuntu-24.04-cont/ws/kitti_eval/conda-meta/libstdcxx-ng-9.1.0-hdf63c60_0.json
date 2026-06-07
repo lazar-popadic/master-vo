@@ -1,0 +1,85 @@
+{
+  "name": "libstdcxx-ng",
+  "version": "9.1.0",
+  "build": "hdf63c60_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "subdir": "linux-64",
+  "fn": "libstdcxx-ng-9.1.0-hdf63c60_0.conda",
+  "md5": "c3efd14430bedbe0a036a899f50cec7f",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/libstdcxx-ng-9.1.0-hdf63c60_0.conda",
+  "sha256": "4cd5e8e3ad70b0a611fd94931fd82d845ba602789fa9bbd9f202b9d0da434277",
+  "depends": [],
+  "constrains": [],
+  "license": "GPL3 with runtime exception",
+  "timestamp": 1560112223556,
+  "size": 3258838,
+  "requested_spec": "libstdcxx-ng==9.1.0=hdf63c60_0",
+  "package_tarball_full_path": "/workspace/miniorge3/pkgs/libstdcxx-ng-9.1.0-hdf63c60_0.conda",
+  "extracted_package_dir": "/workspace/miniorge3/pkgs/libstdcxx-ng-9.1.0-hdf63c60_0",
+  "files": [
+    "lib/libstdc++.so",
+    "lib/libstdc++.so.6",
+    "lib/libstdc++.so.6.0.26",
+    "share/licenses/libstdc++/RUNTIME.LIBRARY.EXCEPTION",
+    "x86_64-conda_cos6-linux-gnu/sysroot/lib/libstdc++.so",
+    "x86_64-conda_cos6-linux-gnu/sysroot/lib/libstdc++.so.6",
+    "x86_64-conda_cos6-linux-gnu/sysroot/lib/libstdc++.so.6.0.26"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "lib/libstdc++.so",
+        "path_type": "softlink",
+        "sha256": "61686be7963bd3830a9cb1f74510f249ed617ac1815b6604e142c5db6f84238d",
+        "size_in_bytes": 13172960
+      },
+      {
+        "_path": "lib/libstdc++.so.6",
+        "path_type": "softlink",
+        "sha256": "61686be7963bd3830a9cb1f74510f249ed617ac1815b6604e142c5db6f84238d",
+        "size_in_bytes": 13172960
+      },
+      {
+        "_path": "lib/libstdc++.so.6.0.26",
+        "path_type": "hardlink",
+        "sha256": "61686be7963bd3830a9cb1f74510f249ed617ac1815b6604e142c5db6f84238d",
+        "size_in_bytes": 13172960,
+        "sha256_in_prefix": "61686be7963bd3830a9cb1f74510f249ed617ac1815b6604e142c5db6f84238d"
+      },
+      {
+        "_path": "share/licenses/libstdc++/RUNTIME.LIBRARY.EXCEPTION",
+        "path_type": "hardlink",
+        "sha256": "9d6b43ce4d8de0c878bf16b54d8e7a10d9bd42b75178153e3af6a815bdc90f74",
+        "size_in_bytes": 3324,
+        "sha256_in_prefix": "9d6b43ce4d8de0c878bf16b54d8e7a10d9bd42b75178153e3af6a815bdc90f74"
+      },
+      {
+        "_path": "x86_64-conda_cos6-linux-gnu/sysroot/lib/libstdc++.so",
+        "path_type": "softlink",
+        "sha256": "61686be7963bd3830a9cb1f74510f249ed617ac1815b6604e142c5db6f84238d",
+        "size_in_bytes": 13172960
+      },
+      {
+        "_path": "x86_64-conda_cos6-linux-gnu/sysroot/lib/libstdc++.so.6",
+        "path_type": "softlink",
+        "sha256": "61686be7963bd3830a9cb1f74510f249ed617ac1815b6604e142c5db6f84238d",
+        "size_in_bytes": 13172960
+      },
+      {
+        "_path": "x86_64-conda_cos6-linux-gnu/sysroot/lib/libstdc++.so.6.0.26",
+        "path_type": "softlink",
+        "sha256": "61686be7963bd3830a9cb1f74510f249ed617ac1815b6604e142c5db6f84238d",
+        "size_in_bytes": 13172960
+      }
+    ]
+  },
+  "link": {
+    "source": "/workspace/miniorge3/pkgs/libstdcxx-ng-9.1.0-hdf63c60_0",
+    "type": 1
+  },
+  "requested_specs": [
+    "libstdcxx-ng==9.1.0=hdf63c60_0"
+  ]
+}

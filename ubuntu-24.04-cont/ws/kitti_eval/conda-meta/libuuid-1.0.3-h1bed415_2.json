@@ -1,0 +1,94 @@
+{
+  "name": "libuuid",
+  "version": "1.0.3",
+  "build": "h1bed415_2",
+  "build_number": 2,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "subdir": "linux-64",
+  "fn": "libuuid-1.0.3-h1bed415_2.conda",
+  "md5": "c7eb74a82210554559774327088c2582",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/libuuid-1.0.3-h1bed415_2.conda",
+  "sha256": "7c4bc14591f14cbe1c92bd0c658c21d1dbe7138a0067b0c9f0fe65bf5ceb8c53",
+  "depends": [
+    "libgcc-ng >=7.2.0"
+  ],
+  "constrains": [],
+  "license": "BSD 3-Clause",
+  "timestamp": 1515696691334,
+  "size": 15085,
+  "requested_spec": "libuuid==1.0.3=h1bed415_2",
+  "package_tarball_full_path": "/workspace/miniorge3/pkgs/libuuid-1.0.3-h1bed415_2.conda",
+  "extracted_package_dir": "/workspace/miniorge3/pkgs/libuuid-1.0.3-h1bed415_2",
+  "files": [
+    "include/uuid/uuid.h",
+    "lib/libuuid.a",
+    "lib/libuuid.la",
+    "lib/libuuid.so",
+    "lib/libuuid.so.1",
+    "lib/libuuid.so.1.0.0",
+    "lib/pkgconfig/uuid.pc"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "include/uuid/uuid.h",
+        "path_type": "hardlink",
+        "sha256": "d6471ec814fdc0517f448d2b42d1fc5403eaf4b27124a1cf4e151b0fb73704da",
+        "size_in_bytes": 3297,
+        "sha256_in_prefix": "d6471ec814fdc0517f448d2b42d1fc5403eaf4b27124a1cf4e151b0fb73704da"
+      },
+      {
+        "_path": "lib/libuuid.a",
+        "path_type": "hardlink",
+        "sha256": "9f9a827f120b0e97b551fcb4ef440af9449825e98c61ea88aaa3183f7d4583ac",
+        "size_in_bytes": 26398,
+        "sha256_in_prefix": "9f9a827f120b0e97b551fcb4ef440af9449825e98c61ea88aaa3183f7d4583ac"
+      },
+      {
+        "_path": "lib/libuuid.la",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "sha256": "765af53906f1527cecc9feeb72d53c0f006ac6ecd052eebd6d55ea297d61e9f8",
+        "size_in_bytes": 978,
+        "sha256_in_prefix": "feac30bc1118bb26c5bf611d92e6017a45a2ac499e2fa77c92fa5175e2af4317"
+      },
+      {
+        "_path": "lib/libuuid.so",
+        "path_type": "softlink",
+        "sha256": "08f304f183f0625161ed50026bfe03a435b5044de015c122883a34e3fe1981ff",
+        "size_in_bytes": 18472
+      },
+      {
+        "_path": "lib/libuuid.so.1",
+        "path_type": "softlink",
+        "sha256": "08f304f183f0625161ed50026bfe03a435b5044de015c122883a34e3fe1981ff",
+        "size_in_bytes": 18472
+      },
+      {
+        "_path": "lib/libuuid.so.1.0.0",
+        "path_type": "hardlink",
+        "sha256": "08f304f183f0625161ed50026bfe03a435b5044de015c122883a34e3fe1981ff",
+        "size_in_bytes": 18472,
+        "sha256_in_prefix": "08f304f183f0625161ed50026bfe03a435b5044de015c122883a34e3fe1981ff"
+      },
+      {
+        "_path": "lib/pkgconfig/uuid.pc",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "sha256": "5ea611521069dd1250318e13447bb8bd5d91e5d34633d62e82917c426ae1ed3b",
+        "size_in_bytes": 251,
+        "sha256_in_prefix": "79e4a9aa08e8bc383e43060bb73722daaec044245e269aae987122d6dcd7eabd"
+      }
+    ]
+  },
+  "link": {
+    "source": "/workspace/miniorge3/pkgs/libuuid-1.0.3-h1bed415_2",
+    "type": 1
+  },
+  "requested_specs": [
+    "libuuid==1.0.3=h1bed415_2"
+  ]
+}
