@@ -35,7 +35,12 @@ def generate_board():
     height, width = image.shape
     confirmed_image_size = (height, width)
     print(str(IMG_SIZE) + " resized to " + str(confirmed_image_size))
-    cv2.imwrite(OUTPUT_NAME, image)
+    # scale for printing, empirical scaling factor
+    factor = 1.1428
+    printing_size = ((round)(width * factor), (round)(height * factor))
+    print("Printing size " + str(printing_size))
+    print_image = cv2.resize(image, printing_size)
+    cv2.imwrite(OUTPUT_NAME, print_image)
 
 
 generate_board()
