@@ -19,3 +19,6 @@ python3 /workspace/svo_ws/src/rpg_svo_pro_open/svo_ros/scripts/kitti_to_rosbag.p
 
 roslaunch svo_ros run_from_bag.launch cam_name:=kitti_00
 rosbag play /workspace/kitti/dataset/kitti_00_left.bag --clock
+
+
+roslaunch svo_ros run_from_bag_ros381.launch bag_file:=/workspace/bags/straight_test_slow.bag
