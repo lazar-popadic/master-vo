@@ -1,8 +1,8 @@
-Symlinking /workspace/svo_ws/devel/lib/libsvo_direct.so
-Symlinking /workspace/svo_ws/devel/lib/svo_direct/svo_test_edgelet_direction
-Symlinking /workspace/svo_ws/devel/lib/svo_direct/svo_test_edgelet_extraction
-Symlinking /workspace/svo_ws/devel/lib/svo_direct/svo_test_patch_score
-Symlinking /workspace/svo_ws/devel/lib/svo_direct/svo_test_feature_alignment
-Symlinking /workspace/svo_ws/devel/lib/pkgconfig/svo_direct.pc
-Symlinking /workspace/svo_ws/devel/share/svo_direct/cmake/svo_directConfig.cmake
-Symlinking /workspace/svo_ws/devel/share/svo_direct/cmake/svo_directConfig-version.cmake
+Linked: (/workspace/svo_ws/devel/.private/svo_direct/lib/libsvo_direct.so, /workspace/svo_ws/devel/lib/libsvo_direct.so)
+Linked: (/workspace/svo_ws/devel/.private/svo_direct/lib/svo_direct/svo_test_edgelet_direction, /workspace/svo_ws/devel/lib/svo_direct/svo_test_edgelet_direction)
+Linked: (/workspace/svo_ws/devel/.private/svo_direct/lib/svo_direct/svo_test_edgelet_extraction, /workspace/svo_ws/devel/lib/svo_direct/svo_test_edgelet_extraction)
+Linked: (/workspace/svo_ws/devel/.private/svo_direct/lib/svo_direct/svo_test_patch_score, /workspace/svo_ws/devel/lib/svo_direct/svo_test_patch_score)
+Linked: (/workspace/svo_ws/devel/.private/svo_direct/lib/svo_direct/svo_test_feature_alignment, /workspace/svo_ws/devel/lib/svo_direct/svo_test_feature_alignment)
+Linked: (/workspace/svo_ws/devel/.private/svo_direct/lib/pkgconfig/svo_direct.pc, /workspace/svo_ws/devel/lib/pkgconfig/svo_direct.pc)
+Linked: (/workspace/svo_ws/devel/.private/svo_direct/share/svo_direct/cmake/svo_directConfig.cmake, /workspace/svo_ws/devel/share/svo_direct/cmake/svo_directConfig.cmake)
+Linked: (/workspace/svo_ws/devel/.private/svo_direct/share/svo_direct/cmake/svo_directConfig-version.cmake, /workspace/svo_ws/devel/share/svo_direct/cmake/svo_directConfig-version.cmake)

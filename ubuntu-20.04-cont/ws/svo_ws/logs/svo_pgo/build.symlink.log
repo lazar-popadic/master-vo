@@ -1,5 +1,5 @@
-Symlinking /workspace/svo_ws/devel/lib/libsvo_pgo.so
-Symlinking /workspace/svo_ws/devel/lib/pkgconfig/svo_pgo.pc
-Symlinking /workspace/svo_ws/devel/lib/svo_pgo/test_pgo
-Symlinking /workspace/svo_ws/devel/share/svo_pgo/cmake/svo_pgoConfig-version.cmake
-Symlinking /workspace/svo_ws/devel/share/svo_pgo/cmake/svo_pgoConfig.cmake
+Linked: (/workspace/svo_ws/devel/.private/svo_pgo/lib/libsvo_pgo.so, /workspace/svo_ws/devel/lib/libsvo_pgo.so)
+Linked: (/workspace/svo_ws/devel/.private/svo_pgo/lib/pkgconfig/svo_pgo.pc, /workspace/svo_ws/devel/lib/pkgconfig/svo_pgo.pc)
+Linked: (/workspace/svo_ws/devel/.private/svo_pgo/lib/svo_pgo/test_pgo, /workspace/svo_ws/devel/lib/svo_pgo/test_pgo)
+Linked: (/workspace/svo_ws/devel/.private/svo_pgo/share/svo_pgo/cmake/svo_pgoConfig-version.cmake, /workspace/svo_ws/devel/share/svo_pgo/cmake/svo_pgoConfig-version.cmake)
+Linked: (/workspace/svo_ws/devel/.private/svo_pgo/share/svo_pgo/cmake/svo_pgoConfig.cmake, /workspace/svo_ws/devel/share/svo_pgo/cmake/svo_pgoConfig.cmake)

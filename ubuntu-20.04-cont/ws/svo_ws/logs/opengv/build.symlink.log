@@ -1,21 +1,21 @@
-Symlinking /workspace/svo_ws/devel/lib/libopengv.so
-Symlinking /workspace/svo_ws/devel/lib/librandom_generators.so
-Symlinking /workspace/svo_ws/devel/lib/opengv/test_absolute_pose_sac
-Symlinking /workspace/svo_ws/devel/lib/opengv/test_point_cloud_sac
-Symlinking /workspace/svo_ws/devel/lib/opengv/test_relative_pose_sac
-Symlinking /workspace/svo_ws/devel/lib/opengv/test_multi_noncentral_relative_pose_sac
-Symlinking /workspace/svo_ws/devel/lib/opengv/test_triangulation
-Symlinking /workspace/svo_ws/devel/lib/opengv/test_relative_pose_rotationOnly
-Symlinking /workspace/svo_ws/devel/lib/opengv/test_point_cloud
-Symlinking /workspace/svo_ws/devel/lib/opengv/test_noncentral_absolute_pose_sac
-Symlinking /workspace/svo_ws/devel/lib/opengv/test_eigensolver
-Symlinking /workspace/svo_ws/devel/lib/opengv/test_noncentral_absolute_pose
-Symlinking /workspace/svo_ws/devel/lib/opengv/test_relative_pose
-Symlinking /workspace/svo_ws/devel/lib/opengv/test_noncentral_relative_pose
-Symlinking /workspace/svo_ws/devel/lib/opengv/test_relative_pose_rotationOnly_sac
-Symlinking /workspace/svo_ws/devel/lib/opengv/test_absolute_pose
-Symlinking /workspace/svo_ws/devel/lib/opengv/test_eigensolver_sac
-Symlinking /workspace/svo_ws/devel/lib/opengv/test_noncentral_relative_pose_sac
-Symlinking /workspace/svo_ws/devel/lib/pkgconfig/opengv.pc
-Symlinking /workspace/svo_ws/devel/share/opengv/cmake/opengvConfig-version.cmake
-Symlinking /workspace/svo_ws/devel/share/opengv/cmake/opengvConfig.cmake
+Linked: (/workspace/svo_ws/devel/.private/opengv/lib/libopengv.so, /workspace/svo_ws/devel/lib/libopengv.so)
+Linked: (/workspace/svo_ws/devel/.private/opengv/lib/librandom_generators.so, /workspace/svo_ws/devel/lib/librandom_generators.so)
+Linked: (/workspace/svo_ws/devel/.private/opengv/lib/opengv/test_absolute_pose_sac, /workspace/svo_ws/devel/lib/opengv/test_absolute_pose_sac)
+Linked: (/workspace/svo_ws/devel/.private/opengv/lib/opengv/test_point_cloud_sac, /workspace/svo_ws/devel/lib/opengv/test_point_cloud_sac)
+Linked: (/workspace/svo_ws/devel/.private/opengv/lib/opengv/test_relative_pose_sac, /workspace/svo_ws/devel/lib/opengv/test_relative_pose_sac)
+Linked: (/workspace/svo_ws/devel/.private/opengv/lib/opengv/test_multi_noncentral_relative_pose_sac, /workspace/svo_ws/devel/lib/opengv/test_multi_noncentral_relative_pose_sac)
+Linked: (/workspace/svo_ws/devel/.private/opengv/lib/opengv/test_triangulation, /workspace/svo_ws/devel/lib/opengv/test_triangulation)
+Linked: (/workspace/svo_ws/devel/.private/opengv/lib/opengv/test_relative_pose_rotationOnly, /workspace/svo_ws/devel/lib/opengv/test_relative_pose_rotationOnly)
+Linked: (/workspace/svo_ws/devel/.private/opengv/lib/opengv/test_point_cloud, /workspace/svo_ws/devel/lib/opengv/test_point_cloud)
+Linked: (/workspace/svo_ws/devel/.private/opengv/lib/opengv/test_noncentral_absolute_pose_sac, /workspace/svo_ws/devel/lib/opengv/test_noncentral_absolute_pose_sac)
+Linked: (/workspace/svo_ws/devel/.private/opengv/lib/opengv/test_eigensolver, /workspace/svo_ws/devel/lib/opengv/test_eigensolver)
+Linked: (/workspace/svo_ws/devel/.private/opengv/lib/opengv/test_noncentral_absolute_pose, /workspace/svo_ws/devel/lib/opengv/test_noncentral_absolute_pose)
+Linked: (/workspace/svo_ws/devel/.private/opengv/lib/opengv/test_relative_pose, /workspace/svo_ws/devel/lib/opengv/test_relative_pose)
+Linked: (/workspace/svo_ws/devel/.private/opengv/lib/opengv/test_noncentral_relative_pose, /workspace/svo_ws/devel/lib/opengv/test_noncentral_relative_pose)
+Linked: (/workspace/svo_ws/devel/.private/opengv/lib/opengv/test_relative_pose_rotationOnly_sac, /workspace/svo_ws/devel/lib/opengv/test_relative_pose_rotationOnly_sac)
+Linked: (/workspace/svo_ws/devel/.private/opengv/lib/opengv/test_absolute_pose, /workspace/svo_ws/devel/lib/opengv/test_absolute_pose)
+Linked: (/workspace/svo_ws/devel/.private/opengv/lib/opengv/test_eigensolver_sac, /workspace/svo_ws/devel/lib/opengv/test_eigensolver_sac)
+Linked: (/workspace/svo_ws/devel/.private/opengv/lib/opengv/test_noncentral_relative_pose_sac, /workspace/svo_ws/devel/lib/opengv/test_noncentral_relative_pose_sac)
+Linked: (/workspace/svo_ws/devel/.private/opengv/lib/pkgconfig/opengv.pc, /workspace/svo_ws/devel/lib/pkgconfig/opengv.pc)
+Linked: (/workspace/svo_ws/devel/.private/opengv/share/opengv/cmake/opengvConfig-version.cmake, /workspace/svo_ws/devel/share/opengv/cmake/opengvConfig-version.cmake)
+Linked: (/workspace/svo_ws/devel/.private/opengv/share/opengv/cmake/opengvConfig.cmake, /workspace/svo_ws/devel/share/opengv/cmake/opengvConfig.cmake)
