@@ -36,3 +36,6 @@ Thumbs.db
 /ubuntu-20.04-cont/ws/orb_slam3_ws/.catkin_tools
 /ubuntu-20.04-cont/ws/orb_slam3_ws/devel
 /ubuntu-20.04-cont/ws/orb_slam3_ws/logs
+/ubuntu-20.04-cont/ws/bagvenv
+/ubuntu-20.04-cont/ws/svo_ws/build
+/ubuntu-20.04-cont/ws/svo_ws/logs
