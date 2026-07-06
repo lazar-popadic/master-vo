@@ -1,0 +1,8 @@
+prefix=/workspace/svo_ws/devel/.private/fast
+
+Name: fast
+Description: Description of fast
+Version: 0.0.0
+Cflags: -I/workspace/svo_ws/src/fast_neon/include
+Libs: -L${prefix}/lib -lfast
+Requires: 

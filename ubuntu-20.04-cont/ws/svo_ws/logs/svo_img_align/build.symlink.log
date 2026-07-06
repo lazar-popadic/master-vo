@@ -1,0 +1,4 @@
+Linked: (/workspace/svo_ws/devel/.private/svo_img_align/lib/libsvo_img_align.so, /workspace/svo_ws/devel/lib/libsvo_img_align.so)
+Linked: (/workspace/svo_ws/devel/.private/svo_img_align/lib/pkgconfig/svo_img_align.pc, /workspace/svo_ws/devel/lib/pkgconfig/svo_img_align.pc)
+Linked: (/workspace/svo_ws/devel/.private/svo_img_align/share/svo_img_align/cmake/svo_img_alignConfig-version.cmake, /workspace/svo_ws/devel/share/svo_img_align/cmake/svo_img_alignConfig-version.cmake)
+Linked: (/workspace/svo_ws/devel/.private/svo_img_align/share/svo_img_align/cmake/svo_img_alignConfig.cmake, /workspace/svo_ws/devel/share/svo_img_align/cmake/svo_img_alignConfig.cmake)

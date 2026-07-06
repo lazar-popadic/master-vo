@@ -1,0 +1,49 @@
+{
+  "name": "ca-certificates",
+  "version": "2019.8.28",
+  "build": "0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "subdir": "linux-64",
+  "fn": "ca-certificates-2019.8.28-0.conda",
+  "md5": "aad98fcdcd78a08eaf6ddde388ee9a52",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/ca-certificates-2019.8.28-0.conda",
+  "sha256": "d8e4be5a499f2b58dc23d8fad6792b0bd60a0bd2d9b68a8c9b8f6a503242f935",
+  "depends": [],
+  "constrains": [],
+  "license": "MPL 2.0",
+  "timestamp": 1569263563402,
+  "size": 128265,
+  "requested_spec": "ca-certificates==2019.8.28=0",
+  "package_tarball_full_path": "/workspace/miniorge3/pkgs/ca-certificates-2019.8.28-0.conda",
+  "extracted_package_dir": "/workspace/miniorge3/pkgs/ca-certificates-2019.8.28-0",
+  "files": [
+    "ssl/cacert.pem",
+    "ssl/cert.pem"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "ssl/cacert.pem",
+        "path_type": "hardlink",
+        "sha256": "38b6230aa4bee062cd34ee0ff6da173250899642b1937fc130896290b6bd91e3",
+        "size_in_bytes": 224085,
+        "sha256_in_prefix": "38b6230aa4bee062cd34ee0ff6da173250899642b1937fc130896290b6bd91e3"
+      },
+      {
+        "_path": "ssl/cert.pem",
+        "path_type": "softlink",
+        "sha256": "38b6230aa4bee062cd34ee0ff6da173250899642b1937fc130896290b6bd91e3",
+        "size_in_bytes": 224085
+      }
+    ]
+  },
+  "link": {
+    "source": "/workspace/miniorge3/pkgs/ca-certificates-2019.8.28-0",
+    "type": 1
+  },
+  "requested_specs": [
+    "ca-certificates==2019.8.28=0"
+  ]
+}

@@ -1,0 +1,1 @@
+/workspace/svo_ws/devel/.private/svo_direct/share/svo_direct/cmake/svo_directConfig-version.cmake

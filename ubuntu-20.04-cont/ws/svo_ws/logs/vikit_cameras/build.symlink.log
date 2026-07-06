@@ -1,0 +1,4 @@
+Linked: (/workspace/svo_ws/devel/.private/vikit_cameras/lib/libvikit_cameras.so, /workspace/svo_ws/devel/lib/libvikit_cameras.so)
+Linked: (/workspace/svo_ws/devel/.private/vikit_cameras/lib/pkgconfig/vikit_cameras.pc, /workspace/svo_ws/devel/lib/pkgconfig/vikit_cameras.pc)
+Linked: (/workspace/svo_ws/devel/.private/vikit_cameras/share/vikit_cameras/cmake/vikit_camerasConfig.cmake, /workspace/svo_ws/devel/share/vikit_cameras/cmake/vikit_camerasConfig.cmake)
+Linked: (/workspace/svo_ws/devel/.private/vikit_cameras/share/vikit_cameras/cmake/vikit_camerasConfig-version.cmake, /workspace/svo_ws/devel/share/vikit_cameras/cmake/vikit_camerasConfig-version.cmake)

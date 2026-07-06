@@ -1,0 +1,8 @@
+prefix=/workspace/svo_ws/devel/.private/minkindr
+
+Name: minkindr
+Description: Description of minkindr
+Version: 1.0.0
+Cflags: -I/workspace/svo_ws/src/minkindr/minkindr/include
+Libs: -L${prefix}/lib 
+Requires: 

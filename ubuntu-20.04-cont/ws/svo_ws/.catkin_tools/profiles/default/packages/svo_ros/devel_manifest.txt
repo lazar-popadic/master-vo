@@ -1,0 +1,8 @@
+rpg_svo_pro_open/svo_ros
+/workspace/svo_ws/devel/.private/svo_ros/lib/libsvo_nodelet.so /workspace/svo_ws/devel/lib/libsvo_nodelet.so
+/workspace/svo_ws/devel/.private/svo_ros/lib/libsvo_ros.so /workspace/svo_ws/devel/lib/libsvo_ros.so
+/workspace/svo_ws/devel/.private/svo_ros/lib/svo_ros/svo_node /workspace/svo_ws/devel/lib/svo_ros/svo_node
+/workspace/svo_ws/devel/.private/svo_ros/lib/svo_ros/svo_benchmark /workspace/svo_ws/devel/lib/svo_ros/svo_benchmark
+/workspace/svo_ws/devel/.private/svo_ros/lib/pkgconfig/svo_ros.pc /workspace/svo_ws/devel/lib/pkgconfig/svo_ros.pc
+/workspace/svo_ws/devel/.private/svo_ros/share/svo_ros/cmake/svo_rosConfig-version.cmake /workspace/svo_ws/devel/share/svo_ros/cmake/svo_rosConfig-version.cmake
+/workspace/svo_ws/devel/.private/svo_ros/share/svo_ros/cmake/svo_rosConfig.cmake /workspace/svo_ws/devel/share/svo_ros/cmake/svo_rosConfig.cmake

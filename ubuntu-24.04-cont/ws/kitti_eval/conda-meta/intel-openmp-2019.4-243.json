@@ -1,0 +1,58 @@
+{
+  "name": "intel-openmp",
+  "version": "2019.4",
+  "build": "243",
+  "build_number": 243,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "subdir": "linux-64",
+  "fn": "intel-openmp-2019.4-243.conda",
+  "md5": "264d7675bc416bf7c1428ea2d48fa187",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/intel-openmp-2019.4-243.conda",
+  "sha256": "75d5764bddfbd3c183919911842aa789af810a0b56a7e2cfc5c34faee55462cd",
+  "depends": [],
+  "constrains": [],
+  "license": "proprietary - Intel",
+  "timestamp": 1559526508129,
+  "size": 746422,
+  "requested_spec": "intel-openmp==2019.4=243",
+  "package_tarball_full_path": "/workspace/miniorge3/pkgs/intel-openmp-2019.4-243.conda",
+  "extracted_package_dir": "/workspace/miniorge3/pkgs/intel-openmp-2019.4-243",
+  "files": [
+    "lib/libiomp5.so",
+    "lib/libiomp5_db.so",
+    "lib/libiompstubs5.so"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "lib/libiomp5.so",
+        "path_type": "hardlink",
+        "sha256": "8aa68c67805b565b1eb1bb54c6e5d9f46f2fe0401e0e79f091cc57dcc66282f5",
+        "size_in_bytes": 2178611,
+        "sha256_in_prefix": "8aa68c67805b565b1eb1bb54c6e5d9f46f2fe0401e0e79f091cc57dcc66282f5"
+      },
+      {
+        "_path": "lib/libiomp5_db.so",
+        "path_type": "hardlink",
+        "sha256": "fba0bd2a8f8ba07e329d39ae3b1578b58a202468fcc9727fb86657add3b217f7",
+        "size_in_bytes": 639965,
+        "sha256_in_prefix": "fba0bd2a8f8ba07e329d39ae3b1578b58a202468fcc9727fb86657add3b217f7"
+      },
+      {
+        "_path": "lib/libiompstubs5.so",
+        "path_type": "hardlink",
+        "sha256": "6a6e2b6926c85f397fdb1d7323088cb30e5c6e59019e9021a59e3b1a5223134c",
+        "size_in_bytes": 177087,
+        "sha256_in_prefix": "6a6e2b6926c85f397fdb1d7323088cb30e5c6e59019e9021a59e3b1a5223134c"
+      }
+    ]
+  },
+  "link": {
+    "source": "/workspace/miniorge3/pkgs/intel-openmp-2019.4-243",
+    "type": 1
+  },
+  "requested_specs": [
+    "intel-openmp==2019.4=243"
+  ]
+}

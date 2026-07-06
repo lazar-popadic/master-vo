@@ -1,9 +1,9 @@
 # Virtual environments
-pykitti/
-venv/
-env/
-.env/
-.venv/
+*/pykitti/
+*/venv/
+*/env/
+*/.env/
+*/.venv/
 
 # Python cache
 __pycache__/
@@ -21,12 +21,22 @@ __pycache__/
 Thumbs.db
 
 # KITTI dataset files
-ws/kitti/*
+*/ws/kitti/*
 
 # miniforge
-ws/miniorge3/*
-ws/miniforge3/*
-ws/Miniforge3-Linux-x86_64.sh
+*/ws/miniorge3/*
+*/ws/miniforge3/*
+*/ws/Miniforge3-Linux-x86_64.sh
 
 # TSformer-VO models
-ws/TSformer-VO/models/*
+*/ws/TSformer-VO/models/*
+/ubuntu-20.04-cont/ws/eee_01
+*.bag
+/ubuntu-20.04-cont/ws/orb_slam3_ws/build
+/ubuntu-20.04-cont/ws/orb_slam3_ws/.catkin_tools
+/ubuntu-20.04-cont/ws/orb_slam3_ws/devel
+/ubuntu-20.04-cont/ws/orb_slam3_ws/logs
+/ubuntu-20.04-cont/ws/bagvenv
+/ubuntu-20.04-cont/ws/svo_ws/build
+/ubuntu-20.04-cont/ws/svo_ws/logs
+/ubuntu-20.04-cont/ws/bags

@@ -1,0 +1,5 @@
+rpg_svo_pro_open/vikit/vikit_ros
+/workspace/svo_ws/devel/.private/vikit_ros/lib/libvikit_ros.so /workspace/svo_ws/devel/lib/libvikit_ros.so
+/workspace/svo_ws/devel/.private/vikit_ros/lib/pkgconfig/vikit_ros.pc /workspace/svo_ws/devel/lib/pkgconfig/vikit_ros.pc
+/workspace/svo_ws/devel/.private/vikit_ros/share/vikit_ros/cmake/vikit_rosConfig.cmake /workspace/svo_ws/devel/share/vikit_ros/cmake/vikit_rosConfig.cmake
+/workspace/svo_ws/devel/.private/vikit_ros/share/vikit_ros/cmake/vikit_rosConfig-version.cmake /workspace/svo_ws/devel/share/vikit_ros/cmake/vikit_rosConfig-version.cmake

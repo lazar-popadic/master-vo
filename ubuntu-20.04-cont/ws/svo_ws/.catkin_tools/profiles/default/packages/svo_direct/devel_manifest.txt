@@ -1,0 +1,9 @@
+rpg_svo_pro_open/svo_direct
+/workspace/svo_ws/devel/.private/svo_direct/lib/libsvo_direct.so /workspace/svo_ws/devel/lib/libsvo_direct.so
+/workspace/svo_ws/devel/.private/svo_direct/lib/svo_direct/svo_test_edgelet_direction /workspace/svo_ws/devel/lib/svo_direct/svo_test_edgelet_direction
+/workspace/svo_ws/devel/.private/svo_direct/lib/svo_direct/svo_test_edgelet_extraction /workspace/svo_ws/devel/lib/svo_direct/svo_test_edgelet_extraction
+/workspace/svo_ws/devel/.private/svo_direct/lib/svo_direct/svo_test_patch_score /workspace/svo_ws/devel/lib/svo_direct/svo_test_patch_score
+/workspace/svo_ws/devel/.private/svo_direct/lib/svo_direct/svo_test_feature_alignment /workspace/svo_ws/devel/lib/svo_direct/svo_test_feature_alignment
+/workspace/svo_ws/devel/.private/svo_direct/lib/pkgconfig/svo_direct.pc /workspace/svo_ws/devel/lib/pkgconfig/svo_direct.pc
+/workspace/svo_ws/devel/.private/svo_direct/share/svo_direct/cmake/svo_directConfig.cmake /workspace/svo_ws/devel/share/svo_direct/cmake/svo_directConfig.cmake
+/workspace/svo_ws/devel/.private/svo_direct/share/svo_direct/cmake/svo_directConfig-version.cmake /workspace/svo_ws/devel/share/svo_direct/cmake/svo_directConfig-version.cmake

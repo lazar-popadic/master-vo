@@ -1,0 +1,8 @@
+Symlinking /workspace/svo_ws/devel/lib/libnumpy_eigen_test.so
+Symlinking /workspace/svo_ws/devel/lib/libnumpy_eigen.so
+Symlinking /workspace/svo_ws/devel/lib/python3/dist-packages/numpy_eigen/libnumpy_eigen_test.so
+Symlinking /workspace/svo_ws/devel/lib/python3/dist-packages/numpy_eigen/libnumpy_eigen.so
+Symlinking /workspace/svo_ws/devel/lib/python3/dist-packages/numpy_eigen/__init__.py
+Symlinking /workspace/svo_ws/devel/lib/pkgconfig/numpy_eigen.pc
+Symlinking /workspace/svo_ws/devel/share/numpy_eigen/cmake/numpy_eigenConfig-version.cmake
+Symlinking /workspace/svo_ws/devel/share/numpy_eigen/cmake/numpy_eigenConfig.cmake

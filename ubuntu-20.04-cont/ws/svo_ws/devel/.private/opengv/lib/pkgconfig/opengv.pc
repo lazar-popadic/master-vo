@@ -1,0 +1,8 @@
+prefix=/workspace/svo_ws/devel/.private/opengv
+
+Name: opengv
+Description: Description of opengv
+Version: 1.0.0
+Cflags: -I/workspace/svo_ws/src/opengv/include
+Libs: -L${prefix}/lib -lopengv -lrandom_generators
+Requires: 

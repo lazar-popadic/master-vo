@@ -1,0 +1,5 @@
+Symlinking /workspace/svo_ws/devel/lib/python3/dist-packages/rqt_svo/__init__.py
+Symlinking /workspace/svo_ws/devel/lib/pkgconfig/rqt_svo.pc
+Symlinking /workspace/svo_ws/devel/bin/rqt_svo
+Symlinking /workspace/svo_ws/devel/share/rqt_svo/cmake/rqt_svoConfig.cmake
+Symlinking /workspace/svo_ws/devel/share/rqt_svo/cmake/rqt_svoConfig-version.cmake

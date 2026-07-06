@@ -1,0 +1,1 @@
+/workspace/svo_ws/devel/.private/vikit_solver/lib/pkgconfig/vikit_solver.pc

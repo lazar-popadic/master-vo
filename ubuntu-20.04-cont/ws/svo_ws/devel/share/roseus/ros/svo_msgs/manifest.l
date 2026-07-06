@@ -1,0 +1,1 @@
+/workspace/svo_ws/devel/.private/svo_msgs/share/roseus/ros/svo_msgs/manifest.l

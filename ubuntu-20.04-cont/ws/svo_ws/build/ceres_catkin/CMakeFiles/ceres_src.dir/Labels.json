@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/workspace/svo_ws/build/ceres_catkin/CMakeFiles/ceres_src"
+		},
+		{
+			"file" : "/workspace/svo_ws/build/ceres_catkin/CMakeFiles/ceres_src.rule"
+		},
+		{
+			"file" : "/workspace/svo_ws/build/ceres_catkin/CMakeFiles/ceres_src-complete.rule"
+		},
+		{
+			"file" : "/workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src-stamp/ceres_src-install.rule"
+		},
+		{
+			"file" : "/workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src-stamp/ceres_src-mkdir.rule"
+		},
+		{
+			"file" : "/workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src-stamp/ceres_src-download.rule"
+		},
+		{
+			"file" : "/workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src-stamp/ceres_src-update.rule"
+		},
+		{
+			"file" : "/workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src-stamp/ceres_src-patch.rule"
+		},
+		{
+			"file" : "/workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src-stamp/ceres_src-configure.rule"
+		},
+		{
+			"file" : "/workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src-stamp/ceres_src-build.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"ceres_src"
+		],
+		"name" : "ceres_src"
+	}
+}

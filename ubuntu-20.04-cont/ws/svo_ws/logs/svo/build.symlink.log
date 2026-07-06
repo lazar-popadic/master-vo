@@ -1,0 +1,4 @@
+Linked: (/workspace/svo_ws/devel/.private/svo/lib/libsvo.so, /workspace/svo_ws/devel/lib/libsvo.so)
+Linked: (/workspace/svo_ws/devel/.private/svo/lib/pkgconfig/svo.pc, /workspace/svo_ws/devel/lib/pkgconfig/svo.pc)
+Linked: (/workspace/svo_ws/devel/.private/svo/share/svo/cmake/svoConfig-version.cmake, /workspace/svo_ws/devel/share/svo/cmake/svoConfig-version.cmake)
+Linked: (/workspace/svo_ws/devel/.private/svo/share/svo/cmake/svoConfig.cmake, /workspace/svo_ws/devel/share/svo/cmake/svoConfig.cmake)

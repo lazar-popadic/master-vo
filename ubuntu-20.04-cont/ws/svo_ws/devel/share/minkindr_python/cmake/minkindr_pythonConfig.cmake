@@ -1,0 +1,1 @@
+/workspace/svo_ws/devel/.private/minkindr_python/share/minkindr_python/cmake/minkindr_pythonConfig.cmake

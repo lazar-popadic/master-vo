@@ -1,0 +1,129 @@
+FROM docker.io/ubuntu:20.04
+
+# Set environment variables to avoid interactive prompts during installation
+ENV DEBIAN_FRONTEND=noninteractive
+
+# Create ubuntu user
+RUN useradd -m -s /bin/bash ubuntu
+
+# Update package lists and install basic utilities
+RUN apt-get update && apt-get upgrade -y && \
+    apt-get install -y \
+    curl \
+    wget \
+    git \
+    vim \
+    nano \
+    htop \
+    net-tools \
+    iputils-ping \
+    build-essential \
+    software-properties-common \
+    apt-utils \
+    sudo \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+
+# Give ubuntu user passwordless sudo
+RUN echo "ubuntu ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers.d/ubuntu && \
+    chmod 0440 /etc/sudoers.d/ubuntu
+
+# Create mount point for workspace and set proper ownership
+RUN mkdir -p /workspace && \
+    chown -R ubuntu:ubuntu /workspace
+
+# Set working directory
+WORKDIR /workspace
+
+# Switch to ubuntu user
+USER ubuntu
+
+# Set locale
+RUN sudo apt-get update && \
+    sudo apt-get install -y locales && \
+    sudo locale-gen en_US.UTF-8 && \
+    sudo update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
+
+RUN sudo apt-get update && \
+    sudo apt-get install -y \
+    neovim \
+    ranger \
+    && sudo apt-get clean
+
+# X11 and GUI libraries
+RUN sudo apt-get update && \
+    sudo apt-get install -y \
+    x11-apps \
+    xauth \
+    libx11-6 \
+    libxext6 \
+    libxrender1 \
+    libxtst6 \
+    libxi6 \
+    libxkbcommon-x11-0 \
+    libgl1-mesa-dri \
+    libglx-mesa0 \
+    mesa-utils \
+    dbus-x11 \
+    && sudo apt-get clean
+
+# GTK support for GUI apps
+RUN sudo apt-get update && \
+    sudo apt-get install -y \
+    libgtk-3-0 \
+    libgtk-3-bin \
+    libcanberra-gtk3-module \
+    && sudo apt-get clean
+
+# Qt support for GUI apps
+RUN sudo apt-get update && \
+    sudo apt-get install -y \
+    libqt5core5a \
+    libqt5gui5 \
+    libqt5widgets5 \
+    qt5-gtk-platformtheme \
+    && sudo apt-get clean
+
+# Python GUI dependencies
+RUN sudo apt-get update && \
+    sudo apt-get install -y \
+    python3-tk \
+    python3-pyqt5 \
+    && sudo apt-get clean
+
+# SVO specific
+RUN sudo apt install -y \
+    libboost-all-dev \
+    libeigen3-dev 
+RUN sudo apt-get update && \
+    sudo apt-get install -y \
+    python3-opencv \
+    libopencv-dev \
+    && sudo apt-get clean
+
+# ROS 1 Noetic setup
+RUN sudo DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true \
+    apt-get install -y -o Dpkg::Pre-Install-Pkgs::=/bin/true \
+    keyboard-configuration && \
+    sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com --recv-keys F42ED6FBAB17C654 || true && \
+    sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu focal main" > /etc/apt/sources.list.d/ros-latest.list' && \
+    sudo apt-get update && \
+    sudo DEBIAN_FRONTEND=noninteractive apt-get install -y --allow-unauthenticated ros-noetic-desktop-full && \
+    sudo apt-get clean
+
+# Additional ROS build tools and libraries
+RUN sudo apt-get update && \
+    sudo apt-get install -y \
+    python3-catkin-tools \
+    python3-vcstool \
+    python3-osrf-pycommon \
+    libglew-dev \
+    libopencv-dev \
+    libyaml-cpp-dev \
+    libblas-dev \
+    liblapack-dev \
+    libsuitesparse-dev \
+    && sudo apt-get clean
+
+# Source ROS setup in bashrc
+RUN echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc

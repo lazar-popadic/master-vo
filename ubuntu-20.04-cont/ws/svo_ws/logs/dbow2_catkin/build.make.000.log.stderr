@@ -1,0 +1,26 @@
+Cloning into 'dbow2_src'...
+Warning: Permanently added the ECDSA host key for IP address '140.82.121.4' to the list of known hosts.
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+Cloning into 'dbow2_src'...
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+Cloning into 'dbow2_src'...
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+CMake Error at /workspace/svo_ws/build/dbow2_catkin/dbow2_src-prefix/tmp/dbow2_src-gitclone.cmake:31 (message):
+  Failed to clone repository: 'git@github.com:dorian3d/DBoW2.git'
+
+
+make[2]: *** [CMakeFiles/dbow2_src.dir/build.make:91: dbow2_src-prefix/src/dbow2_src-stamp/dbow2_src-download] Error 1
+make[1]: *** [CMakeFiles/Makefile2:306: CMakeFiles/dbow2_src.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2
