@@ -2,6 +2,7 @@ from bagpy import bagreader
 import pandas as pd
 import numpy as np
 import math
+import os
 
 
 def get_yaw_from_quaternion(x, y, z, w):
@@ -10,7 +11,6 @@ def get_yaw_from_quaternion(x, y, z, w):
     return math.atan2(siny_cosp, cosy_cosp)
 
 bag = "curve_sequence_medium"
-
 b = bagreader(f'../bags/{bag}.bag')
 
 csvfiles = []
@@ -29,7 +29,9 @@ result = pd.DataFrame({
         row['pose.pose.orientation.y'],
         row['pose.pose.orientation.z'],
         row['pose.pose.orientation.w']
-    ), axis=1)
+    ), axis=1),
+    'v': data['twist.twist.linear.x'],
+    'w': data['twist.twist.angular.z'],
 })
 
 print(result)
