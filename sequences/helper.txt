@@ -1,7 +1,0 @@
-18 56 str8 fast fast
-18 49 str8 fast
-18 41 str8 medium
-18 32 str8 slow
-18 21 curve medium
-18 14 curve fast
-17 55 curve slow
