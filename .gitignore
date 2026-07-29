@@ -41,3 +41,4 @@ Thumbs.db
 /ubuntu-20.04-cont/ws/bags
 /ubuntu-20.04-cont/ws/bagpy_venv
 *.ods#
+*.tar
