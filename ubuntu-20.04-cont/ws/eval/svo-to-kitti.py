@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """
 Convert SVO odometry .txt to KITTI format
-Usage: python svo_to_kitti.py odom.txt
-       python svo_to_kitti.py ../data/odom.txt
-       python svo_to_kitti.py /absolute/path/to/odom.txt
+Usage: python svo-to-kitti.py odom.txt
+       python svo-to-kitti.py ../data/odom.txt
+       python svo-to-kitti.py /absolute/path/to/odom.txt
 Output: <input_filename>_kitti.txt in same directory as input
 """
 

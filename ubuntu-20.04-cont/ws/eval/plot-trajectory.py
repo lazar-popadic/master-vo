@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
 Plot KITTI format trajectory in 2D top-down view
-Usage: python plot_trajectory.py <kitti_file.txt>
-Example: python plot_trajectory.py odom_kitti.txt
+Usage: python plot-trajectory.py <kitti_file.txt>
+Example: python plot-trajectory.py odom_kitti.txt
 """
 
 import numpy as np

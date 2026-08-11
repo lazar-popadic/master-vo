@@ -1,9 +1,7 @@
 #!/usr/bin/env python3
 """
-Convert GT .csv to KITTI format using VO timestamps
-Usage: python gt_to_kitti.py gt.csv odom.txt
-       python gt_to_kitti.py ../data/gt.csv ../data/odom.txt
-       python gt_to_kitti.py /absolute/path/to/gt.csv /absolute/path/to/odom.txt
+Convert GT .csv to KITTI format using ORB-SLAM3 trajectory timestamps
+Usage: python orb-gt-to-kitti.py gt.csv orb_trajectory.txt
 Output: <gt_filename>_kitti.txt in same directory as gt input
 """
 
@@ -25,8 +23,15 @@ def planar_to_transformation_matrix(x, y, yaw):
     T[0:3, 3] = [x, y, 0]
     return T[0:3, :]
 
-def interpolate_gt_to_vo_timestamps(gt_csv, vo_odom_txt):
-    # Get directory and base name from GT input path
+def parse_timestamp(ts_str):
+    ts_str_clean = ts_str.split('.')[0]
+    ts_int = int(ts_str_clean)
+    if ts_int > 1e12:
+        return ts_int / 1e9
+    else:
+        return float(ts_str)
+
+def interpolate_gt_to_vo_timestamps(gt_csv, vo_traj_txt):
     gt_dir = os.path.dirname(gt_csv)
     base_name = os.path.splitext(os.path.basename(gt_csv))[0]
     output_file = os.path.join(gt_dir, f"{base_name}_kitti.txt")
@@ -35,27 +40,35 @@ def interpolate_gt_to_vo_timestamps(gt_csv, vo_odom_txt):
     gt_df = gt_df.sort_values('timestamp')
     
     vo_data = []
-    with open(vo_odom_txt, 'r') as f:
+    
+    with open(vo_traj_txt, 'r') as f:
         for line in f:
             if line.startswith('#') or not line.strip():
                 continue
             parts = line.strip().split()
-            if len(parts) >= 9:
+            if len(parts) >= 1:
                 try:
-                    frame_id = int(parts[0])
-                    timestamp = float(parts[1])
-                    vo_data.append((frame_id, timestamp))
-                except:
+                    ts_str = parts[0]
+                    timestamp = parse_timestamp(ts_str)
+                    vo_data.append((len(vo_data), timestamp))
+                except Exception as e:
+                    print(f"Warning: Could not parse line: {line.strip()}")
                     continue
     
     if not vo_data:
-        print(f"Error: Could not read timestamps from {vo_odom_txt}")
+        print(f"Error: Could not read timestamps from {vo_traj_txt}")
+        print("First few lines of file:")
+        with open(vo_traj_txt, 'r') as f:
+            for i, line in enumerate(f):
+                if i < 5:
+                    print(f"  {line.strip()}")
         sys.exit(1)
     
     vo_df = pd.DataFrame(vo_data, columns=['frame_id', 'timestamp'])
     
     print(f"Loaded GT: {len(gt_df)} poses from {gt_csv}")
-    print(f"Loaded VO: {len(vo_df)} poses from {vo_odom_txt}")
+    print(f"Loaded VO: {len(vo_df)} poses from {vo_traj_txt}")
+    print(f"VO timestamp range: {vo_df['timestamp'].min():.6f} - {vo_df['timestamp'].max():.6f}")
     
     gt_t = gt_df['timestamp'].values
     gt_x = gt_df['x'].values
@@ -95,20 +108,19 @@ def interpolate_gt_to_vo_timestamps(gt_csv, vo_odom_txt):
 
 if __name__ == "__main__":
     if len(sys.argv) < 3:
-        print("Usage: python gt_to_kitti.py <gt_csv> <vo_odom_txt>")
-        print("Example: python gt_to_kitti.py gt.csv odom.txt")
-        print("         python gt_to_kitti.py ../data/gt.csv ../data/odom.txt")
+        print("Usage: python orb-gt-to-kitti.py <gt_csv> <orb_trajectory_txt>")
+        print("Example: python orb-gt-to-kitti.py gt.csv CameraTrajectory.txt")
         sys.exit(1)
     
     gt_csv = sys.argv[1]
-    vo_odom_txt = sys.argv[2]
+    vo_traj_txt = sys.argv[2]
     
     if not os.path.exists(gt_csv):
         print(f"Error: GT file '{gt_csv}' not found!")
         sys.exit(1)
     
-    if not os.path.exists(vo_odom_txt):
-        print(f"Error: VO file '{vo_odom_txt}' not found!")
+    if not os.path.exists(vo_traj_txt):
+        print(f"Error: VO file '{vo_traj_txt}' not found!")
         sys.exit(1)
     
-    interpolate_gt_to_vo_timestamps(gt_csv, vo_odom_txt)
+    interpolate_gt_to_vo_timestamps(gt_csv, vo_traj_txt)
