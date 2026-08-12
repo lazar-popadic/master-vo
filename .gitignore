@@ -42,3 +42,4 @@ Thumbs.db
 /ubuntu-20.04-cont/ws/bagpy_venv
 *.ods#
 *.tar
+/ubuntu-24.04-cont/ws/kitti-odom-eval/kitti_eval
