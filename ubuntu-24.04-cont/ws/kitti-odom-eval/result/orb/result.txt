@@ -1,0 +1,56 @@
+Sequence: 	 0 
+Trans. err. (%): 	 0.000 
+Rot. err. (deg/100m): 	 0.000 
+ATE (m): 	 0.420 
+RPE (m): 	 0.007 
+RPE (deg): 	 0.415 
+
+Sequence: 	 1 
+Trans. err. (%): 	 0.000 
+Rot. err. (deg/100m): 	 0.000 
+ATE (m): 	 0.494 
+RPE (m): 	 0.060 
+RPE (deg): 	 2.896 
+
+Sequence: 	 2 
+Trans. err. (%): 	 0.000 
+Rot. err. (deg/100m): 	 0.000 
+ATE (m): 	 0.075 
+RPE (m): 	 0.008 
+RPE (deg): 	 0.173 
+
+Sequence: 	 3 
+Trans. err. (%): 	 0.000 
+Rot. err. (deg/100m): 	 0.000 
+ATE (m): 	 0.066 
+RPE (m): 	 0.016 
+RPE (deg): 	 0.870 
+
+Sequence: 	 4 
+Trans. err. (%): 	 0.000 
+Rot. err. (deg/100m): 	 0.000 
+ATE (m): 	 0.165 
+RPE (m): 	 0.002 
+RPE (deg): 	 0.210 
+
+Sequence: 	 5 
+Trans. err. (%): 	 0.000 
+Rot. err. (deg/100m): 	 0.000 
+ATE (m): 	 0.145 
+RPE (m): 	 0.017 
+RPE (deg): 	 1.569 
+
+Sequence: 	 6 
+Trans. err. (%): 	 0.000 
+Rot. err. (deg/100m): 	 0.000 
+ATE (m): 	 0.093 
+RPE (m): 	 0.002 
+RPE (deg): 	 0.121 
+
+Sequence: 	 7 
+Trans. err. (%): 	 0.000 
+Rot. err. (deg/100m): 	 0.000 
+ATE (m): 	 0.056 
+RPE (m): 	 0.009 
+RPE (deg): 	 0.857 
+
