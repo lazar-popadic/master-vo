@@ -37,3 +37,10 @@ conda activate tsformer-vo
 conda env create -f kitti-odom-eval/requirement.yml -p kitti_eval
 conda activate /workspace/kitti_eval
 python eval_odom.py --result result/TSformer-VO_model3/ --align scale_7dof
+
+
+python3 eval_odom.py --result result/orb --gt result/orb/gt_poses --align scale_7dof
+python3 eval_odom.py --result result/svo --gt result/svo/gt_poses --align scale_7dof
+
+
+python3 scripts/convert_preds_to_kitti_and_plot.py --pred-dir TSformer-VO/models/Model3/checkpoint_model3_exp20 --args-pkl TSformer-VO/models/Model3/args.pkl --sequences 02 --out-dir TSformer-VO/models/Model3/checkpoint_model3_exp20 --plot 02 --move-to-data

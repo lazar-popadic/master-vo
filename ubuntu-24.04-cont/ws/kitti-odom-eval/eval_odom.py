@@ -16,10 +16,13 @@ parser.add_argument('--seqs',
                     type=int, 
                     help="sequences to be evaluated",
                     default=None)
+parser.add_argument('--gt', type=str, required=False,
+                    help="Ground-truth poses directory (default: dataset/kitti_odom/gt_poses/)",
+                    default="dataset/kitti_odom/gt_poses/")
 args = parser.parse_args()
 
 eval_tool = KittiEvalOdom()
-gt_dir = "dataset/kitti_odom/gt_poses/"
+gt_dir = args.gt
 result_dir = args.result
 
 continue_flag = input("Evaluate result in {}? [y/n]".format(result_dir))

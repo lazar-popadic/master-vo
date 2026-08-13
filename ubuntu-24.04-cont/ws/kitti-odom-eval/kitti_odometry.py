@@ -237,6 +237,25 @@ class KittiEvalOdom():
             fp.writelines(line_to_write+"\n")
         fp.close()
 
+    def save_poses_to_txt(self, poses, file_name, with_idx=True):
+        """Save poses to txt in KITTI format.
+        Args:
+            poses (dict): {idx: 4x4 array}
+            file_name (str): txt file for writing poses
+            with_idx (bool): include the frame index at beginning of each line
+        """
+        with open(file_name, 'w') as fp:
+            for frame_idx in sorted(poses.keys()):
+                pose = poses[frame_idx]
+                idx = int(frame_idx) if abs(frame_idx - int(frame_idx)) < 1e-6 else frame_idx
+                values = []
+                if with_idx:
+                    values.append(str(idx))
+                for row in range(3):
+                    for col in range(4):
+                        values.append(str(pose[row, col]))
+                fp.write(" ".join([str(v) for v in values]) + "\n")
+
     def compute_overall_err(self, seq_err):
         """Compute average translation & rotation errors
         Args:
@@ -281,20 +300,20 @@ class KittiEvalOdom():
         ax.set_aspect('equal')
 
         for key in plot_keys:
-            pos_xz = []
+            pos_xy = []
             frame_idx_list = sorted(poses_dict["Ours"].keys())
             for frame_idx in frame_idx_list:
-                # pose = np.linalg.inv(poses_dict[key][frame_idx_list[0]]) @ poses_dict[key][frame_idx]
                 pose = poses_dict[key][frame_idx]
-                pos_xz.append([pose[0, 3],  pose[2, 3]])
-            pos_xz = np.asarray(pos_xz)
-            plt.plot(pos_xz[:, 0],  pos_xz[:, 1], label=key)
+                # forward: x, left: y (plot ground plane x vs y)
+                pos_xy.append([pose[0, 3], pose[1, 3]])
+            pos_xy = np.asarray(pos_xy)
+            plt.plot(pos_xy[:, 0], pos_xy[:, 1], label=key)
 
         plt.legend(loc="upper right", prop={'size': fontsize_})
         plt.xticks(fontsize=fontsize_)
         plt.yticks(fontsize=fontsize_)
         plt.xlabel('x (m)', fontsize=fontsize_)
-        plt.ylabel('z (m)', fontsize=fontsize_)
+        plt.ylabel('y (m)', fontsize=fontsize_)
         fig.set_size_inches(10, 10)
         png_title = "sequence_{:02}".format(seq)
         fig_pdf = self.plot_path_dir + "/" + png_title + ".pdf"
@@ -522,6 +541,9 @@ class KittiEvalOdom():
             os.makedirs(self.plot_path_dir)
         if not os.path.exists(self.plot_error_dir):
             os.makedirs(self.plot_error_dir)
+        self.aligned_path_dir = result_dir + "/aligned"
+        if not os.path.exists(self.aligned_path_dir):
+            os.makedirs(self.aligned_path_dir)
 
         # Create evaluation list
         if seqs is None:
@@ -540,6 +562,32 @@ class KittiEvalOdom():
             poses_result = self.load_poses_from_txt(result_dir+"/"+file_name)
             poses_gt = self.load_poses_from_txt(self.gt_dir + "/" + file_name)
             self.result_file_name = result_dir+file_name
+            poses_gt_orig = copy.deepcopy(poses_gt)
+
+            # (GT left unchanged) -- automatic GT conversion removed to avoid
+            # corrupting already-correct GT pose files.
+
+            # Detect result plane orientation: some VO outputs use x-y plane (z~0).
+            # If result has near-zero z translations but non-zero y, convert result to x-z plane
+            # by swapping y and z axes so plotting/evaluation matches GT.
+            try:
+                res_trans = np.array([poses_result[k][:3, 3] for k in poses_result])
+                max_abs_z_r = np.max(np.abs(res_trans[:, 2]))
+                max_abs_y_r = np.max(np.abs(res_trans[:, 1]))
+                if max_abs_z_r < 1e-3 and max_abs_y_r > 1e-3:
+                    S = np.array([[1, 0, 0], [0, 0, 1], [0, 1, 0]])
+                    for cnt in list(poses_result.keys()):
+                        P = poses_result[cnt].copy()
+                        R = P[:3, :3]
+                        t = P[:3, 3]
+                        R_new = S @ R @ S.T
+                        t_new = S @ t
+                        P[:3, :3] = R_new
+                        P[:3, 3] = t_new
+                        poses_result[cnt] = P
+                    print('Notice: converted result poses from x-y to x-z plane for sequence', self.cur_seq)
+            except Exception:
+                pass
 
             # Pose alignment to first frame
             idx_0 = sorted(list(poses_result.keys()))[0]
@@ -571,6 +619,14 @@ class KittiEvalOdom():
                     poses_result[cnt][:3, 3] *= scale
                     if alignment=="7dof" or alignment=="6dof":
                         poses_result[cnt] = align_transformation @ poses_result[cnt]
+
+            # Restore aligned predictions to the original GT starting pose for saving and plotting
+            poses_result_world = {}
+            for cnt in poses_result:
+                poses_result_world[cnt] = gt_0 @ poses_result[cnt]
+
+            aligned_file = os.path.join(self.aligned_path_dir, file_name)
+            self.save_poses_to_txt(poses_result_world, aligned_file)
 
             # compute sequence errors
             seq_err = self.calc_sequence_errors(poses_gt, poses_result)
