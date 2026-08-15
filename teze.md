@@ -1,6 +1,6 @@
 ## Teze za master rad
 
-- proces prikupljanja podataka:
+- Proces prikupljanja podataka:
   - robot:
     - opis robota:
       - diferencijalni pogon
@@ -35,3 +35,17 @@
       - zasto ne moze na slepo da se koristi odometrija sa tockova kao GT
       - proracunate greske za svaku sekvencu
       - procenjivanje GT i aproksimacije koje su koriscene
+- Vizuelna odometrija:
+  - Teorija
+  - SVO
+  - ORB-SLAM3
+  - TSformer-VO
+  - Podman Ubuntu kontejneri sa ROS1
+- Rezultati algoritama VO na snimljenim sekvencama:
+  - SVO
+  - ORB-SLAM3
+  - TSformer-VO
+  - poredjenje: mogucnosti i ogranicenja
+- Diskusija:
+  - ocekivani rezultati na osnovu ogranicenja monokularne vizuelne odometrije
+  - primena monokularne vizuelne odometrije: vslam, fuzija (ekf: imu, wheel odom)
