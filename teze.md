@@ -1,0 +1,37 @@
+## Teze za master rad
+
+- proces prikupljanja podataka:
+  - robot:
+    - opis robota:
+      - diferencijalni pogon
+      - odometrija:
+        - teorija
+        - identifikovanje parametara
+      - polozaj kamere na robotu
+    - ros2:
+      - osnove: topici (teme)
+      - rosbags:
+        - princip rada
+        - snimanje
+        - reprodukovanje
+        - topici koji su cuvani u mojim sekvencama
+  - kamera:
+    - opis kamere: ov9281, global shutter, 120fps, monochrome, 720p
+    - kalibracija kamere i ostali parametri:
+      - teorija o parametrima kamere
+      - proces kalibracije sa charuco tablom
+      - ostala bitna podesavanja: exposure time, contrast, gamma...
+  - sekvence:
+    - fizicko okruzenje:
+      - G3
+      - sto za eurobot
+    - opis sekvenci:
+      - iskljucivo od pravolinijskih translacija i ciste rotacije
+      - sa krivolinijskim putanjama
+      - 2 seta maksimalnih brzina za obe sekvence
+      - objasnjenje za izbor sekvenci
+    - izvlacenje GT iz sekvenci:
+      - stackovanje u zid
+      - zasto ne moze na slepo da se koristi odometrija sa tockova kao GT
+      - proracunate greske za svaku sekvencu
+      - procenjivanje GT i aproksimacije koje su koriscene
