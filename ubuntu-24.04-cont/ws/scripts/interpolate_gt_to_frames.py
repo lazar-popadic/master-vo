@@ -3,11 +3,12 @@
 Interpolate planar ground-truth CSV (timestamp,x,y,phi,...) to per-frame KITTI poses.
 Assumptions:
 - CSV has a header and columns: timestamp,x,y,phi (or similar: --ts-col, --x-col, --y-col, --phi-col)
-- Frames are in data/sequences_jpg/<seq>/image_<camera>/ and named %06d.jpg starting at 000000.jpg
+- If real frame folders exist, they can be used to determine the output length; otherwise the script
+  simply interpolates across the GT timestamp span at the requested FPS.
 - Default fps is 120. If video start time differs from first GT timestamp, pass --start-offset (seconds)
 
 Example:
-  python3 scripts/interpolate_gt_to_frames.py --sequence 30 --csv kitti/dataset/poses.csv/30.csv --fps 120
+  python3 scripts/interpolate_gt_to_frames.py --sequence 30 --csv results/TSformer-VO/gt_poses/30.csv --fps 120 --has-header --user-to-kitti
 
 Options:
   --user-to-kitti : apply axis transform for your frame convention (X forward, Y left, Z up) -> KITTI
@@ -75,12 +76,18 @@ def main():
     phis_un = unwrap_angles(phis)
 
     frames_dir = Path(args.frames_root) / seq / f"image_{args.camera}"
-    if not frames_dir.exists():
-        raise SystemExit(f"Frames folder not found: {frames_dir}")
-    img_files = sorted(frames_dir.glob('*.jpg'))
-    n_frames = len(img_files)
-    if n_frames == 0:
-        raise SystemExit('No frames found')
+    if frames_dir.exists():
+        img_files = sorted(frames_dir.glob('*.jpg'))
+        n_frames = len(img_files)
+        if n_frames == 0:
+            raise SystemExit(f'No frames found in {frames_dir}')
+    else:
+        # For GT-only interpolation, derive the output length from the CSV timestamps instead of
+        # requiring a matching image sequence on disk.
+        duration = float(ts[-1] - ts[0]) if len(ts) > 1 else 0.0
+        n_frames = int(np.ceil(duration * args.fps)) + 1
+        if n_frames <= 0:
+            n_frames = 1
 
     # build frame timestamps: start at first GT ts + offset, step = 1/fps
     t0 = ts[0] + args.start_offset
