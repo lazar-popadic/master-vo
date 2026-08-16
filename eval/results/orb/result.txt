@@ -13,15 +13,15 @@ RPE (m): 	 0.060
 RPE (deg): 	 2.896 
 
 Sequence: 	 2 
-Trans. err. (%): 	 0.000 
-Rot. err. (deg/100m): 	 0.000 
+Trans. err. (%): 	 1.861 
+Rot. err. (deg/100m): 	 58.206 
 ATE (m): 	 0.075 
 RPE (m): 	 0.008 
 RPE (deg): 	 0.173 
 
 Sequence: 	 3 
-Trans. err. (%): 	 0.000 
-Rot. err. (deg/100m): 	 0.000 
+Trans. err. (%): 	 1.465 
+Rot. err. (deg/100m): 	 52.507 
 ATE (m): 	 0.066 
 RPE (m): 	 0.016 
 RPE (deg): 	 0.870 

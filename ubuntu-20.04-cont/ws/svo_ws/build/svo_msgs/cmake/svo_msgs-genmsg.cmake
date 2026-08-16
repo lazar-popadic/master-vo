@@ -19,12 +19,12 @@ add_custom_target(svo_msgs_generate_messages ALL)
 
 get_filename_component(_filename "/workspace/svo_ws/src/rpg_svo_pro_open/svo_msgs/msg/DenseInput.msg" NAME_WE)
 add_custom_target(_svo_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "svo_msgs" "/workspace/svo_ws/src/rpg_svo_pro_open/svo_msgs/msg/DenseInput.msg" "geometry_msgs/Pose:geometry_msgs/Quaternion:std_msgs/Header:sensor_msgs/Image:geometry_msgs/Point"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "svo_msgs" "/workspace/svo_ws/src/rpg_svo_pro_open/svo_msgs/msg/DenseInput.msg" "geometry_msgs/Pose:geometry_msgs/Quaternion:geometry_msgs/Point:sensor_msgs/Image:std_msgs/Header"
 )
 
 get_filename_component(_filename "/workspace/svo_ws/src/rpg_svo_pro_open/svo_msgs/msg/DenseInputWithFeatures.msg" NAME_WE)
 add_custom_target(_svo_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "svo_msgs" "/workspace/svo_ws/src/rpg_svo_pro_open/svo_msgs/msg/DenseInputWithFeatures.msg" "geometry_msgs/Pose:geometry_msgs/Quaternion:svo_msgs/Feature:std_msgs/Header:sensor_msgs/Image:geometry_msgs/Point"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "svo_msgs" "/workspace/svo_ws/src/rpg_svo_pro_open/svo_msgs/msg/DenseInputWithFeatures.msg" "geometry_msgs/Pose:geometry_msgs/Quaternion:geometry_msgs/Point:svo_msgs/Feature:sensor_msgs/Image:std_msgs/Header"
 )
 
 get_filename_component(_filename "/workspace/svo_ws/src/rpg_svo_pro_open/svo_msgs/msg/Feature.msg" NAME_WE)
@@ -39,7 +39,7 @@ add_custom_target(_svo_msgs_generate_messages_check_deps_${_filename}
 
 get_filename_component(_filename "/workspace/svo_ws/src/rpg_svo_pro_open/svo_msgs/msg/NbvTrajectory.msg" NAME_WE)
 add_custom_target(_svo_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "svo_msgs" "/workspace/svo_ws/src/rpg_svo_pro_open/svo_msgs/msg/NbvTrajectory.msg" "geometry_msgs/Pose:geometry_msgs/Quaternion:geometry_msgs/Point:std_msgs/Header"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "svo_msgs" "/workspace/svo_ws/src/rpg_svo_pro_open/svo_msgs/msg/NbvTrajectory.msg" "geometry_msgs/Quaternion:geometry_msgs/Point:std_msgs/Header:geometry_msgs/Pose"
 )
 
 #
@@ -51,13 +51,13 @@ add_custom_target(_svo_msgs_generate_messages_check_deps_${_filename}
 _generate_msg_cpp(svo_msgs
   "/workspace/svo_ws/src/rpg_svo_pro_open/svo_msgs/msg/DenseInput.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/svo_msgs
 )
 _generate_msg_cpp(svo_msgs
   "/workspace/svo_ws/src/rpg_svo_pro_open/svo_msgs/msg/DenseInputWithFeatures.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/workspace/svo_ws/src/rpg_svo_pro_open/svo_msgs/msg/Feature.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/workspace/svo_ws/src/rpg_svo_pro_open/svo_msgs/msg/Feature.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/svo_msgs
 )
 _generate_msg_cpp(svo_msgs
@@ -75,7 +75,7 @@ _generate_msg_cpp(svo_msgs
 _generate_msg_cpp(svo_msgs
   "/workspace/svo_ws/src/rpg_svo_pro_open/svo_msgs/msg/NbvTrajectory.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/svo_msgs
 )
 
@@ -116,13 +116,13 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS svo_msgs_generate_messages_cpp)
 _generate_msg_eus(svo_msgs
   "/workspace/svo_ws/src/rpg_svo_pro_open/svo_msgs/msg/DenseInput.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/svo_msgs
 )
 _generate_msg_eus(svo_msgs
   "/workspace/svo_ws/src/rpg_svo_pro_open/svo_msgs/msg/DenseInputWithFeatures.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/workspace/svo_ws/src/rpg_svo_pro_open/svo_msgs/msg/Feature.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/workspace/svo_ws/src/rpg_svo_pro_open/svo_msgs/msg/Feature.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/svo_msgs
 )
 _generate_msg_eus(svo_msgs
@@ -140,7 +140,7 @@ _generate_msg_eus(svo_msgs
 _generate_msg_eus(svo_msgs
   "/workspace/svo_ws/src/rpg_svo_pro_open/svo_msgs/msg/NbvTrajectory.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/svo_msgs
 )
 
@@ -181,13 +181,13 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS svo_msgs_generate_messages_eus)
 _generate_msg_lisp(svo_msgs
   "/workspace/svo_ws/src/rpg_svo_pro_open/svo_msgs/msg/DenseInput.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/svo_msgs
 )
 _generate_msg_lisp(svo_msgs
   "/workspace/svo_ws/src/rpg_svo_pro_open/svo_msgs/msg/DenseInputWithFeatures.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/workspace/svo_ws/src/rpg_svo_pro_open/svo_msgs/msg/Feature.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/workspace/svo_ws/src/rpg_svo_pro_open/svo_msgs/msg/Feature.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/svo_msgs
 )
 _generate_msg_lisp(svo_msgs
@@ -205,7 +205,7 @@ _generate_msg_lisp(svo_msgs
 _generate_msg_lisp(svo_msgs
   "/workspace/svo_ws/src/rpg_svo_pro_open/svo_msgs/msg/NbvTrajectory.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/svo_msgs
 )
 
@@ -246,13 +246,13 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS svo_msgs_generate_messages_lisp)
 _generate_msg_nodejs(svo_msgs
   "/workspace/svo_ws/src/rpg_svo_pro_open/svo_msgs/msg/DenseInput.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/svo_msgs
 )
 _generate_msg_nodejs(svo_msgs
   "/workspace/svo_ws/src/rpg_svo_pro_open/svo_msgs/msg/DenseInputWithFeatures.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/workspace/svo_ws/src/rpg_svo_pro_open/svo_msgs/msg/Feature.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/workspace/svo_ws/src/rpg_svo_pro_open/svo_msgs/msg/Feature.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/svo_msgs
 )
 _generate_msg_nodejs(svo_msgs
@@ -270,7 +270,7 @@ _generate_msg_nodejs(svo_msgs
 _generate_msg_nodejs(svo_msgs
   "/workspace/svo_ws/src/rpg_svo_pro_open/svo_msgs/msg/NbvTrajectory.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/svo_msgs
 )
 
@@ -311,13 +311,13 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS svo_msgs_generate_messages_nodejs)
 _generate_msg_py(svo_msgs
   "/workspace/svo_ws/src/rpg_svo_pro_open/svo_msgs/msg/DenseInput.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/svo_msgs
 )
 _generate_msg_py(svo_msgs
   "/workspace/svo_ws/src/rpg_svo_pro_open/svo_msgs/msg/DenseInputWithFeatures.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/workspace/svo_ws/src/rpg_svo_pro_open/svo_msgs/msg/Feature.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/workspace/svo_ws/src/rpg_svo_pro_open/svo_msgs/msg/Feature.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/svo_msgs
 )
 _generate_msg_py(svo_msgs
@@ -335,7 +335,7 @@ _generate_msg_py(svo_msgs
 _generate_msg_py(svo_msgs
   "/workspace/svo_ws/src/rpg_svo_pro_open/svo_msgs/msg/NbvTrajectory.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/svo_msgs
 )
 

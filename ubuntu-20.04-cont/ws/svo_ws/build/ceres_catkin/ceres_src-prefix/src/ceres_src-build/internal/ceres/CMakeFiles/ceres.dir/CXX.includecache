@@ -1776,28 +1776,6 @@ ceres/internal/disable_warnings.h
 ceres/internal/reenable_warnings.h
 /workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src/include/ceres/ceres/internal/reenable_warnings.h
 
-/workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src/include/ceres/version.h
-
-/workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src/internal/ceres/array_utils.cc
-ceres/array_utils.h
-/workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src/internal/ceres/ceres/array_utils.h
-algorithm
--
-cmath
--
-cstddef
--
-string
--
-vector
--
-ceres/fpclassify.h
-/workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src/internal/ceres/ceres/fpclassify.h
-ceres/stringprintf.h
-/workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src/internal/ceres/ceres/stringprintf.h
-ceres/types.h
-/workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src/internal/ceres/ceres/types.h
-
 /workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src/internal/ceres/array_utils.h
 string
 -
@@ -1962,10 +1940,6 @@ ceres/internal/scoped_ptr.h
 ceres/types.h
 /workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src/internal/ceres/ceres/types.h
 
-/workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src/internal/ceres/block_random_access_matrix.cc
-ceres/block_random_access_matrix.h
-/workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src/internal/ceres/ceres/block_random_access_matrix.h
-
 /workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src/internal/ceres/block_random_access_matrix.h
 ceres/mutex.h
 /workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src/internal/ceres/ceres/mutex.h
@@ -2055,10 +2029,6 @@ ceres/internal/macros.h
 /workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src/internal/ceres/ceres/internal/macros.h
 ceres/internal/scoped_ptr.h
 /workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src/internal/ceres/ceres/internal/scoped_ptr.h
-
-/workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src/internal/ceres/block_structure.cc
-ceres/block_structure.h
-/workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src/internal/ceres/ceres/block_structure.h
 
 /workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src/internal/ceres/block_structure.h
 vector
@@ -2866,12 +2836,6 @@ string
 ceres/internal/port.h
 /workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src/internal/ceres/ceres/internal/port.h
 
-/workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src/internal/ceres/function_sample.cc
-ceres/function_sample.h
-/workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src/internal/ceres/ceres/function_sample.h
-ceres/stringprintf.h
-/workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src/internal/ceres/ceres/stringprintf.h
-
 /workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src/internal/ceres/function_sample.h
 string
 -
@@ -3434,14 +3398,6 @@ glog/logging.h
 Eigen/Dense
 /workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src/internal/ceres/Eigen/Dense
 
-/workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src/internal/ceres/is_close.cc
-ceres/is_close.h
-/workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src/internal/ceres/ceres/is_close.h
-algorithm
--
-cmath
--
-
 /workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src/internal/ceres/is_close.h
 
 /workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src/internal/ceres/iterative_schur_complement_solver.cc
@@ -3720,10 +3676,6 @@ ceres/internal/port.h
 ceres/internal/scoped_ptr.h
 /workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src/internal/ceres/ceres/internal/scoped_ptr.h
 
-/workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src/internal/ceres/linear_operator.cc
-ceres/linear_operator.h
-/workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src/internal/ceres/ceres/linear_operator.h
-
 /workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src/internal/ceres/linear_operator.h
 ceres/types.h
 /workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src/internal/ceres/ceres/types.h
@@ -3929,10 +3881,6 @@ ceres/thread_token_provider.h
 /workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src/internal/ceres/ceres/thread_token_provider.h
 glog/logging.h
 /workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src/internal/ceres/glog/logging.h
-
-/workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src/internal/ceres/parallel_utils.cc
-ceres/parallel_utils.h
-/workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src/internal/ceres/ceres/parallel_utils.h
 
 /workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src/internal/ceres/parallel_utils.h
 
@@ -4708,22 +4656,6 @@ ceres/types.h
 ceres/wall_time.h
 /workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src/internal/ceres/ceres/wall_time.h
 
-/workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src/internal/ceres/solver_utils.cc
-string
--
-ceres/internal/config.h
-/workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src/internal/ceres/ceres/internal/config.h
-Eigen/Core
-/workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src/internal/ceres/Eigen/Core
-tbb/tbb_stddef.h
-/workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src/internal/ceres/tbb/tbb_stddef.h
-ceres/internal/port.h
-/workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src/internal/ceres/ceres/internal/port.h
-ceres/solver_utils.h
-/workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src/internal/ceres/ceres/solver_utils.h
-ceres/version.h
-/workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src/internal/ceres/ceres/version.h
-
 /workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src/internal/ceres/solver_utils.h
 algorithm
 -
@@ -4751,10 +4683,6 @@ ceres/linear_solver.h
 /workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src/internal/ceres/ceres/linear_solver.h
 glog/logging.h
 /workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src/internal/ceres/glog/logging.h
-
-/workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src/internal/ceres/sparse_matrix.cc
-ceres/sparse_matrix.h
-/workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src/internal/ceres/ceres/sparse_matrix.h
 
 /workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src/internal/ceres/sparse_matrix.h
 cstdio
@@ -4804,45 +4732,9 @@ ceres/internal/macros.h
 ceres/linear_solver.h
 /workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src/internal/ceres/ceres/linear_solver.h
 
-/workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src/internal/ceres/split.cc
-ceres/split.h
-/workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src/internal/ceres/ceres/split.h
-iterator
--
-string
--
-vector
--
-ceres/internal/port.h
-/workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src/internal/ceres/ceres/internal/port.h
-
-/workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src/internal/ceres/split.h
-string
--
-vector
--
-ceres/internal/port.h
-/workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src/internal/ceres/ceres/internal/port.h
-
 /workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src/internal/ceres/stl_util.h
 algorithm
 -
-
-/workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src/internal/ceres/stringprintf.cc
-ceres/stringprintf.h
-/workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src/internal/ceres/ceres/stringprintf.h
-cerrno
--
-cstdarg
--
-cstdio
--
-string
--
-vector
--
-ceres/internal/port.h
-/workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src/internal/ceres/ceres/internal/port.h
 
 /workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src/internal/ceres/stringprintf.h
 cstdarg

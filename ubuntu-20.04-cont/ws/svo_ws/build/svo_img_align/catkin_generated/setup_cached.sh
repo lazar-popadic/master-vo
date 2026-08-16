@@ -8,6 +8,8 @@
 
 # modified environment variables
 export CMAKE_PREFIX_PATH="/workspace/svo_ws/devel/.private/svo_img_align:$CMAKE_PREFIX_PATH"
+export LD_LIBRARY_PATH="/workspace/svo_ws/devel/.private/svo_img_align/lib:$LD_LIBRARY_PATH"
+export PKG_CONFIG_PATH="/workspace/svo_ws/devel/.private/svo_img_align/lib/pkgconfig:$PKG_CONFIG_PATH"
 export PWD='/workspace/svo_ws/build/svo_img_align'
 export ROSLISP_PACKAGE_DIRECTORIES="/workspace/svo_ws/devel/.private/svo_img_align/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
 export ROS_PACKAGE_PATH="/workspace/svo_ws/src/rpg_svo_pro_open/svo_img_align:$ROS_PACKAGE_PATH"

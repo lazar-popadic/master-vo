@@ -8,8 +8,8 @@
 
 # modified environment variables
 export CMAKE_PREFIX_PATH="/workspace/svo_ws/devel/.private/fast:$CMAKE_PREFIX_PATH"
-export PATH="/workspace/svo_ws/devel/bin:$PATH"
+export LD_LIBRARY_PATH="/workspace/svo_ws/devel/.private/fast/lib:$LD_LIBRARY_PATH"
+export PKG_CONFIG_PATH="/workspace/svo_ws/devel/.private/fast/lib/pkgconfig:$PKG_CONFIG_PATH"
 export PWD='/workspace/svo_ws/build/fast'
-export PYTHONPATH="/workspace/svo_ws/devel/lib/python3/dist-packages:$PYTHONPATH"
 export ROSLISP_PACKAGE_DIRECTORIES="/workspace/svo_ws/devel/.private/fast/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
 export ROS_PACKAGE_PATH="/workspace/svo_ws/src/fast_neon:$ROS_PACKAGE_PATH"

@@ -144,6 +144,10 @@ file(INSTALL DESTINATION "/workspace/svo_ws/install" TYPE FILE FILES "/workspace
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/svo_ros" TYPE PROGRAM FILES "/workspace/svo_ws/src/rpg_svo_pro_open/svo_ros/scripts/pose_logger.py")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libsvo_ros.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libsvo_ros.so")
     file(RPATH_CHECK

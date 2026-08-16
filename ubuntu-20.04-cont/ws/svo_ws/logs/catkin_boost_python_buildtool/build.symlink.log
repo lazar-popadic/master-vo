@@ -1,3 +1,3 @@
-Symlinking /workspace/svo_ws/devel/lib/pkgconfig/catkin_boost_python_buildtool.pc
-Symlinking /workspace/svo_ws/devel/share/catkin_boost_python_buildtool/cmake/catkin_boost_python_buildtoolConfig-version.cmake
-Symlinking /workspace/svo_ws/devel/share/catkin_boost_python_buildtool/cmake/catkin_boost_python_buildtoolConfig.cmake
+Linked: (/workspace/svo_ws/devel/.private/catkin_boost_python_buildtool/lib/pkgconfig/catkin_boost_python_buildtool.pc, /workspace/svo_ws/devel/lib/pkgconfig/catkin_boost_python_buildtool.pc)
+Linked: (/workspace/svo_ws/devel/.private/catkin_boost_python_buildtool/share/catkin_boost_python_buildtool/cmake/catkin_boost_python_buildtoolConfig-version.cmake, /workspace/svo_ws/devel/share/catkin_boost_python_buildtool/cmake/catkin_boost_python_buildtoolConfig-version.cmake)
+Linked: (/workspace/svo_ws/devel/.private/catkin_boost_python_buildtool/share/catkin_boost_python_buildtool/cmake/catkin_boost_python_buildtoolConfig.cmake, /workspace/svo_ws/devel/share/catkin_boost_python_buildtool/cmake/catkin_boost_python_buildtoolConfig.cmake)

@@ -9,6 +9,7 @@
 # modified environment variables
 export CMAKE_PREFIX_PATH="/workspace/svo_ws/devel/.private/vikit_py:$CMAKE_PREFIX_PATH"
 export LD_LIBRARY_PATH="/workspace/svo_ws/devel/.private/vikit_py/lib:$LD_LIBRARY_PATH"
+export PKG_CONFIG_PATH="/workspace/svo_ws/devel/.private/vikit_py/lib/pkgconfig:$PKG_CONFIG_PATH"
 export PWD='/workspace/svo_ws/build/vikit_py'
 export PYTHONPATH="/workspace/svo_ws/devel/.private/vikit_py/lib/python3/dist-packages:$PYTHONPATH"
 export ROSLISP_PACKAGE_DIRECTORIES="/workspace/svo_ws/devel/.private/vikit_py/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"

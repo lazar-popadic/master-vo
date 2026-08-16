@@ -1172,12 +1172,6 @@ kindr/minimal/quat-transformation.h
 numpy_eigen/boost_python_headers.hpp
 -
 
-/workspace/svo_ws/src/minkindr/minkindr_python/src/module.cpp
-numpy_eigen/boost_python_headers.hpp
--
-boost/python/suite/indexing/vector_indexing_suite.hpp
--
-
 /workspace/svo_ws/src/numpy_eigen/include/numpy_eigen/boost_python_headers.hpp
 Eigen/Core
 -

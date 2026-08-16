@@ -2674,12 +2674,6 @@ vikit/performance_monitor.h
 svo/direct/matcher.h
 -
 
-/workspace/svo_ws/src/rpg_svo_pro_open/svo_direct/include/svo/direct/elder_zucker.h
-vector
--
-opencv2/core/core.hpp
--
-
 /workspace/svo_ws/src/rpg_svo_pro_open/svo_direct/include/svo/direct/feature_alignment.h
 Eigen/Core
 -
@@ -2788,18 +2782,6 @@ svo/direct/matcher.h
 svo/direct/feature_detection.h
 -
 svo/direct/feature_detection_utils.h
--
-
-/workspace/svo_ws/src/rpg_svo_pro_open/svo_direct/src/elder_zucker.cpp
-svo/direct/elder_zucker.h
--
-tmmintrin.h
--
-boost/math/special_functions/erf.hpp
--
-opencv2/imgproc/imgproc.hpp
--
-opencv2/highgui/highgui.hpp
 -
 
 /workspace/svo_ws/src/rpg_svo_pro_open/svo_direct/src/feature_alignment.cpp

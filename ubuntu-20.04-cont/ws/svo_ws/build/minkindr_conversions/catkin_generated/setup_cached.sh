@@ -8,6 +8,8 @@
 
 # modified environment variables
 export CMAKE_PREFIX_PATH="/workspace/svo_ws/devel/.private/minkindr_conversions:$CMAKE_PREFIX_PATH"
+export LD_LIBRARY_PATH="/workspace/svo_ws/devel/.private/minkindr_conversions/lib:$LD_LIBRARY_PATH"
+export PKG_CONFIG_PATH="/workspace/svo_ws/devel/.private/minkindr_conversions/lib/pkgconfig:$PKG_CONFIG_PATH"
 export PWD='/workspace/svo_ws/build/minkindr_conversions'
 export ROSLISP_PACKAGE_DIRECTORIES="/workspace/svo_ws/devel/.private/minkindr_conversions/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
 export ROS_PACKAGE_PATH="/workspace/svo_ws/src/minkindr_ros/minkindr_conversions:$ROS_PACKAGE_PATH"

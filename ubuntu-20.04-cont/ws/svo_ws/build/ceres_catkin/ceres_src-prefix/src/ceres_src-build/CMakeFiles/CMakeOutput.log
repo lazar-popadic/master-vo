@@ -1067,3 +1067,105 @@ Source file was:
                                 std::fmin(1.0, 1.0);
                                 return 0;
                              }
+Determining if the include file unordered_map exists passed with the following output:
+Change Dir: /workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_04775/fast && make[3]: Entering directory '/workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src-build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_04775.dir/build.make CMakeFiles/cmTC_04775.dir/build
+make[4]: Entering directory '/workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src-build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_04775.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++    -fPIC -fopenmp -fPIC -fopenmp   -o CMakeFiles/cmTC_04775.dir/CheckIncludeFile.cxx.o -c /workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src-build/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+Linking CXX executable cmTC_04775
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_04775.dir/link.txt --verbose=1
+/usr/bin/c++  -fPIC -fopenmp -fPIC -fopenmp    -rdynamic CMakeFiles/cmTC_04775.dir/CheckIncludeFile.cxx.o  -o cmTC_04775 
+make[4]: Leaving directory '/workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src-build/CMakeFiles/CMakeTmp'
+make[3]: Leaving directory '/workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src-build/CMakeFiles/CMakeTmp'
+
+
+
+Performing C++ SOURCE FILE Test HAVE_UNORDERED_MAP_IN_STD_NAMESPACE succeeded with the following output:
+Change Dir: /workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_6a1af/fast && make[3]: Entering directory '/workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src-build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_6a1af.dir/build.make CMakeFiles/cmTC_6a1af.dir/build
+make[4]: Entering directory '/workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src-build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_6a1af.dir/src.cxx.o
+/usr/bin/c++    -fPIC -fopenmp -DHAVE_UNORDERED_MAP_IN_STD_NAMESPACE -fPIC -fopenmp   -o CMakeFiles/cmTC_6a1af.dir/src.cxx.o -c /workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src-build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_6a1af
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6a1af.dir/link.txt --verbose=1
+/usr/bin/c++  -fPIC -fopenmp -DHAVE_UNORDERED_MAP_IN_STD_NAMESPACE -fPIC -fopenmp    -rdynamic CMakeFiles/cmTC_6a1af.dir/src.cxx.o  -o cmTC_6a1af 
+make[4]: Leaving directory '/workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src-build/CMakeFiles/CMakeTmp'
+make[3]: Leaving directory '/workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src-build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <unordered_map>
+                               int main() {
+                                 std::unordered_map<int, int> map;
+                                 return 0;
+                               }
+Determining if the include file memory exists passed with the following output:
+Change Dir: /workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_4cdeb/fast && make[3]: Entering directory '/workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src-build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_4cdeb.dir/build.make CMakeFiles/cmTC_4cdeb.dir/build
+make[4]: Entering directory '/workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src-build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_4cdeb.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++    -fPIC -fopenmp -fPIC -fopenmp   -o CMakeFiles/cmTC_4cdeb.dir/CheckIncludeFile.cxx.o -c /workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src-build/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+Linking CXX executable cmTC_4cdeb
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4cdeb.dir/link.txt --verbose=1
+/usr/bin/c++  -fPIC -fopenmp -fPIC -fopenmp    -rdynamic CMakeFiles/cmTC_4cdeb.dir/CheckIncludeFile.cxx.o  -o cmTC_4cdeb 
+make[4]: Leaving directory '/workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src-build/CMakeFiles/CMakeTmp'
+make[3]: Leaving directory '/workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src-build/CMakeFiles/CMakeTmp'
+
+
+
+Performing C++ SOURCE FILE Test HAVE_SHARED_PTR_IN_STD_NAMESPACE succeeded with the following output:
+Change Dir: /workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_b4ffe/fast && make[3]: Entering directory '/workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src-build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_b4ffe.dir/build.make CMakeFiles/cmTC_b4ffe.dir/build
+make[4]: Entering directory '/workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src-build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_b4ffe.dir/src.cxx.o
+/usr/bin/c++    -fPIC -fopenmp -DHAVE_SHARED_PTR_IN_STD_NAMESPACE -fPIC -fopenmp   -o CMakeFiles/cmTC_b4ffe.dir/src.cxx.o -c /workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src-build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_b4ffe
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b4ffe.dir/link.txt --verbose=1
+/usr/bin/c++  -fPIC -fopenmp -DHAVE_SHARED_PTR_IN_STD_NAMESPACE -fPIC -fopenmp    -rdynamic CMakeFiles/cmTC_b4ffe.dir/src.cxx.o  -o cmTC_b4ffe 
+make[4]: Leaving directory '/workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src-build/CMakeFiles/CMakeTmp'
+make[3]: Leaving directory '/workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src-build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <memory>
+                               int main() {
+                                 std::shared_ptr<int> int_ptr;
+                                 return 0;
+                               }
+Performing C++ SOURCE FILE Test CXX11_MATH_FUNCTIONS_FOUND succeeded with the following output:
+Change Dir: /workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_3581d/fast && make[3]: Entering directory '/workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src-build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_3581d.dir/build.make CMakeFiles/cmTC_3581d.dir/build
+make[4]: Entering directory '/workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src-build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_3581d.dir/src.cxx.o
+/usr/bin/c++    -fPIC -fopenmp -DCXX11_MATH_FUNCTIONS_FOUND -fPIC -fopenmp   -o CMakeFiles/cmTC_3581d.dir/src.cxx.o -c /workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src-build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_3581d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3581d.dir/link.txt --verbose=1
+/usr/bin/c++  -fPIC -fopenmp -DCXX11_MATH_FUNCTIONS_FOUND -fPIC -fopenmp    -rdynamic CMakeFiles/cmTC_3581d.dir/src.cxx.o  -o cmTC_3581d 
+make[4]: Leaving directory '/workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src-build/CMakeFiles/CMakeTmp'
+make[3]: Leaving directory '/workspace/svo_ws/build/ceres_catkin/ceres_src-prefix/src/ceres_src-build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <cmath>
+                             #include <cstddef>
+                             static constexpr size_t kMaxAlignBytes = alignof(std::max_align_t);
+                             int main() {
+                                std::cbrt(1.0);
+                                std::exp2(1.0);
+                                std::log2(1.0);
+                                std::hypot(1.0, 1.0);
+                                std::fmax(1.0, 1.0);
+                                std::fmin(1.0, 1.0);
+                                return 0;
+                             }

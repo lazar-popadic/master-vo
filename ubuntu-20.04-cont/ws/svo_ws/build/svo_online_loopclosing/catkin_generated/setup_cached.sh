@@ -8,6 +8,8 @@
 
 # modified environment variables
 export CMAKE_PREFIX_PATH="/workspace/svo_ws/devel/.private/svo_online_loopclosing:$CMAKE_PREFIX_PATH"
+export LD_LIBRARY_PATH="/workspace/svo_ws/devel/.private/svo_online_loopclosing/lib:$LD_LIBRARY_PATH"
+export PKG_CONFIG_PATH="/workspace/svo_ws/devel/.private/svo_online_loopclosing/lib/pkgconfig:$PKG_CONFIG_PATH"
 export PWD='/workspace/svo_ws/build/svo_online_loopclosing'
 export ROSLISP_PACKAGE_DIRECTORIES="/workspace/svo_ws/devel/.private/svo_online_loopclosing/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
 export ROS_PACKAGE_PATH="/workspace/svo_ws/src/rpg_svo_pro_open/svo_online_loopclosing:$ROS_PACKAGE_PATH"

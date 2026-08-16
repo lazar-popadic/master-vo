@@ -5756,10 +5756,6 @@ vikit/output_helper.h
 vikit/params_helper.h
 -
 
-/workspace/svo_ws/src/rpg_svo_pro_open/svo_ceres_backend/src/error_interface.cpp
-svo/ceres_backend/error_interface.hpp
-/workspace/svo_ws/src/rpg_svo_pro_open/svo_ceres_backend/src/svo/ceres_backend/error_interface.hpp
-
 /workspace/svo_ws/src/rpg_svo_pro_open/svo_ceres_backend/src/estimator.cpp
 svo/ceres_backend/estimator.hpp
 /workspace/svo_ws/src/rpg_svo_pro_open/svo_ceres_backend/src/svo/ceres_backend/estimator.hpp

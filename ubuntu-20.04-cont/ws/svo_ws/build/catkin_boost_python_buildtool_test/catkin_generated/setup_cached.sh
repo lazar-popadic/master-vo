@@ -9,6 +9,7 @@
 # modified environment variables
 export CMAKE_PREFIX_PATH="/workspace/svo_ws/devel/.private/catkin_boost_python_buildtool_test:$CMAKE_PREFIX_PATH"
 export LD_LIBRARY_PATH="/workspace/svo_ws/devel/.private/catkin_boost_python_buildtool_test/lib:$LD_LIBRARY_PATH"
+export PKG_CONFIG_PATH="/workspace/svo_ws/devel/.private/catkin_boost_python_buildtool_test/lib/pkgconfig:$PKG_CONFIG_PATH"
 export PWD='/workspace/svo_ws/build/catkin_boost_python_buildtool_test'
 export PYTHONPATH="/workspace/svo_ws/devel/.private/catkin_boost_python_buildtool_test/lib/python3/dist-packages:$PYTHONPATH"
 export ROSLISP_PACKAGE_DIRECTORIES="/workspace/svo_ws/devel/.private/catkin_boost_python_buildtool_test/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"

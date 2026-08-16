@@ -8,6 +8,8 @@
 
 # modified environment variables
 export CMAKE_PREFIX_PATH="/workspace/svo_ws/devel/.private/ceres_catkin:$CMAKE_PREFIX_PATH"
+export LD_LIBRARY_PATH="/workspace/svo_ws/devel/.private/ceres_catkin/lib:$LD_LIBRARY_PATH"
+export PKG_CONFIG_PATH="/workspace/svo_ws/devel/.private/ceres_catkin/lib/pkgconfig:$PKG_CONFIG_PATH"
 export PWD='/workspace/svo_ws/build/ceres_catkin'
 export ROSLISP_PACKAGE_DIRECTORIES="/workspace/svo_ws/devel/.private/ceres_catkin/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
 export ROS_PACKAGE_PATH="/workspace/svo_ws/src/ceres_catkin:$ROS_PACKAGE_PATH"

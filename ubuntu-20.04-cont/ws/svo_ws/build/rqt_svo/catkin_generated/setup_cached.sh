@@ -9,6 +9,7 @@
 # modified environment variables
 export CMAKE_PREFIX_PATH="/workspace/svo_ws/devel/.private/rqt_svo:$CMAKE_PREFIX_PATH"
 export LD_LIBRARY_PATH="/workspace/svo_ws/devel/.private/rqt_svo/lib:$LD_LIBRARY_PATH"
+export PATH="/workspace/svo_ws/devel/.private/rqt_svo/bin:$PATH"
 export PKG_CONFIG_PATH="/workspace/svo_ws/devel/.private/rqt_svo/lib/pkgconfig:$PKG_CONFIG_PATH"
 export PWD='/workspace/svo_ws/build/rqt_svo'
 export PYTHONPATH="/workspace/svo_ws/devel/.private/rqt_svo/lib/python3/dist-packages:$PYTHONPATH"

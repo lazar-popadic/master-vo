@@ -8,8 +8,8 @@
 
 # modified environment variables
 export CMAKE_PREFIX_PATH="/workspace/svo_ws/devel/.private/cmake_external_project_catkin:$CMAKE_PREFIX_PATH"
-export PATH="/workspace/svo_ws/devel/bin:$PATH"
+export LD_LIBRARY_PATH="/workspace/svo_ws/devel/.private/cmake_external_project_catkin/lib:$LD_LIBRARY_PATH"
+export PKG_CONFIG_PATH="/workspace/svo_ws/devel/.private/cmake_external_project_catkin/lib/pkgconfig:$PKG_CONFIG_PATH"
 export PWD='/workspace/svo_ws/build/cmake_external_project_catkin'
-export PYTHONPATH="/workspace/svo_ws/devel/lib/python3/dist-packages:$PYTHONPATH"
 export ROSLISP_PACKAGE_DIRECTORIES="/workspace/svo_ws/devel/.private/cmake_external_project_catkin/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
 export ROS_PACKAGE_PATH="/workspace/svo_ws/src/cmake_external_project_catkin:$ROS_PACKAGE_PATH"

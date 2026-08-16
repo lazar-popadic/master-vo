@@ -1,6 +1,6 @@
-Symlinking /workspace/svo_ws/devel/lib/libcatkin_boost_python_test.so
-Symlinking /workspace/svo_ws/devel/lib/python3/dist-packages/catkin_boost_python_test/libcatkin_boost_python_test.so
-Symlinking /workspace/svo_ws/devel/lib/python3/dist-packages/catkin_boost_python_test/__init__.py
-Symlinking /workspace/svo_ws/devel/lib/pkgconfig/catkin_boost_python_buildtool_test.pc
-Symlinking /workspace/svo_ws/devel/share/catkin_boost_python_buildtool_test/cmake/catkin_boost_python_buildtool_testConfig.cmake
-Symlinking /workspace/svo_ws/devel/share/catkin_boost_python_buildtool_test/cmake/catkin_boost_python_buildtool_testConfig-version.cmake
+Linked: (/workspace/svo_ws/devel/.private/catkin_boost_python_buildtool_test/lib/libcatkin_boost_python_test.so, /workspace/svo_ws/devel/lib/libcatkin_boost_python_test.so)
+Linked: (/workspace/svo_ws/devel/.private/catkin_boost_python_buildtool_test/lib/python3/dist-packages/catkin_boost_python_test/libcatkin_boost_python_test.so, /workspace/svo_ws/devel/lib/python3/dist-packages/catkin_boost_python_test/libcatkin_boost_python_test.so)
+Linked: (/workspace/svo_ws/devel/.private/catkin_boost_python_buildtool_test/lib/python3/dist-packages/catkin_boost_python_test/__init__.py, /workspace/svo_ws/devel/lib/python3/dist-packages/catkin_boost_python_test/__init__.py)
+Linked: (/workspace/svo_ws/devel/.private/catkin_boost_python_buildtool_test/lib/pkgconfig/catkin_boost_python_buildtool_test.pc, /workspace/svo_ws/devel/lib/pkgconfig/catkin_boost_python_buildtool_test.pc)
+Linked: (/workspace/svo_ws/devel/.private/catkin_boost_python_buildtool_test/share/catkin_boost_python_buildtool_test/cmake/catkin_boost_python_buildtool_testConfig.cmake, /workspace/svo_ws/devel/share/catkin_boost_python_buildtool_test/cmake/catkin_boost_python_buildtool_testConfig.cmake)
+Linked: (/workspace/svo_ws/devel/.private/catkin_boost_python_buildtool_test/share/catkin_boost_python_buildtool_test/cmake/catkin_boost_python_buildtool_testConfig-version.cmake, /workspace/svo_ws/devel/share/catkin_boost_python_buildtool_test/cmake/catkin_boost_python_buildtool_testConfig-version.cmake)

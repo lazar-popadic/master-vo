@@ -1,8 +1,1 @@
-[35m[1mScanning dependencies of target minkindr_python[0m
-[ 25%] [32mBuilding CXX object CMakeFiles/minkindr_python.dir/src/module.cpp.o[0m
-[ 50%] [32mBuilding CXX object CMakeFiles/minkindr_python.dir/src/export-transformation.cc.o[0m
-[ 75%] [32mBuilding CXX object CMakeFiles/minkindr_python.dir/src/export-rotation-quaternion.cc.o[0m
-[100%] [32m[1mLinking CXX shared library /workspace/svo_ws/devel/.private/minkindr_python/lib/libminkindr_python.so[0m
-[34m[1mCopying library files to python directory[0m
-'/workspace/svo_ws/devel/.private/minkindr_python/lib/libminkindr_python.so' -> '/workspace/svo_ws/devel/.private/minkindr_python/lib/python3/dist-packages/minkindr/libminkindr_python.so'
 [100%] Built target minkindr_python

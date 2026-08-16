@@ -9,6 +9,7 @@
 # modified environment variables
 export CMAKE_PREFIX_PATH="/workspace/svo_ws/devel/.private/numpy_eigen:$CMAKE_PREFIX_PATH"
 export LD_LIBRARY_PATH="/workspace/svo_ws/devel/.private/numpy_eigen/lib:$LD_LIBRARY_PATH"
+export PKG_CONFIG_PATH="/workspace/svo_ws/devel/.private/numpy_eigen/lib/pkgconfig:$PKG_CONFIG_PATH"
 export PWD='/workspace/svo_ws/build/numpy_eigen'
 export PYTHONPATH="/workspace/svo_ws/devel/.private/numpy_eigen/lib/python3/dist-packages:$PYTHONPATH"
 export ROSLISP_PACKAGE_DIRECTORIES="/workspace/svo_ws/devel/.private/numpy_eigen/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"

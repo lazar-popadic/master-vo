@@ -8,6 +8,8 @@
 
 # modified environment variables
 export CMAKE_PREFIX_PATH="/workspace/svo_ws/devel/.private/opengv:$CMAKE_PREFIX_PATH"
+export LD_LIBRARY_PATH="/workspace/svo_ws/devel/.private/opengv/lib:$LD_LIBRARY_PATH"
+export PKG_CONFIG_PATH="/workspace/svo_ws/devel/.private/opengv/lib/pkgconfig:$PKG_CONFIG_PATH"
 export PWD='/workspace/svo_ws/build/opengv'
 export ROSLISP_PACKAGE_DIRECTORIES="/workspace/svo_ws/devel/.private/opengv/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
 export ROS_PACKAGE_PATH="/workspace/svo_ws/src/opengv:$ROS_PACKAGE_PATH"

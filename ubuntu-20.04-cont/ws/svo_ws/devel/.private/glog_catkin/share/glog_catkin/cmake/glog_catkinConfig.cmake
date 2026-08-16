@@ -116,7 +116,7 @@ if(NOT "/workspace/svo_ws/devel/.private/glog_catkin/include " STREQUAL " ")
   endforeach()
 endif()
 
-set(libraries "glog")
+set(libraries "/workspace/svo_ws/devel/.private/glog_catkin/lib/libglog.so")
 foreach(library ${libraries})
   # keep build configuration keywords, generator expressions, target names, and absolute libraries as-is
   if("${library}" MATCHES "^(debug|optimized|general)$")

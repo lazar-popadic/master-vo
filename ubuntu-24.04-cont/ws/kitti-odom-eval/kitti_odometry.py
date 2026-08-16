@@ -77,7 +77,7 @@ class KittiEvalOdom():
         vo_eval.eval(gt_pose_txt_dir, result_pose_txt_dir)
     """
     def __init__(self):
-        self.lengths = [100, 200, 300, 400, 500, 600, 700, 800]
+        self.lengths = [5, 10, 15, 20, 25, 30]
         self.num_lengths = len(self.lengths)
 
     def load_poses_from_txt(self, file_name):
@@ -186,7 +186,7 @@ class KittiEvalOdom():
         """
         err = []
         dist = self.trajectory_distances(poses_gt)
-        self.step_size = 10
+        self.step_size = 1
 
         for first_frame in range(0, len(poses_gt), self.step_size):
             for i in range(self.num_lengths):
@@ -567,32 +567,20 @@ class KittiEvalOdom():
             # (GT left unchanged) -- automatic GT conversion removed to avoid
             # corrupting already-correct GT pose files.
 
-            # Detect result plane orientation: some VO outputs use x-y plane (z~0).
-            # If result has near-zero z translations but non-zero y, convert result to x-z plane
-            # by swapping y and z axes so plotting/evaluation matches GT.
-            try:
-                res_trans = np.array([poses_result[k][:3, 3] for k in poses_result])
-                max_abs_z_r = np.max(np.abs(res_trans[:, 2]))
-                max_abs_y_r = np.max(np.abs(res_trans[:, 1]))
-                if max_abs_z_r < 1e-3 and max_abs_y_r > 1e-3:
-                    S = np.array([[1, 0, 0], [0, 0, 1], [0, 1, 0]])
-                    for cnt in list(poses_result.keys()):
-                        P = poses_result[cnt].copy()
-                        R = P[:3, :3]
-                        t = P[:3, 3]
-                        R_new = S @ R @ S.T
-                        t_new = S @ t
-                        P[:3, :3] = R_new
-                        P[:3, 3] = t_new
-                        poses_result[cnt] = P
-                    print('Notice: converted result poses from x-y to x-z plane for sequence', self.cur_seq)
-            except Exception:
-                pass
+            # NOTE: disabled the automatic x-y/x-z remapping so the evaluator
+            # uses the raw model pose frame for metric computation.
+            # This is intentional for short-sequence / custom-frame comparisons.
 
             # Pose alignment to first frame
             idx_0 = sorted(list(poses_result.keys()))[0]
             pred_0 = poses_result[idx_0]
             gt_0 = poses_gt[idx_0]
+
+            # Align the model output into the GT frame using the first-pose rigid transform.
+            # This is needed when the model and GT use different pose conventions.
+            T_model_to_gt = gt_0 @ np.linalg.inv(pred_0)
+            poses_result = {cnt: T_model_to_gt @ pose for cnt, pose in poses_result.items()}
+
             for cnt in poses_result:
                 poses_result[cnt] = np.linalg.inv(pred_0) @ poses_result[cnt]
                 poses_gt[cnt] = np.linalg.inv(gt_0) @ poses_gt[cnt]

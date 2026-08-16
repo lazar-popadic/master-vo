@@ -1,6 +1,6 @@
-Symlinking /workspace/svo_ws/devel/lib/libminkindr_python.so
-Symlinking /workspace/svo_ws/devel/lib/python3/dist-packages/minkindr/__init__.py
-Symlinking /workspace/svo_ws/devel/lib/python3/dist-packages/minkindr/libminkindr_python.so
-Symlinking /workspace/svo_ws/devel/lib/pkgconfig/minkindr_python.pc
-Symlinking /workspace/svo_ws/devel/share/minkindr_python/cmake/minkindr_pythonConfig-version.cmake
-Symlinking /workspace/svo_ws/devel/share/minkindr_python/cmake/minkindr_pythonConfig.cmake
+Linked: (/workspace/svo_ws/devel/.private/minkindr_python/lib/libminkindr_python.so, /workspace/svo_ws/devel/lib/libminkindr_python.so)
+Linked: (/workspace/svo_ws/devel/.private/minkindr_python/lib/python3/dist-packages/minkindr/__init__.py, /workspace/svo_ws/devel/lib/python3/dist-packages/minkindr/__init__.py)
+Linked: (/workspace/svo_ws/devel/.private/minkindr_python/lib/python3/dist-packages/minkindr/libminkindr_python.so, /workspace/svo_ws/devel/lib/python3/dist-packages/minkindr/libminkindr_python.so)
+Linked: (/workspace/svo_ws/devel/.private/minkindr_python/lib/pkgconfig/minkindr_python.pc, /workspace/svo_ws/devel/lib/pkgconfig/minkindr_python.pc)
+Linked: (/workspace/svo_ws/devel/.private/minkindr_python/share/minkindr_python/cmake/minkindr_pythonConfig-version.cmake, /workspace/svo_ws/devel/share/minkindr_python/cmake/minkindr_pythonConfig-version.cmake)
+Linked: (/workspace/svo_ws/devel/.private/minkindr_python/share/minkindr_python/cmake/minkindr_pythonConfig.cmake, /workspace/svo_ws/devel/share/minkindr_python/cmake/minkindr_pythonConfig.cmake)
