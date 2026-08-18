@@ -1,0 +1,38 @@
+Pracenje sopstvenog polozaja u vremenu je jedan
+od najvaznijih problema u mobilnoj robotici.
+Nedovoljno brza i stabilna procena negativno utice
+na upravljanje kretanjem robota, dok se konstantne
+greske nagomilavaju i polako se gubi precizna
+pozicija robota u prostoru. Odometrija je osnovni
+pristup proceni kretanja, i njen zadatak je da
+proceni promenu polozaja u vremenu na osnovu
+merenja nekog senzora. Lokalizacija ima za cilj
+da odredi polozaj u poznatom okruzenju, cime
+kompenzuje nagomilanu gresku odometrije (drift).
+Sto je greska odometrije manja, to je zadatak
+lokalizacije jednostavniji.
+
+Senzori na osnovu cijih merenja se procenjuje
+promena polozaja mogu da se podele na
+proprioceptivne i eksteroceptivne. Proprioceptivni
+senzori mere unutrasnja stanja robota, kao sto su:
+polozaj, brzina i ubrzanje u zglobovima, a njihova
+merenja mogu bez mnogo obrade da se koriste za
+odometriju. Eksteroceptivni senzori sakupljaju
+podatke o spoljasnjoj okolini, kao sto su:
+slike okruzenja i udaljenost do prepreka, koje
+mogu da se koriste i za lokalizaciju.
+
+Vizuelna odometrija (VO) procenjuje promenu polozaja na
+osnovu sekvence slika sa kamera. Monokularna VO
+koristi slike sa samo jedne kamere. Zbog nedostatka
+informacije o dubini i neodredjenosti apsolutne
+skale ovo predstavlja veoma ogranicen pristup VO.
+
+S obzirom na to da je glavni ulaz u VO sekvenca
+slika spoljasnjeg okruzenja, veoma je vazno da se
+rad algoritama VO analizira u odgovarajucem
+okruzenju. Zbog toga je napravljen eksperimentalni
+skup podataka na mobilnom robotu, koji sadrzi
+putanje kojima se robot krece i sekvence slika
+prikupljenih kamerom postavljenom na njemu.

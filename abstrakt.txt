@@ -1,0 +1,33 @@
+U radu je predstavljena eksperimentalna analiza
+i poredjenje razlicitih pristupa monokularnoj
+vizuelnoj odometriji u mobilnoj robotici. Vizuelna
+odometrija procenjuje kretanje kamere na osnovu niza
+uzastopnih slika. Monokularna vizuelna odometrija
+koristi samo jednu kameru, sto otezava procenu
+kretanja zbog nedostatka informacije o dubini i
+neodredjenosti apsolutne skale. Analizirana su tri
+pristupa monokularnoj proceni kretanja: SVO,
+ORB-SLAM3 i TSformer-VO.
+
+U svrhu procene rada algoritama, predstavljen je
+celokupan proces prikupljanja podataka sa mobilnog
+robota dok prolazi kroz sekvence kretanja. Snimljene
+su slike sa kamere i odometrija, koja je zajedno sa
+referentnim tackama u radnom okruzenju robota
+obradjena radi dobijanja referentnih putanja (ground
+truth).
+
+Kao kriterijumi za poredjenje algoritama korisceni
+su apsolutna greska trajektorije (ATE) i relativna
+greska poze (RPE), izracunate u odnosu na referentnu
+putanju. Rezultati pokazuju da je SVO ostvario
+zadovoljavajucu procenu rotacije i na lokalnom i
+na globalnom nivou, dok je procena translacije
+veoma zavisna od vizuelnog okruzenja zbog cega
+SVO nije u stanju da pouzdano odredi apsolutnu
+skalu. ORB-SLAM3 pokazuje ogranicenja u lokalnoj
+proceni kretanja, pogotovo u rotacijama, ali dobro
+slaganje sa referentnom putanjom pokazuje potencijal
+vizuelne odometrije za lokalizaciju kroz SLAM.
+TSformer-VO nije uspesno procenio kretanje na
+analiziranom skupu podataka.
