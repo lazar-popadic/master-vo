@@ -8,7 +8,14 @@
   - O vaznosti provere rada algoritama odometrije na odgovarajucem setu podataka
 
 - Vizuelna odometrija:
-  - Teorija
+  - Teorija:
+    - Osnovno
+    - sta sve utice na uspesnost VO:
+      - osvetljenost
+      - staticna scena
+      - tekstura
+      - dovoljno preklapanje uzastopnih slika
+    - Monokularna VO
   - SVO
   - ORB-SLAM3
   - TSformer-VO

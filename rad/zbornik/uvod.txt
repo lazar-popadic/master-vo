@@ -1,3 +1,4 @@
+1. Uvod
 Pracenje sopstvenog polozaja u vremenu je jedan
 od najvaznijih problema u mobilnoj robotici.
 Nedovoljno brza i stabilna procena negativno utice

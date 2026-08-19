@@ -1,0 +1,38 @@
+2. Vizuelna odometrija
+Vizuelna odometrija inkrementalno estimira pozu
+kamere koja se krece tako sto prati promene u
+slikama koje taj pokret indukuje. Okruzenje u
+kojem se nalazi kamera znacajno utice na uspesnost
+VO. Da bi VO mogla da odredi kretanje, potrebno je
+da okruzenje bude dovoljno osvetljeno i da scena
+bude staticna i sa dovoljno teksture. Bitno je da
+postoji dovoljno preklapanje scene izmedju uzastopnih
+slika [1]. Procena dubine predstavlja osnovu
+algoritama VO. U slucaju stereo VO, dubina scene
+se racuna na osnovu piksela koji se podudaraju u
+levoj i desnoj kameru. Na osnovu razlike njihovog
+polozaja u obe slike, poznate pozicije kamere
+(bazne distance) i njihovih unutrasnjih parametara,
+dubina moze lako da se izracuna kao:
+{formula (1) iz}[2]
+U slucaju velikih udaljenosti u sceni (mnogo vece
+od udaljenosti izmedju kamera) stereo VO se svodi
+u slucaj monokularne VO [1]. Zbog nedostatka
+mogucnosti da se dubina scene izracuna direktno,
+monokularna VO koristi korespondenciju tacaka u
+uzastopnim slikama za rekonstrukciju dubine i
+kretanja kamere. S obzirom da ne postoji podatak
+kao bazna distanca na osnovu kojeg bi se odredila
+apsolutna skala, algoritmi za monokularnu VO mogu
+da procene kretanje samo do faktora skale [1].
+
+2.1. SVO
+2.2. ORB-SLAM3
+2.3. TSformer-VO
+
+
+
+
+
+[1] https://www.alaakhamis.org/teaching/SPC418/reading/Visual%20odometry.pdf
+[2] https://journals.sagepub.com/doi/10.5772/62099
