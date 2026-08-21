@@ -26,7 +26,37 @@ kao bazna distanca na osnovu kojeg bi se odredila
 apsolutna skala, algoritmi za monokularnu VO mogu
 da procene kretanje samo do faktora skale [1].
 
+Metode VO mogu da se podele prvenstveno na
+geometrijske i metode zasnovane na dubokom ucenju.
+Geometrijske dalje mogu da se podela na metode
+zasnovane na karakteristicnim tacakama i direktne [3].
+U ovom radu su analizirani predstavnici svake od
+ta tri tipa metoda.
+
 2.1. SVO
+Semi-Direct Visual Odometry (SVO) algoritam koristi
+korespondenciju karakteristika, ali s obzirom da
+to predstavlja implicitni rezultat direktne procene
+kretanja, a ne rezultat eksplicitnog izdvajanja i
+uparivanja karakteristika SVO je izdvojen kao
+predstavnik direktnih metoda VO. Ekstrakcija
+karakteristika je potrebna samo kada se odabere
+nova kljucna slika radi inicijalizacije 3D tacaka
+(slika 1). Prednost takvog pristupa je preskakanje
+racunski skupog procesa ekstrakcije karakteristika
+u svakom frejmu. Cim se zavrsi korespondencija
+karakteristika i procena inicijalne poze kamere,
+algoritam nastavlja sa koriscenjem samo prethodno
+inicijalizovanih 3D tacaka. Za procenu dubine na
+lokacijama karakteristika koristi se Bajesov filtar
+koji eksplicitno modeluje nepouzdana merenja. Tek
+kada filtar dubine konvergira, nova 3D tacka se
+inicijalizuje [4].
+
+
+
+
+
 2.2. ORB-SLAM3
 2.3. TSformer-VO
 
@@ -36,3 +66,5 @@ da procene kretanje samo do faktora skale [1].
 
 [1] https://www.alaakhamis.org/teaching/SPC418/reading/Visual%20odometry.pdf
 [2] https://journals.sagepub.com/doi/10.5772/62099
+[3] https://academic.oup.com/tse/article/1/3/177/5747766?login=false
+[4] SVO
