@@ -7,20 +7,55 @@ kroz razlicite sekvence kretanja u definisanom
 prostoru. Procenjene putanje dobijene algoritmima
 VO su uporedjene sa referentnim putanjama.
 
+3.1. Robot
+Za prikupljanje podataka koriscen je mobilni robot
+razvijen u okviru tima +381 Robotics za takmicenje
+Eurobot Srbija 2026. U nastavku su opisane
+karakteristike robota koje su relevantne za proces
+prikupljanja podataka.
 
-	- robot:
-		- opis robota:
-			- diferencijalni pogon
-			- odometrija:
-				- teorija
-				- identifikovanje parametara
-			- polozaj kamere
-			- rosbag2 i snimani ros topici
-	- kamera:
+Diferencijalni pogon se sastoji od dva nezavisno
+aktuisana saosna tocka. Ovakav tip pogona ima dva
+stepena slobode i uvodi neholonomno ogranicenje:
+brzina baze u y-smeru je uvek 0, odnosno, robot ne
+moze da se krece bocno. Tri osnovna tipa kretanja
+za robota sa diferencijalnim pogonom su:
+- Pravolinijsko kretanje, kada se tockovi krecu
+istom brzinom u istom smeru,
+- Rotacija u mestu, kada se tockovi krecu istom
+brzinom u suprotnom smeru,
+- Krivolinijko kretanje, kada se tockovi krecu
+razlicitim brzinama.
+
+Odometrijski sistem se sastoji iz inkrementalnih
+enkodera koji su na pasivnim tockovima. Pasivni
+tockovi su uvek u kontaktu sa podlogom. Ovaj sistem
+je odvojen od pogonskog kako bi se izbegao uticaj
+proklizavanja pogonskih tockova na stvaranje
+greske u odometriji.
+
+Kamera je kruto vezana za robota. Postavljena je
+direktno iznad lokalnog koordinatnog sistema
+robota i orijentisana je u pravcu kretanja robota.
+S obzirom da se robot krece ravanski, ovakva
+postavka omogucava da se preskoci korak racunanja
+transformacije kamera-robot.
+
+Na robotu je vec implementiran ROS2, pa je za
+snimanje podataka koriscen rosbag. Relevantni
+topici koji su snimane su:
+- Odometrija sa pasivnih tockova, koja je
+koriscena za procenu referentnih putanja,
+- Topik na kojem je snimana sekvenca slika sa
+kamere,
+- Topik sa parametrima kamere.
+
+3.2. Kamera
 		- opis kamere: ov9281, global shutter, 120fps, monochrome, 720p
 		- kalibrisani parametri
 		- ostala podesavanja: exposure time, contrast, gamma
-	- sekvence:
+
+3.3. Sekvence
 		- fizicko okruzenje:
 			- G3
 			- sto za eurobot
