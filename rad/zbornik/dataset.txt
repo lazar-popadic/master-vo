@@ -50,7 +50,11 @@ koriscena za procenu referentnih putanja,
 kamere,
 - Topik sa parametrima kamere.
 
-(slika 2, sa slikanim i oznacenim delovima robota i lokalnim koordinatnim sistemom)
+Na slici 2 je prikazan robot sa oznacenim
+pogonskim i odometrijskim sistemom, kamerom
+i lokalnim koordinatnim sistemom
+
+(slika 2)
 
 3.2. Kamera
 Koriscena je OV9281 global-shutter kamera. Ovaj
@@ -89,16 +93,28 @@ respektivno, kako bi se kompenzovala izrazito
 tamna slika.
 
 3.3. Sekvence
-		- fizicko okruzenje:
-			- G3
-			- sto za eurobot
-		- opis sekvenci:
-			- iskljucivo od pravolinijskih translacija i ciste rotacije
-			- sa krivolinijskim putanjama
-			- 2 seta maksimalnih brzina za obe sekvence
-		- izvlacenje GT iz sekvenci:
-			- stackovanje u zid
-			- procenjivanje GT i aproksimacije koje su koriscene
+Robot se krece po stolu za takmicenje Eurobot 2026.
+Dimenzije stola su tacno definisane i koriscene
+su za kompenzaciju greske odometrije sa pasivnih
+tockova. Tako korigovana odometrija sa tockova je
+koriscena kao referentna putanja.
+
+Snimljene su dve razlicite sekvence kretanja
+robota, i obe sekvence su snimljene sa dva seta
+maksimalnih brzina (maksimalna linearna i ugaona
+brzina). Maksimalne brzine pri sporijim sekvencama
+su 0.5 m/s i Pi/2 rad/s, dok su pri brzim 1m/s i
+Pi rad/s. Prva sekvenca se sastoji iskljucivo od
+pravolinijskih translacija i rotacije oko centra
+robota. Druga sekvenca se sastoji i od
+krivolinijskih kretanja. Ovakva podela sekvenci je
+izabrana kako bi se ispitao uticaj brzine kretanja
+kao i razlicitih tipova kretanja robota na
+uspesnost VO. Na slikama (3) i (4) su prikazane
+referentne putanje pri prvoj i drugoj sekvenci.
+
+(slika 3.)
+(slika 4.)
 
 
 
