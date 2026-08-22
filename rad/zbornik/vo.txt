@@ -53,6 +53,22 @@ koji eksplicitno modeluje nepouzdana merenja. Tek
 kada filtar dubine konvergira, nova 3D tacka se
 inicijalizuje [4].
 
+Procena kretanja se sastoji iz tri koraka. Promena
+relativne poze kamere izmedju dve uzastopne slike
+implicitno dovodi do pomeranja reprojektovanih tacaka.
+Poravnavanje slike nastoji da pronadje transformaciju
+izmedju poza kamere tako da minimizuje fotometrijsku
+gresku izmedju delova slike koji odgovaraju istoj 3D
+tacki. Ta transformacija definise inicijalnu procenu
+polozaja vidljivih 3D tacaka u odnosu na novu sliku.
+Zbog netacnosti u toj proceni, fotometrijska greska
+moze dodatno da se minimizuje optimizacijom
+polozaja svakog izdvojenog dela slike pojedinacno.
+Ovim korakom se vrsi narusavanje epipolarnih
+ogranicenja, kako bi se dobila veca korelacija
+izmedju delova slika. Poslednjim korakom se
+optimizuju poza kamere i polozaji 3D tacaka
+minimizacijom reprojekcione greske.
 
 
 
