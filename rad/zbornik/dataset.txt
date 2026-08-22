@@ -1,0 +1,33 @@
+3. Proces prikupljanja podataka
+Kako bi se ispitala primena VO u mobilnoj robotici
+prikupljen je eksperimentalni skup podataka.
+Eksperimentalnu postavku cine robot sa diferencijalnim
+pogonom i kruto postavljenom kamerom, dok se krece
+kroz razlicite sekvence kretanja u definisanom
+prostoru. Procenjene putanje dobijene algoritmima
+VO su uporedjene sa referentnim putanjama.
+
+
+	- robot:
+		- opis robota:
+			- diferencijalni pogon
+			- odometrija:
+				- teorija
+				- identifikovanje parametara
+			- polozaj kamere
+			- rosbag2 i snimani ros topici
+	- kamera:
+		- opis kamere: ov9281, global shutter, 120fps, monochrome, 720p
+		- kalibrisani parametri
+		- ostala podesavanja: exposure time, contrast, gamma
+	- sekvence:
+		- fizicko okruzenje:
+			- G3
+			- sto za eurobot
+		- opis sekvenci:
+			- iskljucivo od pravolinijskih translacija i ciste rotacije
+			- sa krivolinijskim putanjama
+			- 2 seta maksimalnih brzina za obe sekvence
+		- izvlacenje GT iz sekvenci:
+			- stackovanje u zid
+			- procenjivanje GT i aproksimacije koje su koriscene
