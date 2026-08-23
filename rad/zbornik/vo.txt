@@ -115,7 +115,10 @@ relativnu pozu kamere. S obzirom da su dve uzastopne
 slike potrebne za procenu jedne poze, kao izlaz za
 skup od Nf slika, dobijamo Nf-1 poza kamere [6].
 
+Na slici 2 je prikazana struktura algoritma
+TSformer-VO.
 
+(slika 2.)
 
 
 [1] https://www.alaakhamis.org/teaching/SPC418/reading/Visual%20odometry.pdf

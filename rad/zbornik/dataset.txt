@@ -50,11 +50,11 @@ koriscena za procenu referentnih putanja,
 kamere,
 - Topik sa parametrima kamere.
 
-Na slici 2 je prikazan robot sa oznacenim
+Na slici 3 je prikazan robot sa oznacenim
 pogonskim i odometrijskim sistemom, kamerom
 i lokalnim koordinatnim sistemom
 
-(slika 2)
+(slika 3.)
 
 3.2. Kamera
 Koriscena je OV9281 global-shutter kamera. Ovaj
@@ -110,11 +110,11 @@ robota. Druga sekvenca se sastoji i od
 krivolinijskih kretanja. Ovakva podela sekvenci je
 izabrana kako bi se ispitao uticaj brzine kretanja
 kao i razlicitih tipova kretanja robota na
-uspesnost VO. Na slikama (3) i (4) su prikazane
+uspesnost VO. Na slikama (4) i (5) su prikazane
 referentne putanje pri prvoj i drugoj sekvenci.
 
-(slika 3.)
 (slika 4.)
+(slika 5.)
 
 
 
