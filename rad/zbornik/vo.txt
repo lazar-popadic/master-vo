@@ -96,20 +96,24 @@ i spajanje mapa detektuje zajednicke delove izmedju
 aktivne mape i prethodno poznatih mapa. Ukoliko
 zajednicki region pripada aktivnoj mapi, vrsi se
 korekcija petlje. Ukoliko pripada nekoj drugoj
-mapi, vrsi se spajanje mapa.
-
-
-
-
-
-
-Opis i SLAM
-Koraci za procenu kretanja
-
-
+mapi, vrsi se spajanje mapa [5].
 
 2.3. TSformer-VO
+TSformer-VO je metoda zasnovana na TimeSFormer
+arhitekturi za prepoznavanje akcija. Arhitektura
+koristi mehanizam samopaznje za izdvajanje
+prostorno-vremenskih karakteristika za procenu
+poze kamere [6]. 
 
+Ulazni skup se sastoji od Nf uzastopnih slika.
+Deli se na nepreklapajuce regione slike, koji se
+pretvaraju u tokene i prosledjuju kao ulazi u
+Transformer enkoder, koji uci odnose izmedju
+karakteristika kroz vreme i prostor. Na kraju, MLP
+(multilayer perceptron) izlazni sloj procenjuje
+relativnu pozu kamere. S obzirom da su dve uzastopne
+slike potrebne za procenu jedne poze, kao izlaz za
+skup od Nf slika, dobijamo Nf-1 poza kamere [6].
 
 
 
