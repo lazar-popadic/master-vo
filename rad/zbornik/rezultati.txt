@@ -1,0 +1,24 @@
+4. Rezultati
+Uspesnost algoritama VO je procenjena poredjenjem
+procenjenih i referentnih putanja. Korisceni
+kriterijumi:
+- prosecna translaciona greska,
+- prosecna rotaciona greska, 
+- apsolutna greska trajektorije (ATE),
+- relativna greska poze (RPE), translaciona i
+rotaciona.
+
+Rezultati su prikazani u tabeli 1. Na slici 6 su
+prikazane procenjene i referentne putanje za sve
+sekvence kretanja. Kod SVO, pri sekvenci 2 sa
+vecim maksimalnim brzinama je doslo do jednog
+gubitka pracenja pri rotaciji oko centra robota.
+Kod ORB-SLAM3 je dolazilo do gubitka pracenja na
+samom kraju svake rotacije oko centra robota, zbog
+cega su za pojedine sekvence prikazani samo
+najduzi neprekinuti delovi putanje izmedju dva
+gubitka pracenja.
+
+
+(tabela 1.)
+(slika 6.)

@@ -581,8 +581,12 @@ class KittiEvalOdom():
             T_model_to_gt = gt_0 @ np.linalg.inv(pred_0)
             poses_result = {cnt: T_model_to_gt @ pose for cnt, pose in poses_result.items()}
 
+            # Normalize both prediction and GT into the GT first-frame so the
+            # first pose becomes identity. Previously the code used inv(pred_0)
+            # for predictions which left poses_result[0] == inv(pred_0)@gt_0
+            # (not identity) after the T_model_to_gt step.
             for cnt in poses_result:
-                poses_result[cnt] = np.linalg.inv(pred_0) @ poses_result[cnt]
+                poses_result[cnt] = np.linalg.inv(gt_0) @ poses_result[cnt]
                 poses_gt[cnt] = np.linalg.inv(gt_0) @ poses_gt[cnt]
 
             if alignment == "scale":

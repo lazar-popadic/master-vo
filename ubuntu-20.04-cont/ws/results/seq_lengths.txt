@@ -1,0 +1,4 @@
+curve_sequence_v2_fast_gt.csv: 16.372 m
+curve_sequence_v2_slow_gt.csv: 16.633 m
+straight_sequence_v2_fast.csv: 11.009 m
+straight_sequence_v2_slow.csv: 11.061 m

@@ -1,0 +1,28 @@
+
+TSformer-VO/Model3/aligned/30.txt: 4.793 m
+TSformer-VO/Model3/aligned/31.txt: 5.136 m
+TSformer-VO/Model3/aligned/32.txt: 4.363 m
+TSformer-VO/Model3/aligned/33.txt: 4.818 m
+orb/aligned/01.txt: 4.686 m
+orb/aligned/03.txt: 16.043 m
+orb/aligned/05.txt: 2.719 m
+orb/aligned/07.txt: 2.703 m
+svo/aligned/00.txt: 15.958 m
+svo/aligned/01.txt: 14.623 m
+svo/aligned/02.txt: 8.479 m
+svo/aligned/03.txt: 6.007 m
+
+
+
+ORB:
+Sequence 01
+aligned: 4.685879 m
+gt_poses: 4.336228 m
+
+Sequence 05
+aligned: 2.719003 m
+gt_poses: 2.648992 m
+
+Sequence 07
+aligned: 2.703416 m
+gt_poses: 2.734493 m

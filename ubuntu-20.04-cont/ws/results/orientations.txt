@@ -1,0 +1,32 @@
+ORB-SLAM3
+03.txt: -89.230°
+SVO
+00.txt: -89.905°
+01.txt: -95.828°
+02.txt: +179.412°
+02_scaled.txt: +179.412°
+03.txt: +178.847°
+TSformer-VO
+30.txt: +46.730°
+31.txt: +95.921°
+32.txt: +61.511°
+33.txt: +52.492°
+
+
+
+
+
+
+
+specifically for orbslam3:
+Sequence 01
+aligned: start = 0.294°, end = 99.534°, delta = 99.239°
+gt_poses: start = 0.294°, end = 90.428°, delta = 90.134°
+
+Sequence 05
+aligned: start = 0.188°, end = 59.965°, delta = 59.777°
+gt_poses: start = 0.188°, end = 23.928°, delta = 23.740°
+
+Sequence 07
+aligned: start = -0.107°, end = 53.923°, delta = 54.030°
+gt_poses: start = -0.107°, end = 35.125°, delta = 35.231°

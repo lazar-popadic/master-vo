@@ -41,6 +41,7 @@ python eval_odom.py --result result/TSformer-VO_model3/ --align scale_7dof
 
 python3 eval_odom.py --result result/orb --gt result/orb/gt_poses --align scale_7dof
 python3 eval_odom.py --result result/svo --gt result/svo/gt_poses --align scale_7dof
+python3 eval_odom.py --result /workspace/results/TSformer-VO/Model3/ --gt /workspace/results/TSformer-VO/gt_poses/ --align scale_7dof --seqs 30 31 32 33
 
 
 python3 scripts/convert_preds_to_kitti_and_plot.py --pred-dir TSformer-VO/models/Model3/checkpoint_model3_exp20 --args-pkl TSformer-VO/models/Model3/args.pkl --sequences 02 --out-dir TSformer-VO/models/Model3/checkpoint_model3_exp20 --plot 02 --move-to-data

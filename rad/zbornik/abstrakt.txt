@@ -18,7 +18,8 @@ obradjena radi dobijanja referentnih putanja (ground
 truth).
 
 Kao kriterijumi za poredjenje algoritama korisceni
-su apsolutna greska trajektorije (ATE) i relativna
+su prosecna translaciona i rotaciona greska, 
+apsolutna greska trajektorije (ATE) i relativna
 greska poze (RPE), izracunate u odnosu na referentnu
 putanju. Rezultati pokazuju da je SVO ostvario
 zadovoljavajucu procenu rotacije i na lokalnom i

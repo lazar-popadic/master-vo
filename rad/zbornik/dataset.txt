@@ -110,7 +110,7 @@ robota. Druga sekvenca se sastoji i od
 krivolinijskih kretanja. Ovakva podela sekvenci je
 izabrana kako bi se ispitao uticaj brzine kretanja
 kao i razlicitih tipova kretanja robota na
-uspesnost VO. Na slikama (4) i (5) su prikazane
+uspesnost VO. Na slikama 4 i 5 su prikazane
 referentne putanje pri prvoj i drugoj sekvenci.
 
 (slika 4.)
