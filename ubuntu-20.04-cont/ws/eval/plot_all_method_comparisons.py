@@ -125,10 +125,15 @@ def plot_family(ax, name: str, mapping: dict, show_legend: bool = False):
 
 def main():
     fig, axes = plt.subplots(2, 2, figsize=(14, 14))
-    axis_list = axes.flatten()
+    ordered_families = [
+        ("straight_fast", MAPPING["straight_fast"]),
+        ("straight_slow", MAPPING["straight_slow"]),
+        ("curve_fast", MAPPING["curve_fast"]),
+        ("curve_slow", MAPPING["curve_slow"]),
+    ]
 
-    for ax, (family_name, family_mapping) in zip(axis_list, MAPPING.items()):
-        plot_family(ax, family_name, family_mapping, show_legend=(ax is axes[0, 1]))
+    for ax, (family_name, family_mapping) in zip(axes.flatten(), ordered_families):
+        plot_family(ax, family_name, family_mapping, show_legend=(family_name == "straight_slow"))
 
     fig.tight_layout()
     out_path = OUTPUT_DIR / "all_sequences_2x2.png"
