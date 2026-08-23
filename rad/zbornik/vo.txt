@@ -71,6 +71,38 @@ optimizuju poza kamere i polozaji 3D tacaka
 minimizacijom reprojekcione greske.
 
 2.2. ORB-SLAM3
+ORB-SLAM3 je sistem za vizuelni SLAM (Simultaneous
+localization and mapping) zasnovan na
+karakteristicnim tackama. Za razliku od mnogih
+algoritama za VO koji se oslanjaju samo na
+kratkorocne informacije, odnosno prate okruzenje
+samo dok se nalazi u pogledu, ORB-SLAM3 koristi i
+srednjorocne informacije, koje se koriste kada se
+u pogledu nadje prethodno istrazeno okruzenje,
+kao i dugorocne informacije koje omogucavaju
+resetovanje drifta i korekciju mape [5]. ORB-SLAM3
+je izabran ne samo zato sto je predstavnik metoda
+zasnovanih na karakteristicnim tackama, vec i kako
+bi se obradio uticaj lokalizacije na uspesnost VO.
+
+Algoritam je organizovan u tri komponente: pracenje,
+lokalno mapiranje, detekcija i spajanje mapa.
+Pracenje racuna trenutnu pozu u odnosu na aktivnu
+mapu, minimizacijom reprojekcione greske updarenih
+karakteristika. Lokalno mapiranje dodaje nove
+kljucne slike i 3D tacke u aktivnu mapu, uklanja
+redundantne i poboljsava lokalnu mapu. Detekcija
+i spajanje mapa detektuje zajednicke delove izmedju
+aktivne mape i prethodno poznatih mapa. Ukoliko
+zajednicki region pripada aktivnoj mapi, vrsi se
+korekcija petlje. Ukoliko pripada nekoj drugoj
+mapi, vrsi se spajanje mapa.
+
+
+
+
+
+
 Opis i SLAM
 Koraci za procenu kretanja
 
