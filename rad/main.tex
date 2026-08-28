@@ -1,0 +1,236 @@
+\documentclass[12pt]{article}
+
+% =========================================================
+% Language and font
+% =========================================================
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\usepackage{polyglossia}
+\setdefaultlanguage{serbian}
+\newfontfamily\cyrillicfont{Times New Roman}
+\newfontfamily\cyrillicfonttt{Times New Roman}
+
+% =========================================================
+% Page layout
+% =========================================================
+\usepackage[
+    a4paper,
+    top=2cm,
+    bottom=2cm,
+    left=2.5cm,
+    right=2cm,
+    heightrounded
+]{geometry}
+
+% =========================================================
+% Text formatting
+% =========================================================
+\usepackage{setspace}
+\setstretch{1.15}
+\usepackage{indentfirst}
+\setlength{\parindent}{1.25cm}
+\setlength{\parskip}{0pt}
+
+% =========================================================
+% Mathematics
+% =========================================================
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{mathrsfs}
+
+% =========================================================
+% Figures
+% =========================================================
+\usepackage{graphicx}
+\usepackage{float}
+\graphicspath{{figures/}}
+\usepackage{caption}
+\captionsetup{labelsep=space}
+\usepackage{chngcntr}
+\counterwithin{figure}{subsection}
+
+% =========================================================
+% Lists
+% =========================================================
+\usepackage[shortlabels]{enumitem}
+
+% =========================================================
+% URLs and hyperlinks
+% =========================================================
+\usepackage{xurl}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=blue,
+    breaklinks=true
+}
+
+% =========================================================
+% Other
+% =========================================================
+\usepackage{comment}
+
+
+\title{Мастер рад}
+\author{Лазар Попадић}
+\date{Септембар 2026}
+%\maketitle
+
+\begin{document}
+\tableofcontents
+\newpage
+
+\section{Увод}
+
+\newpage
+\section{Визуелна одометрија}
+
+\subsection{Монокуларна визуелна одометрија}
+\subsection{SVO}
+\subsection{ORB-SLAM3}
+\subsection{TSformer-VO}
+\subsection{Окружење}
+контејнери...
+\newpage
+
+\section{Прикупљање података}
+
+\subsection{Робот}
+\subsubsection{Диференцијални погон}
+\subsubsection{Одометријски систем}
+\subsubsection{Камера}
+
+\subsection{\textit{Rosbag}}
+Основно за \textit{ROS}. Снимани топици...
+\newpage
+
+\subsection{Камера}
+\subsubsection{Калибрација}
+
+\subsection{Секвенце}
+Физичко окружење не мора у свој поднаслов.
+Опис секвенци и брзина.
+Разлог за избор секвенци.
+\subsubsection{Процена референтних путања}
+Зашто не може само одом са точкова. Прорачунате грешке у секвенцама.
+"Стековање" у зид. Апроксимације које су коришћене при процени референтних путања.
+
+\newpage
+
+
+\section{Резултати и дискусија}
+Текст.
+\newpage
+
+\section{Закључак}
+Текст.
+\newpage
+
+\section{Прилог}
+\subsection{Прилог А}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=17.5cm]{figures/+381Logo.png}
+    \caption{Функција за директну кинематику у \textit{MATLAB}-у}
+    \label{fig:direktna_kinematika_matlab}
+\end{figure}
+\newpage
+
+\subsection{Први поднаслов}
+Нешто из литературе [1]. Пример је приказан на слици 2.1.1.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=12cm]{figures/abb_irb_140.jpg}
+    \caption{Серијски манипулатор антропоморфне конфигурације \textit{ABB IRB} 140 [2]}
+    \label{fig:серијски_манипулатор}
+\end{figure}
+
+На слици 2.1.2 је приказан други пример.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=12cm]{figures/abb_irb_360.jpg}
+    \caption{Паралелни манипулатор делта конфигурације \textit{ABB IRB} 360 [2]}
+    \label{fig:паралелни_манипулатор}
+\end{figure}
+
+Пример списка:
+\begin{itemize}
+    \item већа крутост кинематског ланца
+    \item мања маса манипулатора
+    \item већа носивост
+    \item боља прецизност, као последица мањих деформација
+\end{itemize}
+
+\subsubsection{Први подподнаслов}
+Сингуларне конфигурације су одређени положаји крајњег ефектора, за које паралелни роботи губе своју инхерентну бесконачну крутост и у којима крајњи ефектор има неконтролисане степене слободе [1]. Типови кинематских сингуларитета су:
+\begin{itemize}
+    \item Тип 1. За ненулти вектор улазних брзина, крајњи ефектор се не креће.
+    \item Тип 2. Крајњи ефектор се креће при нултом вектору улазних брзина.
+    \item Тип 3. Комбинација сингуларитета типа 1 и 2. Могуће је кретање крајњег ефектора без кретања улазних сегмената и обрнуто, могуће је кретање улазних сегмената без кретања крајњег ефектора.
+\end{itemize}
+
+\subsubsection{Други подподнаслов}
+Текст.
+Примери једначина: $\vec{M}_{in} - I\vec{\alpha} = 0$, $\vec F=Q(\vec v \times \vec B)$, $e_a=-N\dfrac{\partial\phi }{\partial t}$.
+
+\subsubsection{Трећи подподнаслов}
+Другачији примери једначина:
+\begin{equation}
+    u_a-e_a=R_ai_a+L_a\dfrac{di_a}{dt}
+\end{equation}
+\begin{equation}
+    m_e-m_m=J_m \dot\omega+B_m\omega
+\end{equation}
+\begin{equation}
+    \dfrac{d\theta}{dt}=\omega
+\end{equation}
+\begin{equation}
+    m_e=\psi _fi_a
+\end{equation}
+\begin{equation}
+    e_a=\psi _f\omega
+\end{equation}
+\newpage
+Значења величина су:
+\begin{itemize}
+    \item $u_a\;$ - улазни арматурни напон
+    \item $e_a\;$ - индукована електромоторна сила
+    \item $R_a\;$ - електрична отпорност арматурног намотаја
+    \item $i_a\;$ - арматурна струја
+    \item $L_a\;$ - индуктивност арматурног намотаја
+    \item $m_e\;$ - електромагнетни момент
+    \item $m_m\;$ - момент оптерећења
+    \item $J_m\;$ - момент инерције обртних маса
+    \item $\omega\;$ - угаона брзина арматуре
+    \item $B_m\;$ - коефицијент пригушења брзине услед трења
+    \item $\theta\;$ - угао ротора
+    \item $\psi _f\;$ - јачина магнетног флукса побуде
+\end{itemize}
+
+\subsection{Други поднаслов}
+Текст.
+У прилогу А је MATLAB функција која служи за израчунавање директне кинематике.
+
+\subsection{\textit{Subsection name in English}}
+Текст.
+
+\section{Литература}
+\begin{enumerate}[start=1,label={[\arabic*]}]
+\item J. P. Merlet, Parallel Robots, 2nd ed. Springer 2006
+\item \url{https://new.abb.com/en}
+\item \url{http://mehanizacija.ftn.uns.ac.rs/wp-content/uploads/2021/02/7.-DINAMICKA-ANALIZA-mehatronika-2019.pdf}, Механика машина, др М. Чавић, редовни професор, МСц Д. Чавић, асистент
+\item D. K. Sen, A. Yildiz, O. Kopmaz, "Optimal Design of a Five-Bar Planar Manipulator and Its
+Controller by Using Different Algorithms for Minimum
+Shaking Forces and Moments for the Largest Trajectory in a
+Usable Workspace", MDPI, Machines 2022, 10, 971.
+\item \url{https://www.keep.ftn.uns.ac.rs/regulisani-elektromotorni-pogoni/specifikacija/specifikacija-predmeta/}, Регулисани електромоторни погони, др Д. Марчетић, редовни професор, МСц В. Поповић, доцент
+\item др Д. Јеркан, Б. Вујков, Збирка задатака из електричних машина за студијски програм мехатроника, Нови Сад, ФТН 2020
+\item \url{http://www.automatika.ftn.uns.ac.rs/images/predmeti/Sistemi%20automatskog%20upravljanja%20-%20mehatronika/Predavanja/10_Regulacija.pdf}, Системи аутоматског управљања,
+др А. Ристић, редовни професор, др В. Бугарски, доцент
+\item F. Marini, B. Walczak, "Particle swarm optimization (PSO). A tutorial", Elsevier 2015
+\item Ж. Кановић, З. Јеличић, М. Рапаић, Еволутивни оптимизациони алгоритми у инжењерској пракси, Нови Сад, ФТН 2017
+\end{enumerate}
+
+\end{document}
