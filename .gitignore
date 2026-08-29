@@ -43,3 +43,5 @@ Thumbs.db
 *.ods#
 *.tar
 /ubuntu-24.04-cont/ws/kitti-odom-eval/kitti_eval
+*.xcf
+rad/figures/odom.drawio.pdf

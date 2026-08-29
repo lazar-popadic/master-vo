@@ -85,19 +85,77 @@
 \newpage
 \section{Визуелна одометрија}
 
-\subsection{Монокуларна визуелна одометрија}
+Шта је ВО? Шта све утиче на успешност ВО:
+\begin{itemize}
+    \item осветљеност,
+    \item статична сцена,
+    \item текстура и
+    \item довољно преклапање узастопних слика.
+\end{itemize}
+
+Процена дубине у стерео. Дегенерација стерео у монокуларну. Процена дубине у монокуларној. Проблеми са неодређеношћу апсолутне скале. Подела метода ВО.
+
 \subsection{SVO}
 \subsection{ORB-SLAM3}
 \subsection{TSformer-VO}
 \subsection{Окружење}
-контејнери...
+\textit{Podman} контејнер са \textit{Ubuntu} 20.04
 \newpage
 
 \section{Прикупљање података}
 
 \subsection{Робот}
 \subsubsection{Диференцијални погон}
+Два независно актуисана саосна точка. Два степена слободе. Нехолономно ограничење. Три типа кретања. 
+
 \subsubsection{Одометријски систем}
+Инкрементални енкодери на пасивним точковима. Одвојен од погонског због проклизавања погонских точкова.
+Објасни кинематски модел са слике.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=12cm]{figures/diff_kinematic_model.png}
+    \caption{Кинематски модел диференцијалног робота}
+    \label{fig:кинематски_модел}
+\end{figure}
+TODO: sredi malo ovu recenicu:
+Једначине кинематског модела:
+\begin{equation}
+    v_r = \omega_r \cdot \dfrac{d}{2}
+\end{equation}
+\begin{equation}
+    v_l = \omega_l \cdot \dfrac{d}{2}
+\end{equation}
+\begin{equation}
+    v = \dfrac{v_r + v_l}{2}
+\end{equation}
+\begin{equation}
+    \omega = \dfrac{v_r - v_l}{D}
+\end{equation}
+\begin{equation}
+    x_c^{k+1} = x_c^k + v \cdot \cos(\varphi_c^k + \dfrac{\omega \cdot \Delta t}{2}) \cdot \Delta t
+\end{equation}
+\begin{equation}
+    y_c^{k+1} = y_c^k + v \cdot \sin(\varphi_c^k + \dfrac{\omega \cdot \Delta t}{2}) \cdot \Delta t
+\end{equation}
+\begin{equation}
+    \varphi_c^{k+1} = \varphi_c^k + \omega \cdot \Delta t
+\end{equation}
+
+Значења ознака су:
+\begin{itemize}
+    \item $O$, $x$, $y$ - референтни координатни систем
+    \item $O_R$, $x_R$, $y_R$ - локални координатни систем робота
+    \item $x_c$, $y_c$, $\varphi_c$ - положај и оријентација робота у референтном систему
+    \item $v$ - линеарна брзина базе робота
+    \item $\omega$ - угаона брзина базе робота
+    \item $\omega_r$, $\omega_l$ - угаона брзина десног и левог одометријског точка
+    \item $v_r$, $v_l$ - линеарна брзина десног и левог одометријског точка
+    \item $D$ - растојање између одометријских точкова
+    \item $d$ - пречник одометријских точкова
+    \item $\Delta t$ - временски интервал између два одбирка
+    \item $k$, $k+1$ - тренутни и наредни одбирак
+\end{itemize}
+
 \subsubsection{Камера}
 
 \subsection{\textit{Rosbag}}
