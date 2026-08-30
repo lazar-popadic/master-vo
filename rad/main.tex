@@ -99,12 +99,58 @@
 \subsection{ORB-SLAM3}
 \subsection{TSformer-VO}
 \subsection{Окружење}
-\textit{Podman} контејнер са \textit{Ubuntu} 20.04
+С обзиром да су у овом раду коришћени алати и алгоритми који су развијени независно једни од других, јавила се потреба да се користе изолована развојна окружења. Коришћени су различити нивои изолације, у зависности од захтева појединачних алата. У наставку су наведена три алата која су коришћена за изолацију окружења:
+\begin{itemize}
+    \item \textit{Podman} контејнери,
+    \item \textit{Conda} и
+    \item \textit{Python venv}.
+\end{itemize}
+Контејнери представљају потпуну изолацију са комплетним оперативним системом и системским библиотекама. Окружење које је изоловано у контејнеру је независно од \textit{host} оперативног система. \textit{Conda} представља средњи ниво изолације и омогућава потпуну изолацију \textit{python} окружења од системског. \textit{Python venv} користи системски \textit{python} интерпретер и омогућава само одвајање инсталираних \textit{python} пакета. Избор алата који се користи за изолацију датог окружења зависи од системских зависности. Уколико је потребан одређен оперативни систем, користи се контејнер. Уколико је потребна другачија верзија \textit{python} интерпретера са свим осталим пакетима, користи се \textit{conda}. Уколико су потребне одређене верзије појединачних \textit{python} пакета, без потребе за мењањем интерпретера, користи се \textit{python venv}.
+
+TODO: napisi sve ovo lepo
+
+
+
+
+
+Verzije ROS-a direktno diktiraju verziju Ubuntu operativnog sistema; na primer, ROS1 Noetic je kompatibilan samo sa Ubuntu 20.04, što znači da algoritmi koji zavise od ROS1 nemaju izbora u pogledu operativnog sistema.
+Jedan deo eksperimentalnog toka zahteva ROS1, C++ biblioteke, OpenCV i standardne ROS komponente (što nalaže Ubuntu 20.04), dok drugi deo zahteva modernije Python okruženje sa novijim bibliotekama, koje su pogodnije za Ubuntu 24.04.
+Ako bi se sve instaliralo u jedno okruženje, javili bi se konflikti između verzija paketa, Python interpretatora, biblioteka i ROS zavisnosti.
+Zbog toga je bilo neophodno koristiti separisana okruženja za različite funkcionalne potrebe.
+2) Zašto su korišćeni kontejneri
+Kontejneri omogućavaju izolaciju softverskih zavisnosti bez menjanja celokupnog razvojnog sistema na hostovskoj mašini.
+Svaki kontejner je bio namenjen drugoj fazi istraživanja: jedan za ROS1 testiranje algoritama, drugi za Python analizu i evaluaciju rezultata.
+3) ROS1, SVO i ORB-SLAM3 zavisnosti
+SVO i ORB-SLAM3 algoritmi zavise od ROS1 kompatibilne implementacije i standardnog ROS ekosistema.
+Testiranje ovih algoritama mora da bude realizovano u okruženju koje odgovara njihovim originalnim zahtevima.
+4) Zašto je korišćen Conda
+Conda je korišćena za projekte čije su zavisnosti specifične i teško kompatibilne sa sistemskim Python-om.
+U ovom radu je Conda korišćena za rad sa TSformer-VO i za evaluacione alate vezane za KITTI odometriju.
+5) Zašto je korišćen Python venv
+Python venv je korišćen za lokalno, lagano i ograničeno Python okruženje, bez potrebe za potpuno novim instalacionim sistemom.
+On je koristan kada je potrebno da se određena Python aplikacija ili alat pokrene sa minimalnim skupom biblioteka, a da se ne menja globalni sistemski Python.
+U ovom radu je venv korišćen za alate vezane za obradu bag fajlova i druge Python skripte za konverziju i analizu podataka.
+Venv je bio pogodniji od Conda za manje, fokusirane i lokalne Python zadatke.
+6) Šta je korišćeno za šta
+ROS1/Ubuntu 20.04 okruženje: testiranje i validacija algoritama SVO i ORB-SLAM3, rad sa ROS paketima, ROS temama i bag fajlovima, pokretanje algoritama u okruženju koje odgovara njihovoj originalnoj implementaciji.
+Modernije okruženje / Ubuntu 24.04: razvojni i analitički deo rada, obrada datoteka i dataset-a, evaluacija rezultata, rad sa novijim Python i OpenCV paketima.
+Conda: TSformer-VO eksperimenti, KITTI odometrijska evaluacija, okruženja sa specifičnim Python i dependency zahtevima.
+Python venv: lokalni Python alati za konverziju i obradu bag podataka, jednostavna i fokusirana Python okruženja.
+
+
+
 \newpage
 
 \section{Прикупљање података}
 
 \subsection{Робот}
+Положај камере убаци овде, да не буду два наслова за камеру.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=12cm]{figures/robot.png}
+    \caption{Робот тима +381 \textit{Robotics}}
+    \label{fig:робот}
+\end{figure}
 \subsubsection{Диференцијални погон}
 Два независно актуисана саосна точка. Два степена слободе. Нехолономно ограничење. Три типа кретања. 
 
@@ -156,10 +202,9 @@ TODO: sredi malo ovu recenicu:
     \item $k$, $k+1$ - тренутни и наредни одбирак
 \end{itemize}
 
-\subsubsection{Камера}
-
 \subsection{\textit{Rosbag}}
 Основно за \textit{ROS}. Снимани топици...
+
 \newpage
 
 \subsection{Камера}
@@ -234,38 +279,6 @@ TODO: sredi malo ovu recenicu:
 Примери једначина: $\vec{M}_{in} - I\vec{\alpha} = 0$, $\vec F=Q(\vec v \times \vec B)$, $e_a=-N\dfrac{\partial\phi }{\partial t}$.
 
 \subsubsection{Трећи подподнаслов}
-Другачији примери једначина:
-\begin{equation}
-    u_a-e_a=R_ai_a+L_a\dfrac{di_a}{dt}
-\end{equation}
-\begin{equation}
-    m_e-m_m=J_m \dot\omega+B_m\omega
-\end{equation}
-\begin{equation}
-    \dfrac{d\theta}{dt}=\omega
-\end{equation}
-\begin{equation}
-    m_e=\psi _fi_a
-\end{equation}
-\begin{equation}
-    e_a=\psi _f\omega
-\end{equation}
-\newpage
-Значења величина су:
-\begin{itemize}
-    \item $u_a\;$ - улазни арматурни напон
-    \item $e_a\;$ - индукована електромоторна сила
-    \item $R_a\;$ - електрична отпорност арматурног намотаја
-    \item $i_a\;$ - арматурна струја
-    \item $L_a\;$ - индуктивност арматурног намотаја
-    \item $m_e\;$ - електромагнетни момент
-    \item $m_m\;$ - момент оптерећења
-    \item $J_m\;$ - момент инерције обртних маса
-    \item $\omega\;$ - угаона брзина арматуре
-    \item $B_m\;$ - коефицијент пригушења брзине услед трења
-    \item $\theta\;$ - угао ротора
-    \item $\psi _f\;$ - јачина магнетног флукса побуде
-\end{itemize}
 
 \subsection{Други поднаслов}
 Текст.
