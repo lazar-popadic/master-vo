@@ -95,47 +95,19 @@
 
 Процена дубине у стерео. Дегенерација стерео у монокуларну. Процена дубине у монокуларној. Проблеми са неодређеношћу апсолутне скале. Подела метода ВО.
 
-\subsection{SVO}
-\subsection{ORB-SLAM3}
-\subsection{TSformer-VO}
+\subsection{\textit{SVO}}
+\subsection{\textit{ORB-SLAM3}}
+\subsection{\textit{TSformer-VO}}
 \subsection{Окружење}
-С обзиром да су у овом раду коришћени алати и алгоритми који су развијени независно једни од других, јавила се потреба да се користе изолована развојна окружења. Коришћени су различити нивои изолације, у зависности од захтева појединачних алата. У наставку су наведена три алата која су коришћена за изолацију окружења:
+С обзиром на то да су у овом раду коришћени алати и алгоритми који су развијени независно једни од других, јавила се потреба за коришћењем изолованих развојних окружења. Уколико би се све инсталирало у једном окружењу, појавили би се конфликти између верзија пакета, \textit{Python} интерпретера и библиотека. Коришћени су различити нивои изолације, у зависности од захтева појединачних алата. У наставку су наведена три алата која су коришћена за изолацију окружења:
 \begin{itemize}
     \item \textit{Podman} контејнери,
     \item \textit{Conda} и
     \item \textit{Python venv}.
 \end{itemize}
-Контејнери представљају потпуну изолацију са комплетним оперативним системом и системским библиотекама. Окружење које је изоловано у контејнеру је независно од \textit{host} оперативног система. \textit{Conda} представља средњи ниво изолације и омогућава потпуну изолацију \textit{python} окружења од системског. \textit{Python venv} користи системски \textit{python} интерпретер и омогућава само одвајање инсталираних \textit{python} пакета. Избор алата који се користи за изолацију датог окружења зависи од системских зависности. Уколико је потребан одређен оперативни систем, користи се контејнер. Уколико је потребна другачија верзија \textit{python} интерпретера са свим осталим пакетима, користи се \textit{conda}. Уколико су потребне одређене верзије појединачних \textit{python} пакета, без потребе за мењањем интерпретера, користи се \textit{python venv}.
+Контејнери представљају потпуну изолацију са комплетним оперативним системом и системским библиотекама. Окружење изоловано у контејнеру независно је од \textit{host} оперативног система. \textit{Conda} представља средњи ниво изолације и омогућава потпуну изолацију \textit{Python} окружења од системског. \textit{Python venv} користи системски \textit{Python} интерпретер и омогућава само одвајање инсталираних \textit{Python} пакета. Избор алата који се користи за изолацију датог окружења зависи од системских зависности. Уколико је потребан одређен оперативни систем, користи се контејнер. Уколико је потребна другачија верзија \textit{Python} интерпретера са свим осталим пакетима, користи се \textit{Conda}. Уколико су потребне одређене верзије појединачних \textit{Python} пакета, без потребе за променом интерпретера, користи се \textit{Python venv}.
 
-TODO: napisi sve ovo lepo
-
-
-
-
-
-Verzije ROS-a direktno diktiraju verziju Ubuntu operativnog sistema; na primer, ROS1 Noetic je kompatibilan samo sa Ubuntu 20.04, što znači da algoritmi koji zavise od ROS1 nemaju izbora u pogledu operativnog sistema.
-Jedan deo eksperimentalnog toka zahteva ROS1, C++ biblioteke, OpenCV i standardne ROS komponente (što nalaže Ubuntu 20.04), dok drugi deo zahteva modernije Python okruženje sa novijim bibliotekama, koje su pogodnije za Ubuntu 24.04.
-Ako bi se sve instaliralo u jedno okruženje, javili bi se konflikti između verzija paketa, Python interpretatora, biblioteka i ROS zavisnosti.
-Zbog toga je bilo neophodno koristiti separisana okruženja za različite funkcionalne potrebe.
-2) Zašto su korišćeni kontejneri
-Kontejneri omogućavaju izolaciju softverskih zavisnosti bez menjanja celokupnog razvojnog sistema na hostovskoj mašini.
-Svaki kontejner je bio namenjen drugoj fazi istraživanja: jedan za ROS1 testiranje algoritama, drugi za Python analizu i evaluaciju rezultata.
-3) ROS1, SVO i ORB-SLAM3 zavisnosti
-SVO i ORB-SLAM3 algoritmi zavise od ROS1 kompatibilne implementacije i standardnog ROS ekosistema.
-Testiranje ovih algoritama mora da bude realizovano u okruženju koje odgovara njihovim originalnim zahtevima.
-4) Zašto je korišćen Conda
-Conda je korišćena za projekte čije su zavisnosti specifične i teško kompatibilne sa sistemskim Python-om.
-U ovom radu je Conda korišćena za rad sa TSformer-VO i za evaluacione alate vezane za KITTI odometriju.
-5) Zašto je korišćen Python venv
-Python venv je korišćen za lokalno, lagano i ograničeno Python okruženje, bez potrebe za potpuno novim instalacionim sistemom.
-On je koristan kada je potrebno da se određena Python aplikacija ili alat pokrene sa minimalnim skupom biblioteka, a da se ne menja globalni sistemski Python.
-U ovom radu je venv korišćen za alate vezane za obradu bag fajlova i druge Python skripte za konverziju i analizu podataka.
-Venv je bio pogodniji od Conda za manje, fokusirane i lokalne Python zadatke.
-6) Šta je korišćeno za šta
-ROS1/Ubuntu 20.04 okruženje: testiranje i validacija algoritama SVO i ORB-SLAM3, rad sa ROS paketima, ROS temama i bag fajlovima, pokretanje algoritama u okruženju koje odgovara njihovoj originalnoj implementaciji.
-Modernije okruženje / Ubuntu 24.04: razvojni i analitički deo rada, obrada datoteka i dataset-a, evaluacija rezultata, rad sa novijim Python i OpenCV paketima.
-Conda: TSformer-VO eksperimenti, KITTI odometrijska evaluacija, okruženja sa specifičnim Python i dependency zahtevima.
-Python venv: lokalni Python alati za konverziju i obradu bag podataka, jednostavna i fokusirana Python okruženja.
+Целокупно радно окружење је подељено у два контејнера, у којима су даље изолована засебна \textit{Conda} и \textit{Python venv} окружења. Први је коришћен за \textit{SVO} и \textit{ORB-SLAM3} алгоритме, који захтевају \textit{ROS 1 Noetic} дистрибуцију роботског оперативног система. С обзиром на то да су \textit{ROS} дистрибуције директно везане за верзије \textit{Ubuntu} оперативног система, у првом контејнеру је коришћен \textit{Ubuntu} 20.04. Поред тога, први контејнер је коришћен и за обраду \textit{rosbag} датотека. Други контејнер је коришћен за \textit{TSformer-VO} алгоритам, евалуацију резултата и анализу и обраду података. Иако ниједна од претходно наведених намена није захтевала употребу специфичног оперативног система и није било неопходно користити још један контејнер, коришћен је модернији \textit{Ubuntu} 24.04 због новијих верзија \textit{Python}-а и библиотека.
 
 
 
