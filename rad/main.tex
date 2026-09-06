@@ -43,8 +43,14 @@
 \usepackage{graphicx}
 \usepackage{float}
 \graphicspath{{figures/}}
+
 \usepackage{caption}
 \captionsetup{labelsep=space}
+\captionsetup[table]{
+    justification=raggedright,
+    singlelinecheck=false
+}
+
 \usepackage{chngcntr}
 \counterwithin{figure}{section}
 \counterwithin{table}{section}
@@ -81,6 +87,7 @@
 % Other
 % =========================================================
 \usepackage{comment}
+\usepackage{multirow}
 
 
 \title{Мастер рад}
@@ -419,9 +426,9 @@
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=16.5cm]{figures/tsformer-rezultati.pdf}
+    \includegraphics[width=16.5cm]{figures/TSformer-rezultati.pdf}
     \caption{Процењене путање као резултат \textit{TSformer-VO} алгоритма}
-    \label{fig:tsformer-rez}
+    \label{fig:TSformer-rez}
 \end{figure}
 
 \subsection{Поређење алгоритама}
@@ -432,6 +439,66 @@
     \caption{Процењене путање свих анализираних алгоритама}
     \label{fig:zajedno-rez}
 \end{figure}
+
+\begin{table}[ht]
+\centering
+\caption{Резултати евалуације визуелне одометрије}
+\label{tab:rezultati-evaluacije}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}llcccc@{}}
+    \hline
+    & & \multicolumn{4}{c}{\text{Секвенца}} \\
+    \cline{3-6}
+    & \text{Метода} & \multicolumn{2}{c}{\text{Праволинијска}} &
+        \multicolumn{2}{c}{\text{Криволинијска}} \\
+    \cline{3-6}
+    & & \text{Спора} & \text{Брза} & \text{Спора} & \text{Брза} \\
+    \hline
+
+    \multirow{3}{*}{$t_{\mathrm{err}}$ [\%]}
+    & SVO & 45.692 & 22.981 & 12.084 & 2.529\textsuperscript{*} \\
+    & ORB-SLAM3 & 1.136\textsuperscript{*} & 2.643\textsuperscript{*} & 3.547 & 8.063\textsuperscript{*} \\
+    & TSformer-VO & 56.442 & 60.369 & 69.122 & 70.707 \\
+
+    \hline
+
+    \multirow{3}{*}{$r_{\mathrm{err}}$ [$^\circ$/m]}
+    & SVO & 0.053 & 0.053 & 0.350 & 0.006\textsuperscript{*} \\
+    & ORB-SLAM3 & 6.875\textsuperscript{*} & 13.604\textsuperscript{*} & 0.046 & 2.257\textsuperscript{*} \\
+    & TSformer-VO & 11.528 & 10.762 & 11.178 & 8.351 \\
+
+    \hline
+
+    \multirow{3}{*}{$\mathrm{ATE}$ [m]}
+    & SVO & 1.199 & 1.234 & 1.576 & 0.689\textsuperscript{*} \\
+    & ORB-SLAM3 & 0.056\textsuperscript{*} & 0.145\textsuperscript{*} & 0.066 & 0.494\textsuperscript{*} \\
+    & TSformer-VO & 2.202 & 2.182 & 2.187 & 2.362 \\
+
+    \hline
+
+    \multirow{3}{*}{$\mathrm{RPE}_{\mathrm{trans}}$ [m]}
+    & SVO & 0.005 & 0.005 & 0.004 & 0.008\textsuperscript{*} \\
+    & ORB-SLAM3 & 0.009\textsuperscript{*} & 0.017\textsuperscript{*} & 0.016 & 0.060\textsuperscript{*} \\
+    & TSformer-VO & 0.003 & 0.003 & 0.003 & 0.003 \\
+
+    \hline
+
+    \multirow{3}{*}{$\mathrm{RPE}_{\mathrm{rot}}$ [$^\circ$]}
+    & SVO & 0.222 & 0.360 & 0.169 & 0.795\textsuperscript{*} \\
+    & ORB-SLAM3 & 0.857\textsuperscript{*} & 1.569\textsuperscript{*} & 0.870 & 2.896\textsuperscript{*} \\
+    & TSformer-VO & 0.222 & 0.225 & 0.319 & 0.336 \\
+
+    \hline
+\end{tabular*}
+
+\vspace{0.5em}
+\begin{minipage}{\textwidth}
+\textsuperscript{*} За означене резултате, алгоритам је током секвенце изгубио праћење.
+\end{minipage}
+
+\end{table}
+
+
 
 \newpage
 
