@@ -105,7 +105,7 @@ FAMILY_TITLES = {
 }
 
 
-def plot_comparison(ax, family: str, mapping: dict):
+def plot_comparison(ax, family: str, mapping: dict, selected_method=None):
     gt_positions = read_gt_csv(GT_DIR / mapping["gt"])
     if len(gt_positions) == 0:
         raise ValueError(f"Empty reference trajectory for {family}")
@@ -117,7 +117,8 @@ def plot_comparison(ax, family: str, mapping: dict):
     )
 
     all_positions = [gt_positions]
-    for method in METHOD_NAMES:
+    methods_to_plot = METHOD_NAMES if selected_method is None else {selected_method: METHOD_NAMES[selected_method]}
+    for method in methods_to_plot:
         calculated_path = method_path(method, mapping[method])
         calculated_positions = read_pose_file(calculated_path)
         if len(calculated_positions) == 0:
@@ -137,7 +138,7 @@ def plot_comparison(ax, family: str, mapping: dict):
     y_margin = max((y_max - y_min) * 0.05, 0.01)
     ax.set_xlim(x_min - x_margin, x_max + x_margin)
     ax.set_ylim(y_min - y_margin, y_max + y_margin)
-    ax.set_title(FAMILY_TITLES[family], fontsize=14)
+    ax.set_title(FAMILY_TITLES[family], fontsize=16)
     ax.grid(True, alpha=0.3)
     return ax.lines
 
@@ -162,16 +163,40 @@ def main() -> None:
         legend_lines,
         legend_labels,
         loc="upper center",
-        bbox_to_anchor=(0.5, 0.99),
+        bbox_to_anchor=(0.5, 1.005),
         ncol=2,
-        fontsize=14,
+        fontsize=16,
     )
-    fig.tight_layout(rect=(0, 0, 1, 0.95))
+    fig.tight_layout(rect=(0, 0, 1, 0.94))
 
-    output_path = EVAL_DIR / "all_algorithms_all_sequences.pdf"
+    output_path = EVAL_DIR / "zajedno-rezultati.pdf"
     fig.savefig(output_path, bbox_inches="tight")
     plt.close(fig)
     print(f"Saved to {output_path}")
+
+    for method, method_name in METHOD_NAMES.items():
+        fig, axes = plt.subplots(2, 2, figsize=(14, 14))
+        legend_lines = None
+
+        for ax, family in zip(axes.flatten(), ordered_families):
+            lines = plot_comparison(ax, family, MAPPINGS[family], selected_method=method)
+            if legend_lines is None:
+                legend_lines = lines
+
+        fig.legend(
+            legend_lines,
+            ["Референтна путања", METHOD_LEGEND_LABELS[method]],
+            loc="upper center",
+            bbox_to_anchor=(0.5, 0.99),
+            ncol=2,
+            fontsize=16,
+        )
+        fig.tight_layout(rect=(0, 0, 1, 0.95))
+
+        output_path = EVAL_DIR / f"{method_name.replace('_slam3', '').replace('_vo', '')}-rezultati.pdf"
+        fig.savefig(output_path, bbox_inches="tight")
+        plt.close(fig)
+        print(f"Saved to {output_path}")
 
 
 if __name__ == "__main__":
