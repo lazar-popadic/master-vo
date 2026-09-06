@@ -105,27 +105,32 @@ FAMILY_TITLES = {
 }
 
 
-def plot_comparison(ax, family: str, method: str, mapping: dict):
+def plot_comparison(ax, family: str, mapping: dict):
     gt_positions = read_gt_csv(GT_DIR / mapping["gt"])
-    calculated_path = method_path(method, mapping[method])
-    calculated_positions = read_pose_file(calculated_path)
-
-    if len(gt_positions) == 0 or len(calculated_positions) == 0:
-        raise ValueError(f"Empty trajectory for {family} / {method}")
+    if len(gt_positions) == 0:
+        raise ValueError(f"Empty reference trajectory for {family}")
 
     ax.plot(
         gt_positions[:, 0], gt_positions[:, 1],
         color="black", linewidth=2.5, linestyle="--", zorder=1,
         label="Референтна путања",
     )
-    ax.plot(
-        calculated_positions[:, 0], calculated_positions[:, 1],
-        color=METHOD_COLORS[method], linewidth=2.5, linestyle="-", zorder=2,
-        label=METHOD_LEGEND_LABELS[method],
-    )
 
-    # Include both trajectories so calculated excursions are not clipped.
-    all_positions = np.vstack((gt_positions, calculated_positions))
+    all_positions = [gt_positions]
+    for method in METHOD_NAMES:
+        calculated_path = method_path(method, mapping[method])
+        calculated_positions = read_pose_file(calculated_path)
+        if len(calculated_positions) == 0:
+            raise ValueError(f"Empty trajectory for {family} / {method}")
+        ax.plot(
+            calculated_positions[:, 0], calculated_positions[:, 1],
+            color=METHOD_COLORS[method], linewidth=2.5, linestyle="-", zorder=2,
+            label=METHOD_LEGEND_LABELS[method],
+        )
+        all_positions.append(calculated_positions)
+
+    # Include every trajectory so calculated excursions are not clipped.
+    all_positions = np.vstack(all_positions)
     x_min, y_min = all_positions.min(axis=0)
     x_max, y_max = all_positions.max(axis=0)
     x_margin = max((x_max - x_min) * 0.05, 0.01)
@@ -139,30 +144,34 @@ def plot_comparison(ax, family: str, method: str, mapping: dict):
 
 def main() -> None:
     ordered_families = ["straight_slow", "straight_fast", "curve_slow", "curve_fast"]
+    fig, axes = plt.subplots(2, 2, figsize=(14, 14))
+    legend_lines = None
 
-    for method, method_name in METHOD_NAMES.items():
-        fig, axes = plt.subplots(2, 2, figsize=(14, 14))
-        legend_lines = None
+    for ax, family in zip(axes.flatten(), ordered_families):
+        lines = plot_comparison(ax, family, MAPPINGS[family])
+        if legend_lines is None:
+            legend_lines = lines
 
-        for ax, family in zip(axes.flatten(), ordered_families):
-            lines = plot_comparison(ax, family, method, MAPPINGS[family])
-            if legend_lines is None:
-                legend_lines = lines
+    legend_labels = [
+        "Референтна путања",
+        METHOD_LEGEND_LABELS["svo"],
+        METHOD_LEGEND_LABELS["orb"],
+        METHOD_LEGEND_LABELS["tsformer"],
+    ]
+    fig.legend(
+        legend_lines,
+        legend_labels,
+        loc="upper center",
+        bbox_to_anchor=(0.5, 0.99),
+        ncol=2,
+        fontsize=14,
+    )
+    fig.tight_layout(rect=(0, 0, 1, 0.95))
 
-        fig.legend(
-            legend_lines,
-            ["Референтна путања", METHOD_LEGEND_LABELS[method]],
-            loc="upper center",
-            bbox_to_anchor=(0.5, 0.99),
-            ncol=2,
-            fontsize=14,
-        )
-        fig.tight_layout(rect=(0, 0, 1, 0.95))
-
-        output_path = EVAL_DIR / f"all_sequences_{method_name}.pdf"
-        fig.savefig(output_path, bbox_inches="tight")
-        plt.close(fig)
-        print(f"Saved to {output_path}")
+    output_path = EVAL_DIR / "all_algorithms_all_sequences.pdf"
+    fig.savefig(output_path, bbox_inches="tight")
+    plt.close(fig)
+    print(f"Saved to {output_path}")
 
 
 if __name__ == "__main__":
