@@ -90,7 +90,7 @@
 \usepackage{multirow}
 
 
-\title{Мастер рад}
+\title{Алгоритми за визуелну одометрију са применом у мобилној роботици}
 \author{Лазар Попадић}
 \date{Септембар 2026}
 %\maketitle
@@ -99,11 +99,19 @@
 \tableofcontents
 \newpage
 
+\listoffigures
+\addcontentsline{toc}{section}{Списак слика}
+
+\listoftables
+\addcontentsline{toc}{section}{Списак табела}
+
+\newpage
 \section{Увод}
+TODO:
 
 \newpage
 \section{Визуелна одометрија}
-
+TODO:
 Шта је ВО? Шта све утиче на успешност ВО:
 \begin{itemize}
     \item осветљеност,
@@ -115,8 +123,11 @@
 Процена дубине у стерео. Дегенерација стерео у монокуларну. Процена дубине у монокуларној. Проблеми са неодређеношћу апсолутне скале. Подела метода ВО.
 
 \subsection{\textit{SVO}}
+TODO:
 \subsection{\textit{ORB-SLAM3}}
+TODO:
 \subsection{\textit{TSformer-VO}}
+TODO:
 \subsection{Окружење}
 С обзиром на то да су у овом раду коришћени алати и алгоритми који су развијени независно једни од других, јавила се потреба за коришћењем изолованих развојних окружења. Уколико би се све инсталирало у једном окружењу, појавили би се конфликти између верзија пакета, \textit{Python} интерпретера и библиотека. Коришћени су различити нивои изолације, у зависности од захтева појединачних алата. У наставку су наведена три алата која су коришћена за изолацију окружења:
 \begin{itemize}
@@ -144,7 +155,7 @@
 \begin{figure}[H]
     \centering
     \includegraphics[width=12cm]{figures/robot.jpg}
-    \caption{Робот тима \textit{+381 Robotics}}
+    \caption{Робот тима \textit{+381 Robotics} који је коришћен за прикупљање скупа података}
     \label{fig:robot}
 \end{figure}
 
@@ -305,19 +316,19 @@
 
 Снимљена су два типа секвенци. Први тип се састоји искључиво од праволинијских транслација и ротације око центра робота. Други тип користи дугачке криволинијске путање и кратке праволинијске транслације, као и ротацију око центра. Оба типа подразумевају две секвенце у којима робот пролази кроз исте путање, али са различитим максималним брзинама. У споријим секвенцама максимална линеарна брзина износи $0{,}5\,\mathrm{\frac{m}{s}}$, а максимална угаона брзина приликом ротације око центра робота износи $\frac{\pi}{2}\,\mathrm{\frac{rad}{s}}$. Максимална линеарна и угаона брзина у бржим секвенцама износе $1\,\mathrm{\frac{m}{s}}$ и $\pi\,\mathrm{\frac{rad}{s}}$. Угаона брзина при криволинијском кретању није експлицитно ограничена максималном угаоном брзином већ се скалира на основу максималне линеарне брзине.
 
-На слици~\ref{fig:straight_seq_gt} је приказана путања којом се робот кретао у праволинијској секвенци, док је на слици~\ref{fig:curve_seq_gt} приказана путања у криволинијској секвенци.
+На слици~\ref{fig:straight_seq_gt} је приказана путања којом се робот кретао у праволинијским секвенцама, док је на слици~\ref{fig:curve_seq_gt} приказана путања у криволинијским секвенцама.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=12cm]{figures/straight_seq_gt.pdf}
-    \caption{Референтна путања робота у праволинијској секвенци}
+    \caption{Референтна путања робота у праволинијским секвенцама}
     \label{fig:straight_seq_gt}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=12cm]{figures/curve_seq_gt.pdf}
-    \caption{Референтна путања робота у криволинијској секвенци}
+    \caption{Референтна путања робота у криволинијским секвенцама}
     \label{fig:curve_seq_gt}
 \end{figure}
 
@@ -405,34 +416,34 @@
 Након одређивања ротације израчунава се фактор скале. Он се одређује на основу расподеле тачака око њихових средњих вредности и израчунате ротације тако да се минимизује средња квадратна грешка између одговарајућих тачака \cite{umeyama1991least}. На крају се израчунава транслација на основу средњих вредности две групе тачака, ротације и фактора скале \cite{umeyama1991least}.
 
 \subsection{Резултати \textit{SVO}}
-
+TODO:
 \begin{figure}[H]
     \centering
     \includegraphics[width=16.5cm]{figures/svo-rezultati.pdf}
-    \caption{Процењене путање као резултат \textit{SVO} алгоритма}
+    \caption{Путање процењене алгоритмом \textit{SVO}}
     \label{fig:svo-rez}
 \end{figure}
 
 \subsection{Резултати \textit{ORB-SLAM3}}
-
+TODO:
 \begin{figure}[H]
     \centering
     \includegraphics[width=16.5cm]{figures/orb-rezultati.pdf}
-    \caption{Процењене путање као резултат \textit{ORB-SLAM3} алгоритма}
+    \caption{Путање процењене алгоритмом \textit{ORB-SLAM3}}
     \label{fig:orb-rez}
 \end{figure}
 
 \subsection{Резултати \textit{TSformer-VO}}
-
+TODO:
 \begin{figure}[H]
     \centering
     \includegraphics[width=16.5cm]{figures/TSformer-rezultati.pdf}
-    \caption{Процењене путање као резултат \textit{TSformer-VO} алгоритма}
+    \caption{Путање процењене алгоритмом \textit{TSformer-VO}}
     \label{fig:TSformer-rez}
 \end{figure}
 
 \subsection{Поређење алгоритама}
-
+TODO:
 \begin{figure}[H]
     \centering
     \includegraphics[width=16.5cm]{figures/zajedno-rezultati.pdf}
@@ -503,12 +514,17 @@
 \newpage
 
 \section{Закључак}
-Текст.
+TODO:
 \newpage
 
-\section{Прилог}
-% calc_params.py i generate_charuco.py i navedi ih gore, mozda?
 
 \printbibliography
+\addcontentsline{toc}{section}{Литература}
+
+\clearpage
+\addcontentsline{toc}{section}{Прилог}
+\section*{Прилог}
+TODO:
+% calc_params.py i generate_charuco.py i navedi ih gore, mozda?
 
 \end{document}
