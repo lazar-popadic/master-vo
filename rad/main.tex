@@ -455,14 +455,17 @@ TODO:
 
 
 \subsection{Поређење алгоритама}
-TODO:
-напомена зашто игноришем рпе транс за образложење резултата
+
+На слици~\ref{fig:zajedno-rez} су приказане референтне путање и процењене путање за све алгоритме из овог рада. У табели~\ref{tab:rezultati-evaluacije} су приказане вредности критеријума који су коришћени за евалуацију. При поређењу алгоритама није разматран критеријум $\mathrm{RPE}_{\mathrm{trans}}$, јер је у овом експерименту слабо информативан за поређење, како због малог померања између кадрова, тако и због тога што губици праћења утичу на репрезентативност његове вредности.
+
 \begin{figure}[H]
     \centering
     \includegraphics[width=16.5cm]{figures/zajedno-rezultati.pdf}
     \caption{Процењене путање свих анализираних алгоритама}
     \label{fig:zajedno-rez}
 \end{figure}
+
+На основу резултата се може уочити да \textit{ORB-SLAM3} остварује најбоље подударање са референтним путањама, али пре успешне локализације долази до константних губитака праћења у ротацијама и алгоритам је осетљив на брзину кретања робота. \textit{SVO} алгоритам показује најбољу процену оријентације, али није у стању да одреди скалу транслације. \textit{TSformer-VO} показује највеће одступање од референтних путања, без обзира на тип секвенце и без обзира на брзину кретања.
 
 \begin{table}[H]
 \centering
@@ -481,35 +484,35 @@ TODO:
 
     \multirow{3}{*}{$t_{\mathrm{err}}$ [\%]}
     & SVO & 45.692 & 22.981 & 12.084 & 2.529\textsuperscript{*} \\
-    & ORB-SLAM3 & 1.136\textsuperscript{*} & 2.643\textsuperscript{*} & 3.547 & 8.063\textsuperscript{*} \\
+    & ORB-SLAM3 & 1.136\textsuperscript{*} & 2.643\textsuperscript{*} & 3.547\textsuperscript{**} & 8.063\textsuperscript{*} \\
     & TSformer-VO & 56.442 & 60.369 & 69.122 & 70.707 \\
 
     \hline
 
     \multirow{3}{*}{$r_{\mathrm{err}}$ [$^\circ$/m]}
     & SVO & 0.053 & 0.053 & 0.350 & 0.006\textsuperscript{*} \\
-    & ORB-SLAM3 & 6.875\textsuperscript{*} & 13.604\textsuperscript{*} & 0.046 & 2.257\textsuperscript{*} \\
+    & ORB-SLAM3 & 6.875\textsuperscript{*} & 13.604\textsuperscript{*} & 0.046\textsuperscript{**} & 2.257\textsuperscript{*} \\
     & TSformer-VO & 11.528 & 10.762 & 11.178 & 8.351 \\
 
     \hline
 
     \multirow{3}{*}{$\mathrm{ATE}$ [m]}
     & SVO & 1.199 & 1.234 & 1.576 & 0.689\textsuperscript{*} \\
-    & ORB-SLAM3 & 0.056\textsuperscript{*} & 0.145\textsuperscript{*} & 0.066 & 0.494\textsuperscript{*} \\
+    & ORB-SLAM3 & 0.056\textsuperscript{*} & 0.145\textsuperscript{*} & 0.066\textsuperscript{**} & 0.494\textsuperscript{*} \\
     & TSformer-VO & 2.202 & 2.182 & 2.187 & 2.362 \\
 
     \hline
 
     \multirow{3}{*}{$\mathrm{RPE}_{\mathrm{trans}}$ [m]}
     & SVO & 0.005 & 0.005 & 0.004 & 0.008\textsuperscript{*} \\
-    & ORB-SLAM3 & 0.009\textsuperscript{*} & 0.017\textsuperscript{*} & 0.016 & 0.060\textsuperscript{*} \\
+    & ORB-SLAM3 & 0.009\textsuperscript{*} & 0.017\textsuperscript{*} & 0.016\textsuperscript{**} & 0.060\textsuperscript{*} \\
     & TSformer-VO & 0.003 & 0.003 & 0.003 & 0.003 \\
 
     \hline
 
     \multirow{3}{*}{$\mathrm{RPE}_{\mathrm{rot}}$ [$^\circ$]}
     & SVO & 0.222 & 0.360 & 0.169 & 0.795\textsuperscript{*} \\
-    & ORB-SLAM3 & 0.857\textsuperscript{*} & 1.569\textsuperscript{*} & 0.870 & 2.896\textsuperscript{*} \\
+    & ORB-SLAM3 & 0.857\textsuperscript{*} & 1.569\textsuperscript{*} & 0.870\textsuperscript{**} & 2.896\textsuperscript{*} \\
     & TSformer-VO & 0.222 & 0.225 & 0.319 & 0.336 \\
 
     \hline
@@ -517,7 +520,8 @@ TODO:
 
 \vspace{0.5em}
 \begin{minipage}{\textwidth}
-\textsuperscript{*} За означене резултате, алгоритам је током секвенце изгубио праћење.
+\textsuperscript{*} За означене резултате, алгоритам је током секвенце изгубио праћење.\newline
+\textsuperscript{**} За означене резултате, алгоритам је током секвенце изгубио праћење, али је касније успешно извршио локализацију.
 \end{minipage}
 
 \end{table}
@@ -528,6 +532,7 @@ TODO:
 
 \section{Закључак}
 TODO:
+утицај оријентације камере у односу на кретање
 \newpage
 
 
