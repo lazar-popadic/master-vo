@@ -44,4 +44,20 @@ Thumbs.db
 *.tar
 /ubuntu-24.04-cont/ws/kitti-odom-eval/kitti_eval
 *.xcf
-rad/figures/odom.drawio.pdf
+
+# LaTeX build files
+rad/*.aux
+rad/*.bbl
+rad/*.bcf
+rad/*.blg
+rad/*.fdb_latexmk
+rad/*.fls
+rad/*.lof
+rad/*.log
+rad/*.lot
+rad/*.out
+rad/*.run.xml
+rad/*.toc
+rad/*.xdv
+rad/*.synctex.gz
+rad/missfont.log
