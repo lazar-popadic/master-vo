@@ -61,3 +61,4 @@ rad/*.toc
 rad/*.xdv
 rad/*.synctex.gz
 rad/missfont.log
+indent.log
