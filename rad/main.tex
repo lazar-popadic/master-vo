@@ -290,7 +290,36 @@ $\pi$. Релативна трансформација између претхо
 	\label{fig:svo-pipeline}
 \end{figure}
 
-% кораци у процени кретања и слика
+Процена кретања се састоји из три корака, који су приказани на слици
+\ref{fig:svo-koraci}. Први корак представља иницијализацију позе. Релативна
+поза камере у односу на претходну слику се процењује минимизацијом
+фотометријске грешке између подручја слике који одговарају истим 3D тачкама. У
+другом кораку се фотометријска грешка додатно минимизује. Врши се оптимизација
+положаја сваког издвојеног подручја појединачно. Овим кораком се нарушавају
+епиполарна ограничења, како би се добила већа корелација између подручја у
+слици. Последњим кораком се оптимизују поза камере и положаји 3Д тачака
+минимизацијом репројекционе грешке.
+
+\begin{figure}[H]
+	\centering
+	\begin{minipage}[b]{0.31\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{figures/draft/svo-fig2-image-alignment.png}\\
+	\end{minipage}
+	\hfill
+	\begin{minipage}[b]{0.33\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{figures/draft/svo-fig3-feature-alignment.png}\\
+	\end{minipage}
+	\hfill
+	\begin{minipage}[b]{0.33\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{figures/draft/svo-fig4-refinement.png}\\
+	\end{minipage}
+	\caption{Три корака процене кретања у \textit{SVO} алгоритму (преузето из \cite{forster2014svo})}
+	\label{fig:svo-koraci}
+\end{figure}
+
 % SVO Pro је коришћен
 
 \subsection{\textit{ORB-SLAM3}}
