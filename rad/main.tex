@@ -285,7 +285,7 @@ $\pi$. Релативна трансформација између претхо
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=10cm]{figures/draft/svo-pipeline.png}
+	\includegraphics[width=10cm]{figures/svo-pipeline.png}
 	\caption{Структура алгоритма \textit{SVO}: процес за процену кретања и процес за мапирање (преузето из \cite{forster2014svo})}
 	\label{fig:svo-pipeline}
 \end{figure}
@@ -304,17 +304,17 @@ $\pi$. Релативна трансформација између претхо
 	\centering
 	\begin{minipage}[b]{0.31\textwidth}
 		\centering
-		\includegraphics[width=\textwidth]{figures/draft/svo-fig2-image-alignment.png}\\
+		\includegraphics[width=\textwidth]{figures/svo-fig2-image-alignment.png}\\
 	\end{minipage}
 	\hfill
 	\begin{minipage}[b]{0.33\textwidth}
 		\centering
-		\includegraphics[width=\textwidth]{figures/draft/svo-fig3-feature-alignment.png}\\
+		\includegraphics[width=\textwidth]{figures/svo-fig3-feature-alignment.png}\\
 	\end{minipage}
 	\hfill
 	\begin{minipage}[b]{0.33\textwidth}
 		\centering
-		\includegraphics[width=\textwidth]{figures/draft/svo-fig4-refinement.png}\\
+		\includegraphics[width=\textwidth]{figures/svo-fig4-refinement.png}\\
 	\end{minipage}
 	\caption{Три корака процене кретања у \textit{SVO} алгоритму (преузето из \cite{forster2014svo})}
 	\label{fig:svo-koraci}
@@ -368,7 +368,7 @@ $\pi$. Релативна трансформација између претхо
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=12cm]{figures/draft/orbslam3-components.png}
+	\includegraphics[width=12cm]{figures/orbslam3-components.png}
 	\caption{Kомпоненте система \textit{ORB-SLAM3} (преузето из \cite{campos2021orbslam3})}
 	\label{fig:orbslam3}
 \end{figure}
@@ -412,7 +412,6 @@ $\pi$. Релативна трансформација између претхо
 процену поза камере. За разлику од геометријских метода, модел може имплицитно
 да научи скалу кретања из скупа података за обучавање.
 
-% структура модела и слика
 Структура модела је приказана на слици~\ref{fig:tsformer}. Скуп од $N_f$
 узастопних слика представља улазни податак: $\mathbf{X} \in \mathbb{R}^{N_f
 		\times C \times H \times W}$, где су $C$, $H$ и $W$ број канала, висина и
@@ -427,19 +426,30 @@ $\pi$. Релативна трансформација између претхо
 користи за прикупљање информација из свих делова улазних слика, како би се
 избегао бијас при избору излаза једног конкретног дела слике. Низ токена
 пролази кроз $L_x$ блокова \textit{Transformer} енкодера, а класни токен се на
-крају прослеђује излазном вишеслојном перцептрону (\textit{MLP head}).
+крају прослеђује излазном вишеслојном перцептрону (\textit{MLP head}). С
+обзиром на то да су за једну релативну позу потребне две узастопне слике, за
+исечак од $N_f$ слика излаз чини $N_f - 1$ поза. Односно, излазни слој има
+димензију $6(N_f - 1)$.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=16.5cm]{figures/draft/tsformer-pipeline.png}
+	\includegraphics[width=16.5cm]{figures/tsformer-pipeline.png}
 	\caption{Структура модела \textit{TSformer-VO} (преузето из \cite{Francani2025})}
 	\label{fig:tsformer}
 \end{figure}
 
-% улазни скуп и слика 4 из рада
-С обзиром на то да су за једну релативну позу потребне две узастопне слике, за
-исечак од $N_f$ слика излаз чини $N_f - 1$ поза. Односно, излазни слој има
-димензију $6(N_f - 1)$.
+Улазни скупови слика се преклапају за $N_f-1$ слика. Због тога иста кретања
+могу да се процене више пута. Клипови се формирају као кружни бафер величине
+$N_f$. Свако кретање представља усредњену вредност процена из различитих
+клипова. Овај поступак уводи мало кашњење, које је занемарљиво због малог броја
+слика у клипу.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=16.5cm]{figures/tsformer-clips.png}
+	\caption{Визуелизација поновљених кретања, за случај $N_f = 3$ (преузето из \cite{Francani2025})}
+	\label{fig:tsformer}
+\end{figure}
 % на KITTI је обучен
 % коришћени модел
 
