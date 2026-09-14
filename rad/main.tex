@@ -94,6 +94,12 @@
 % =========================================================
 \usepackage{comment}
 \usepackage{multirow}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{verbatim}
+\usepackage{xurl}
+\usepackage{hyperref}
+\usepackage{graphicx}
 
 
 \title{Алгоритми за визуелну одометрију са применом у мобилној роботици}
@@ -1291,10 +1297,38 @@ $\mathrm{RPE}_{\mathrm{trans}}$, јер је у овом експеримент�
 \printbibliography
 \addcontentsline{toc}{section}{Литература}
 
-\clearpage
 \addcontentsline{toc}{section}{Прилог}
+
 \section*{Прилог}
-TODO:
-% calc_params.py i generate_charuco.py i navedi ih gore, mozda?
+
+\begingroup
+
+\fontsize{8}{9}\selectfont
+
+\subsection*{Генерисање \textit{ChArUco} табле}
+
+\verbatiminput{prilog/generate_charuco.py}
+
+\subsection*{Израчунавање параметара камере}
+
+\verbatiminput{prilog/calc_params.py}
+
+\subsection*{Издвајање одометрије из свих \textit{rosbag} датотека}
+
+\verbatiminput{prilog/extract_all.py}
+
+\subsection*{Конверзија трајекторије у \textit{KITTI} формат}
+
+\verbatiminput{prilog/to-kitti.py}
+
+\subsection*{Конверзија референтне путање у \textit{KITTI} формат}
+
+\verbatiminput{prilog/gt-to-kitti.py}
+
+\subsection*{\textit{Containerfile} за \textit{Ubuntu 20.04} окружење}
+
+\verbatiminput{prilog/Containerfile}
+
+\endgroup
 
 \end{document}

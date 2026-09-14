@@ -1,0 +1,97 @@
+\documentclass[12pt]{article}
+
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\usepackage{polyglossia}
+\setdefaultlanguage{serbian}
+\newfontfamily\cyrillicfont{Times New Roman}
+\newfontfamily\cyrillicfonttt{Times New Roman}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{verbatim}
+\usepackage{xurl}
+\usepackage{hyperref}
+\usepackage{graphicx}
+
+\geometry{
+    a4paper,
+    top=2cm,
+    bottom=2cm,
+    left=2.5cm,
+    right=2cm
+}
+
+\setstretch{1.15}
+\setlength{\parindent}{1.25cm}
+\setlength{\parskip}{0pt}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=blue,
+    breaklinks=true
+}
+
+\title{Прилог}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+
+\section*{Генерисање ChArUco табле}
+
+\begingroup
+\fontsize{8}{9}\selectfont
+\verbatiminput{prilog/generate_charuco.py}
+\endgroup
+
+\section*{Израчунавање параметара камере}
+
+\begingroup
+\fontsize{8}{9}\selectfont
+\verbatiminput{prilog/calc_params.py}
+\endgroup
+
+\section*{Издвајање одометрије из свих rosbag датотека}
+
+\begingroup
+\fontsize{8}{9}\selectfont
+\verbatiminput{prilog/extract_all.py}
+\endgroup
+
+\section*{Конверзија трајекторије у KITTI формат}
+
+\begingroup
+\fontsize{8}{9}\selectfont
+\verbatiminput{prilog/to-kitti.py}
+\endgroup
+
+\section*{Конверзија референтне путање у KITTI формат}
+
+\begingroup
+\fontsize{8}{9}\selectfont
+\verbatiminput{prilog/gt-to-kitti.py}
+\endgroup
+
+\section*{Конверзија ROS 2 bag датотека}
+
+\begingroup
+\fontsize{8}{9}\selectfont
+\begin{verbatim}
+sudo apt install python3.8-venv
+python3 -m venv bagvenv
+pip install rosbags
+rosbags-convert straight_test_slow
+\end{verbatim}
+\endgroup
+
+\section*{Контејнерско окружење}
+
+\begingroup
+\fontsize{8}{9}\selectfont
+\verbatiminput{prilog/Containerfile}
+\endgroup
+
+\end{document}
