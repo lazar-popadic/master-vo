@@ -30,11 +30,11 @@ VI-A	TSformer-VO
 VI-B	preklapanje ulaznih klipova
 VI-C	samopaznja			(VIDI I STA JE TACNO)
 VII-A	Prikupljanje eksperimentalnog skupa podataka
-VII-B	kratak opis robota
+VII-B	kratak opis robota: slika robota
 VII-C	rosbag
 VII-D	kamera
-VII-E	kalibracija
-VII-F	sekvence
+VII-E	kalibracija: zasto mora, slika charuco table i proracunati parametri
+VII-F	sekvence: slike sekvenci, snimak odozgo i snimak sa robota
 VIII-A	Rezultati - kriterijumi
 VIII-B	kratko o poravnavanju
 VIII-C	rezultati SVO			- slika i deo iz tabele
