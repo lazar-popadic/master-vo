@@ -1,4 +1,4 @@
-### I-A	Problem procene kretanja
+### I-A		Problem procene kretanja
 Procena sopstvenog polozaja je jedan od najvaznijih problema u mobilnoj robotici.
 Nedovoljno brza i stabilna procena negatvino utice na upravljanje kretanjem,
 dok se konstantne greske nagomilavaju i vremenom se gubi precizna pozicija robota.
@@ -21,13 +21,14 @@ Procena dubine predstavlja osnovu algoritama vizuelne odometrije. U stereo sluca
 dubina 3D tacke se racuna na osnovu bazne distance, odnosno rastojanja izmedju leve i
 desne kamere, dispariteta, odnosno razlike polozaja odgovarajuceg piksela u obe slike,
 i zizne daljine. Greska procene dubine raste sa kvadratom udaljenosti izmedju tacke i kamere.
-I zbog toga se u slucaju velikih udaljenosti tacaka u sceni, stereo vizuelna odometrija se
+I zbog toga se u slucaju velikih udaljenosti tacaka u sceni, stereo vizuelna odometrija
 svodi na slucaj monokularne.
 
 #### II-C	Monokularna vizuelna odometrija (slika mono kamere)
 U monokularnom slucaju, tacka u sceni se posmatra iz dva razlicita polozaja kamere.
 Dubina ne moze direktno da se izmeri, jer ne postoji podatak kao bazna distanca. I zbog
-toga, algoritmi za vizuelnu odometriju mogu da procene kretanje samo do faktora skale.
+toga, algoritmi za monokularnu vizuelnu odometriju mogu da procene kretanje samo do faktora
+skale.
 
 ### III-A	Podela vizuelne odometrije (stablo podele i greske)
 Metode vizuelne odometrije mogu da se podele na geometrijske i metode zasnovane na
@@ -74,14 +75,14 @@ elementima iz okruzenja koji se nalaze blizu kamere. Dugorocne informacije su za
 na prepoznavanju okruzenja i one omogucavaju spajanje nepovezanih mapa i relokalizaciju.
 
 #### V-C	ORB-SLAM3 - Struktura i procesi
-ORB-SLAM3 se sastoji iz 3 paralelna procesa i strukture Atlas. Proces za pracenje procenjuje
+ORB-SLAM se sastoji iz 3 paralelna procesa i strukture Atlas. Proces za pracenje procenjuje
 pozu minimizacijom reprojekcione greske uparenih karakteristika. Proces za lokalno mapiranje
 dodaje nove i otklanja redundantne kljucne slike i 3D tacke. Proces za spajanje mapa detektuje
 zajednicke regione izmedju mapa i vrsi spajanje mapa. Atlas je struktura za reprezentaciju
 vise nepovezanih mapa, od kojih je jedna aktivna u svakom trenutku.
 
 ### VI-A	TSformer-VO
-TSformer je metoda monokularne vizuelne odometrije zasnovana na dubokom ucenju, koja
+TSformer-VO je metoda monokularne vizuelne odometrije zasnovana na dubokom ucenju, koja
 problem procene kretanja posmatra kao zadatak razumevanja videa. Model regresijom procenjuje
 relativne poze kamere na osnovu kratkog skupa uzastopnih slika.
 
@@ -104,7 +105,7 @@ sekvence kretanja u definisanom prostoru.
 #### VII-B	Robot (slika 3.1)
 Za prikupljanje podataka koriscen je mobilni robot razvijen u okviru tima +381 Robotics. Robot
 koristi diferencijalni pogon koji omogucava 3 osnovna tipa kretanja: pravolinijska translacija,
-rotacija oko centra i krivolinijsko kretanja.
+rotacija oko centra robota i krivolinijsko kretanja.
 
 #### VII-C	Robot (slika 3.2, jednacine 6-13)
 Kako bi se smanjio uticaj proklizavanja pogonskih tockova na procenu polozaja, odometrijski sistem
@@ -138,7 +139,8 @@ Referentne tacke su koriscene za proveru greske odometrije sa tockova i za dobij
 Ovde je prikazan snimak sa kamere na robotu tokom jedne od sekvenci.
 Za pravljenje skupa podataka koriscen je rosbag. To je alat koji sluzi za snimanje podataka koji se
 objavljuju na topicima u okviru ROS-a. Pored samih podataka, cuva se i vreme objavljivanja. Snimljeni
-podaci se kasnije mogu reprodukovati, cime se reprodukuje tok podataka zabelezen tokom rada robota.
+podaci se kasnije mogu reprodukovati, cime se reprodukuje tok podataka zabelezen tokom rada robota
+u realnom vremenu.
 To omogucava da se razliciti algoritmi testiraju na identicnim podacima.
 
 ### VIII-A	Kriterijumi evaluacije
@@ -155,17 +157,17 @@ samo do faktora skale, potrebno je dodatno skalirati procenjene putanje.
 Poravnavanje se vrsi u okviru alata za evaluaciju, primenom Umeyama metode.
 
 #### VIII-C	Rezultati SVO (slika i tabela)
-U brzoj krivolinijskoj sekvenci je doslo do jednog gubitka pracenja pri rotaciji.
 SVO je ostvario dobru procenu rotacije i na lokalnom i na globalnom nivou. Medjutim, nije u
-stanju da pouzdano proceni skalu translacije.
+stanju da pouzdano proceni skalu translacije. U brzoj krivolinijskoj sekvenci je doslo do jednog
+gubitka pracenja pri rotaciji.
 Svaki procenjeni segment odrzava priblizno istu orijentaciju, ali relativna skala se stalno menja
 i dolazi do znacajnih odstupanja od referentne putanje.
 
 #### VIII-D	Rezultati ORB-SLAM3 (slika i tabela)
-U ORB-SLAM3 algoritmu je dolazilo do gubitka pracenja na kraju svake rotacije oko centra robota.
+U ORB-SLAM algoritmu je dolazilo do gubitka pracenja na kraju svake rotacije oko centra robota.
 U sporoj krivolinijskoj sekvenci je doslo do uspesne lokalizacije, sto je dovelo do odlicnog
 podudaranja sa referentnom putanjom, sto moze da se vidi na slici.
-ORB-SLAM3 pokazuje dobru globalnu procenu kretanja, ali losiju lokalnu procenu. Takodje pokazuje
+ORB-SLAM pokazuje dobru globalnu procenu kretanja, ali losiju lokalnu procenu. Takodje pokazuje
 osetljivost na brzinu kretanja: sa porastom brzine, opada uspesnost procene.
 
 #### VIII-E	Rezultati TSformer-VO (slika i tabela)
@@ -185,6 +187,6 @@ samostalan izvor procene polozaja.
 
 ### IX-B	Zakljucak: dalja ispitivanja
 Dalja ispitivanja bi mogla da obuhvataju duze sekvence i vec mapirane prostore.
-Zbog ogranicenja konstrukcije robota, nisu ispitane razlicite orijentacije robota.
+Zbog ogranicenja konstrukcije robota, nisu ispitane razlicite orijentacije kamere.
 Mogla bi se ispitati i fuzija sa drugim senzorima, narocito inercijalnim sa kojima se
 cesto kombinuju algoritmi vizuelne odometrije.
