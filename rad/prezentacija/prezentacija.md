@@ -141,11 +141,50 @@ objavljuju na topicima u okviru ROS-a. Pored samih podataka, cuva se i vreme obj
 podaci se kasnije mogu reprodukovati, cime se reprodukuje tok podataka zabelezen tokom rada robota.
 To omogucava da se razliciti algoritmi testiraju na identicnim podacima.
 
-## TODO:
-VIII-A	Rezultati - kriterijumi
-VIII-B	kratko o poravnavanju
-VIII-C	rezultati SVO			- slika i deo iz tabele
-VIII-D	rezultati ORB-SLAM3		- slika i deo iz tabele
-VIII-E	rezultati TSformerVO	- slika i deo iz tabele
-IX-A	Zakljucak: primena
-IX-B	dalje ispitivanje
+### VIII-A	Kriterijumi evaluacije
+Za evaluaciju je koriscen alat KITTI Odometry Evaluation Toolbox. U okviru njega je definisano 5
+kriterijuma: prosecna translaciona i rotaciona greska, apsolutna greska poze i relativna greska za
+translaciju i rotaciju.
+Medjutim, relativna greska poze za translaciju nije razmatrana, zbog uticaja gubitka pracenja na njenu
+vrednost.
+
+#### VIII-B	Poravnavanje procenjene i referentne putanje
+Kako bi procenjena i referentna putanja mogle da se porede, potrebno ja da budu predstavljene u istim
+koordinatnim sistemima. Takodje, zbog ogranicenja monokularne vizuelne odometrija da proceni kretanje
+samo do faktora skale, potrebno je dodatno skalirati procenjene putanje.
+Poravnavanje se vrsi u okviru alata za evaluaciju, primenom Umeyama metode.
+
+#### VIII-C	Rezultati SVO (slika i tabela)
+U brzoj krivolinijskoj sekvenci je doslo do jednog gubitka pracenja pri rotaciji.
+SVO je ostvario dobru procenu rotacije i na lokalnom i na globalnom nivou. Medjutim, nije u
+stanju da pouzdano proceni skalu translacije.
+Svaki procenjeni segment odrzava priblizno istu orijentaciju, ali relativna skala se stalno menja
+i dolazi do znacajnih odstupanja od referentne putanje.
+
+#### VIII-D	Rezultati ORB-SLAM3 (slika i tabela)
+U ORB-SLAM3 algoritmu je dolazilo do gubitka pracenja na kraju svake rotacije oko centra robota.
+U sporoj krivolinijskoj sekvenci je doslo do uspesne lokalizacije, sto je dovelo do odlicnog
+podudaranja sa referentnom putanjom, sto moze da se vidi na slici.
+ORB-SLAM3 pokazuje dobru globalnu procenu kretanja, ali losiju lokalnu procenu. Takodje pokazuje
+osetljivost na brzinu kretanja: sa porastom brzine, opada uspesnost procene.
+
+#### VIII-E	Rezultati TSformer-VO (slika i tabela)
+TSformer-VO nije uspeo da smisleno proceni kretanje. Verovatan razlog za to je velika razlika izmedju
+podataka na kojima je obucavan i podataka u ovom eksperimentu.
+
+### IX-A	Zakljucak: primena
+Monokularna vizuelna odometrija je prikazana kao potencijalno resenje problema procene kretanja.
+Kamere predstavljaju relativno jeftine senzore koji obezbedjuju veliku kolicinu podataka velikom
+frekvencijom. Pored procene kretanja, podaci mogu da se koriste i za lokalizaciju i za resavanje
+drugih zadataka masinske vizije. Medjutim, monokularna vizuelna odometrija ima znacajna ogranicenja.
+Procena kretanja je osetljiva na vizuelno okruzenje i na brzinu kretanja. U slucaju gubitka pracenja
+sistem ostaje bez informacija o kretanju. Neodredjenost apsolutne skale omogucava samo relativnu
+procenu kretanja.
+Zbog toga, monokularna vizuelna odometrija je pogodnija kao deo sistema za lokalizaciju nego kao
+samostalan izvor procene polozaja.
+
+### IX-B	Zakljucak: dalja ispitivanja
+Dalja ispitivanja bi mogla da obuhvataju duze sekvence i vec mapirane prostore.
+Zbog ogranicenja konstrukcije robota, nisu ispitane razlicite orijentacije robota.
+Mogla bi se ispitati i fuzija sa drugim senzorima, narocito inercijalnim sa kojima se
+cesto kombinuju algoritmi vizuelne odometrije.
