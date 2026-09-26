@@ -73,7 +73,7 @@ nestanu iz pogleda. Srednjerocne informacije se koriste za uparivanje trenutne s
 elementima iz okruzenja koji se nalaze blizu kamere. Dugorocne informacije su zasnovane
 na prepoznavanju okruzenja i one omogucavaju spajanje nepovezanih mapa i relokalizaciju.
 
-#### V-B	ORB-SLAM3 - Struktura i procesi
+#### V-C	ORB-SLAM3 - Struktura i procesi
 ORB-SLAM3 se sastoji iz 3 paralelna procesa i strukture Atlas. Proces za pracenje procenjuje
 pozu minimizacijom reprojekcione greske uparenih karakteristika. Proces za lokalno mapiranje
 dodaje nove i otklanja redundantne kljucne slike i 3D tacke. Proces za spajanje mapa detektuje
@@ -81,14 +81,22 @@ zajednicke regione izmedju mapa i vrsi spajanje mapa. Atlas je struktura za repr
 vise nepovezanih mapa, od kojih je jedna aktivna u svakom trenutku.
 
 ### VI-A	TSformer-VO
+TSformer je metoda monokularne vizuelne odometrije zasnovana na dubokom ucenju, koja
+problem procene kretanja posmatra kao zadatak razumevanja videa. Model regresijom procenjuje
+relativne poze kamere na osnovu kratkog skupa uzastopnih slika.
 
-#### VI-A	TSformer-VO - Preklapanje ulaznih klipova
+#### VI-B	TSformer-VO - Struktura (slika 2.4)
+Skup od Nf uzastopnih slika predstavlja ulazni podatak. Svaka slika se deli u neprekplapajuce
+regione koji se ugradjuju u tokene. Niz tokena prolazi kroz Transformer enkoder. Na pocetak niza
+tokena se dodaje klasni token, koji se prosledjuje izlaznom viseslojnom perceptronu. Za jednu
+relativnu pozu su potrebne 2 uzastopne slika. Odnosno, za isecak od Nf slika, dobijamo Nf-1 pozu.
 
-#### VI-A	TSformer-VO - Samopaznja
+#### VI-C	TSformer-VO - Samopaznja (slika 2.6 ali samo gornji deo)
+Samopaznja je mehanizam kojim model razmatra odnose izmedju tokena. Podeljena prostorno-vremenska
+samopaznja podrazumeva razdvajanje vremenske i prostorne obrade. Prvo se razmatraju tokeni sa
+istim prostornim indeksom duz vremenske ose, a zatim tokeni iz iste slike duz prostorne ose.
 
 ## TODO:
-VI-B	
-VI-C	samopaznja			(VIDI I STA JE TACNO)
 VII-A	Prikupljanje eksperimentalnog skupa podataka
 VII-B	kratak opis robota: slika robota
 VII-C	rosbag
