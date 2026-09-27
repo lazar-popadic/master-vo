@@ -106,50 +106,54 @@ mapa i relokalizaciju.
 - a zatim tokeni iz iste slike duz prostorne ose.
 
 ### VII-A	Prikupljanje eksperimentalnog skupa podataka
-Kako bi se ispitala primena vizuelne odometrije u mobilnoj robotici, prikupljen je eksperimentalni
-skup podataka. Eksperimentalnu postavku cine robot sa kamerom, koji se krece kroz razlicite
-sekvence kretanja u definisanom prostoru.
+- Kako bi se ispitala primena vizuelne odometrije u mobilnoj robotici, prikupljen je eksperimentalni
+skup podataka.
+- Eksperimentalnu postavku cine robot sa kamerom, koji se krece kroz razlicite sekvence kretanja u
+definisanom prostoru.
 
 #### VII-B	Robot (slika 3.1)
-Za prikupljanje podataka koriscen je mobilni robot razvijen u okviru tima +381 Robotics. Robot
-koristi diferencijalni pogon koji omogucava 3 osnovna tipa kretanja: pravolinijska translacija,
+- Za prikupljanje podataka koriscen je mobilni robot razvijen u okviru tima +381 Robotics.
+- Robot koristi diferencijalni pogon koji omogucava 3 osnovna tipa kretanja: pravolinijska translacija,
 rotacija oko centra robota i krivolinijsko kretanja.
 
 #### VII-C	Robot (slika 3.2, jednacine 6-13)
-Kako bi se smanjio uticaj proklizavanja pogonskih tockova na procenu polozaja, odometrijski sistem
-je odvojen od pogonskog. Inkrementalni enkoderi se nalaze na pasivnim tockovima. Kretanje robota se
-procenjuje na osnovu merenja sa enkodera i kinematskog modela, koji je prikazan na slici i
-predstavljen ovim jednacinama.
+- Оdometrijski sistem je odvojen od pogonskog.
+- Inkrementalni enkoderi se nalaze na pasivnim tockovima.
+- Kretanje robota se procenjuje na osnovu merenja sa enkodera prema kinematskom modelu diferencijalnog
+robota.
 
 #### VII-D	Kamera
-Za snimanje sekvenci je koriscena OV9281 kamera. Ona je tipa global-shutter, odnosno svi pikseli
-u slici se snimaju u istom trenutku i tokom istog vremena ekspozicije. Ova kamera je monohromatska
-i snimanje je vrseno brzinom 120 slika po sekundi, rezolucije 1280*720 piksela.
+- Za snimanje sekvenci je koriscena OV9281 kamera.
+- Ona je tipa global-shutter, odnosno svi pikseli u slici se snimaju u istom trenutku i tokom istog vremena ekspozicije.
+- Ova kamera je monohromatska i snimanje je vrseno brzinom 120 slika po sekundi, rezolucije 1280*720 piksela.
 
 #### VII-E	Kalibracija kamere (slika 3.3 i formule 16-17)
-Kalibracija kamere sluzi za identifikaciju unutrasnjih parametara kamere i koeficijenata izoblicenja.
-Za kalibraciju je koriscena ChArUco tabla, koja kombinuje sahovsku tablu i ArUco markere. Za kalibraciju
-je korisceno 50 slika table, od kojih je jedna prikazana na slici. Proracunati parametri su prikazani
-ovim matricama.
+- Kalibracija kamere sluzi za identifikaciju unutrasnjih parametara kamere i koeficijenata izoblicenja,
+- koji su prikazani ovde.
+- Za kalibraciju je koriscena ChArUco tabla, koja kombinuje sahovsku tablu i ArUco markere. 
+- Za kalibraciju je korisceno 50 slika table
 
 #### VII-F	Sekvence (snimak odozgo, 48s dok pricam)
-Robot se kretao po stolu za takmicenje Eurobot 2026 koji se nalazi u laboratoriji G3. Snimljena su dva
-tipa sekvenci. Prvi tip se sastoji od pravolinijskih translacija i rotacije, dok drugi tip koristi i
-krivolinijske kretnje. Oba tipa obuhvataju po 2 sekvence sa razlicitim maksimalnim brzinama.
+- Robot se kretao po stolu za takmicenje Eurobot 2026 koji se nalazi u laboratoriji G3.
+- Snimljena su dva tipa sekvenci.
+- Prvi tip se sastoji od pravolinijskih translacija i rotacije, dok drugi tip koristi i
+krivolinijske kretnje.
+- Oba tipa obuhvataju po 2 sekvence sa razlicitim maksimalnim brzinama.
 
 #### VII-G	Procena referentnih putanja (straight snimak, prvih 10s je to, ali pusti da ide)
-Dimenzije stola su tacno definisane i na obodu stola je zid. U trenutku kada robot udari u zid, jedna
-njegova koordinata i orijentacija su tacno definisane. Kratkom sekvencom u kojoj robot udari u dva zida
-koja se nalaze pod pravim uglom mozemo da dobijemo referentnu tacku gde je potpuno poznat polozaj robota.
-Referentne tacke su koriscene za proveru greske odometrije sa tockova i za dobijanje referentne putanje.
+- Dimenzije stola su tacno definisane i na obodu stola je zid.
+- U trenutku kada robot udari u zid, jedna njegova koordinata i orijentacija su tacno definisane.
+- Kratkom sekvencom u kojoj robot udari u dva zida koja se nalaze pod pravim uglom mozemo da dobijemo referentnu tacku gde je potpuno poznat polozaj robota.
+- Referentne tacke su koriscene za proveru greske odometrije sa tockova i za dobijanje referentne putanje.
 
 #### VII-H	rosbag (snimak sa robota, 47s ide dok pricam)
-Ovde je prikazan snimak sa kamere na robotu tokom jedne od sekvenci.
-Za pravljenje skupa podataka koriscen je rosbag. To je alat koji sluzi za snimanje podataka koji se
-objavljuju na topicima u okviru ROS-a. Pored samih podataka, cuva se i vreme objavljivanja. Snimljeni
-podaci se kasnije mogu reprodukovati, cime se reprodukuje tok podataka zabelezen tokom rada robota
+- Ovde je prikazan snimak sa kamere na robotu tokom jedne od sekvenci.
+- Za pravljenje skupa podataka koriscen je rosbag. To je alat koji sluzi za snimanje podataka koji se
+objavljuju na topicima u okviru ROS-a.
+- Pored samih podataka, cuva se i vreme objavljivanja.
+- Snimljeni podaci se kasnije mogu reprodukovati, cime se reprodukuje tok podataka zabelezen tokom rada robota
 u realnom vremenu.
-To omogucava da se razliciti algoritmi testiraju na identicnim podacima.
+- To omogucava da se razliciti algoritmi testiraju na identicnim podacima.
 
 ### VIII-A	Kriterijumi evaluacije
 Za evaluaciju je koriscen alat KITTI Odometry Evaluation Toolbox. U okviru njega je definisano 5
