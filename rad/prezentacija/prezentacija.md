@@ -87,20 +87,23 @@ mapa i relokalizaciju.
 - Atlas je struktura za reprezentaciju vise nepovezanih mapa, od kojih je jedna aktivna u svakom trenutku.
 
 ### VI-A	TSformer-VO
-TSformer-VO je metoda monokularne vizuelne odometrije zasnovana na dubokom ucenju, koja
-problem procene kretanja posmatra kao zadatak razumevanja videa. Model regresijom procenjuje
-relativne poze kamere na osnovu kratkog skupa uzastopnih slika.
+- TSformer-VO je metoda monokularne vizuelne odometrije zasnovana na dubokom ucenju,
+- koja problem procene kretanja posmatra kao zadatak razumevanja videa.
+- Model regresijom procenjuje relativne poze kamere na osnovu kratkog skupa uzastopnih slika.
 
 #### VI-B	TSformer-VO - Struktura (slika 2.4)
-Skup od Nf uzastopnih slika predstavlja ulazni podatak. Svaka slika se deli u neprekplapajuce
-regione koji se ugradjuju u tokene. Niz tokena prolazi kroz Transformer enkoder. Na pocetak niza
-tokena se dodaje klasni token, koji se prosledjuje izlaznom viseslojnom perceptronu. Za jednu
-relativnu pozu su potrebne 2 uzastopne slika. Odnosno, za isecak od Nf slika, dobijamo Nf-1 pozu.
+- Skup od Nf uzastopnih slika predstavlja ulazni podatak.
+- Svaka slika se deli u nepreklapajuce regione koji se ugradjuju u tokene.
+- Niz tokena prolazi kroz Transformer enkoder.
+- Na pocetak niza tokena se dodaje klasni token, koji se prosledjuje izlaznom viseslojnom perceptronu.
+- Za jednu relativnu pozu su potrebne 2 uzastopne slika.
+- Odnosno, za skup od Nf slika, dobijamo Nf-1 pozu.
 
 #### VI-C	TSformer-VO - Samopaznja (slika 2.6 ali samo gornji deo)
-Samopaznja je mehanizam kojim model razmatra odnose izmedju tokena. Podeljena prostorno-vremenska
-samopaznja podrazumeva razdvajanje vremenske i prostorne obrade. Prvo se razmatraju tokeni sa
-istim prostornim indeksom duz vremenske ose, a zatim tokeni iz iste slike duz prostorne ose.
+- Samopaznja je mehanizam kojim model razmatra odnose izmedju tokena.
+- Podeljena prostorno-vremenska samopaznja podrazumeva razdvajanje vremenske i prostorne obrade.
+- Prvo se razmatraju tokeni sa istim prostornim indeksom duz vremenske ose,
+- a zatim tokeni iz iste slike duz prostorne ose.
 
 ### VII-A	Prikupljanje eksperimentalnog skupa podataka
 Kako bi se ispitala primena vizuelne odometrije u mobilnoj robotici, prikupljen je eksperimentalni
