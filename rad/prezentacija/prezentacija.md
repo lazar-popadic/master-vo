@@ -47,20 +47,23 @@ i direktne.
 i projektovanih koordinata odgovarajuce 3D tacke.
 
 ###	IV-A	SVO (Semi-Direct Visual Odometry)
-SVO je algoritam za monokularnu vizuelnu odometriju koji je prvenstveno razvijen za
-koriscenje u dronovima. Algoritam koristi korespondenciju karakteristika koja je implicitan
-rezultat direktne procene kretanja.
+- SVO je algoritam za monokularnu vizuelnu odometriju koji je prvenstveno razvijen za
+primenu u mikro letelicama.
+- Algoritam koristi korespondenciju karakteristika koja je implicitan rezultat direktne
+procene kretanja.
 
 #### IV-B	SVO - Struktura(slika 2.1)
-Algoritam je podeljen u dva paralelna procesa. Proces za procenu kretanja obradjuje svaku
-sliku i procenjuje pozu u odnosu na mapu. Proces za mapiranje prosiruje mapu novim 3D tackama.
+- Algoritam je podeljen u dva paralelna procesa.
+- Proces za procenu kretanja obradjuje svaku sliku i procenjuje pozu u odnosu na mapu.
+- Proces za mapiranje prosiruje mapu novim 3D tackama.
 
 #### IV-C	SVO - Procena kretanja (ista slika 2.1)
-Procena kretanja se sastoji iz 3 koraka. U inicijalizaciji poze se procenjuje relativna poza
-kamere u odnosu na prethodnu sliku minimizacijom fotometrijske greske izmedju porducja slike
-koji odgovaraju istim 3D tackama. Drugi korak predstavlja optimizaciju polozaja svakog
-izdvojenog podrucja pojedinacno. Poslednjim korakom se optimizuju poza kamere i polozaji 3D
-tacaka minimizacijom reprojekcione greske.
+- Procena kretanja se sastoji iz 3 koraka.
+- U inicijalizaciji poze se procenjuje relativna poza kamere u odnosu na prethodnu sliku
+minimizacijom fotometrijske greske izmedju porducja slike koji odgovaraju istim 3D tackama.
+- Drugi korak predstavlja optimizaciju polozaja svakog izdvojenog podrucja pojedinacno.
+- Poslednjim korakom se optimizuju poza kamere i polozaji 3D tacaka minimizacijom reprojekcione
+greske.
 
 ### V-A		ORB-SLAM3
 ORB-SLAM3 je sistem za vSLAM, odnosno vizuelnu simultanu lokalizaciju i mapiranje. Obuhvata
