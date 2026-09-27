@@ -66,23 +66,25 @@ minimizacijom fotometrijske greske izmedju porducja slike koji odgovaraju istim 
 greske.
 
 ### V-A		ORB-SLAM3
-ORB-SLAM3 je sistem za vSLAM, odnosno vizuelnu simultanu lokalizaciju i mapiranje. Obuhvata
-cisto vizuelni, vizuelno-inercijalni i SLAM sa vise mapa. Podrzava monokularne, stereo i depth
-kamere.
+- ORB-SLAM3 je sistem za vSLAM, odnosno vizuelnu simultanu lokalizaciju i mapiranje
+- Obuhvata cisto vizuelni, vizuelno-inercijalni i SLAM sa vise mapa.
+- Podrzava monokularne, stereo i depth kamere.
 
 #### V-B	ORB-SLAM3 - Tipovi informacija
-Autori razlikuju 3 novoa informacija koji su znacajni za procenu kretanja. Kratkorocne
-informacije se koriste za pracenje elemenata mape dok su pogledu, i zaboravljaju se cim
-nestanu iz pogleda. Srednjerocne informacije se koriste za uparivanje trenutne slike sa
-elementima iz okruzenja koji se nalaze blizu kamere. Dugorocne informacije su zasnovane
-na prepoznavanju okruzenja i one omogucavaju spajanje nepovezanih mapa i relokalizaciju.
+- Autori razlikuju 3 novoa informacija koji su znacajni za procenu kretanja.
+- Kratkorocne informacije se koriste za pracenje elemenata mape dok su pogledu, i zaboravljaju se
+cim nestanu iz pogleda.
+- Srednjerocne informacije se koriste za uparivanje trenutne slike sa elementima iz okruzenja koji
+se nalaze blizu kamere.
+- Dugorocne informacije su zasnovane na prepoznavanju okruzenja i one omogucavaju spajanje nepovezanih
+mapa i relokalizaciju.
 
 #### V-C	ORB-SLAM3 - Struktura i procesi
-ORB-SLAM se sastoji iz 3 paralelna procesa i strukture Atlas. Proces za pracenje procenjuje
-pozu minimizacijom reprojekcione greske uparenih karakteristika. Proces za lokalno mapiranje
-dodaje nove i otklanja redundantne kljucne slike i 3D tacke. Proces za spajanje mapa detektuje
-zajednicke regione izmedju mapa i vrsi spajanje mapa. Atlas je struktura za reprezentaciju
-vise nepovezanih mapa, od kojih je jedna aktivna u svakom trenutku.
+- ORB-SLAM se sastoji iz 3 paralelna procesa i strukture Atlas.
+- Proces za pracenje procenjuje pozu minimizacijom reprojekcione greske uparenih karakteristika.
+- Proces za lokalno mapiranje dodaje nove i otklanja redundantne kljucne slike i 3D tacke.
+- Proces za spajanje mapa detektuje zajednicke regione izmedju mapa i vrsi spajanje mapa.
+- Atlas je struktura za reprezentaciju vise nepovezanih mapa, od kojih je jedna aktivna u svakom trenutku.
 
 ### VI-A	TSformer-VO
 TSformer-VO je metoda monokularne vizuelne odometrije zasnovana na dubokom ucenju, koja
