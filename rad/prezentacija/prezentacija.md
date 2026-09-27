@@ -30,20 +30,21 @@ svodi na slucaj monokularne.
 samo do faktora skale.
 
 ### III-A	Podela vizuelne odometrije (stablo podele i greske)
-Metode vizuelne odometrije mogu da se podele na geometrijske i metode zasnovane na
-dubokom ucenju. Geometrijske mogu dalje da se podele na metode zasnovane na
-karakteristicnim tackama i direktne.
+- Metode vizuelne odometrije mogu da se podele na geometrijske i metode zasnovane na
+dubokom ucenju.
+- Geometrijske mogu dalje da se podele na metode zasnovane na karakteristicnim tackama
+i direktne.
 
 #### III-B	Fotometrijska greska (formula 4 i znacenje oznaka)
-Direktne metode procenjuju kretanje minimizacijom fotometrijske greske. Ona predstavlja
-razliku intenziteta izmedju odgovarajucih piksela u paru slika.
+- Direktne metode procenjuju kretanje minimizacijom fotometrijske greske.
+- Ona predstavlja razliku intenziteta izmedju odgovarajucih piksela u paru slika.
 
 #### III-C	Reprojekciona greska (slika karakteristike i greske)
-Metode zasnovane na karakteristicnim tackama detektuju i uparuju karakteristike.
-Karakteristika je obrazac u slici koji se razlikuje od svog neposrednog okruzenja. U ovim
-metodama, kretanje se procenjuje minimizacijom reprojekcione greske. Ona predstavlja
-razliku izmedju izmerenih koordinata karakteristicne tacke u slici i projektovanih
-koordinata odgovarajuce 3D tacke.
+- Metode zasnovane na karakteristicnim tackama detektuju i uparuju karakteristike.
+- Karakteristika je obrazac u slici koji se razlikuje od svog neposrednog okruzenja.
+- U ovim metodama, kretanje se procenjuje minimizacijom reprojekcione greske.
+- Ona predstavlja razliku izmedju izmerenih koordinata karakteristicne tacke u slici
+i projektovanih koordinata odgovarajuce 3D tacke.
 
 ###	IV-A	SVO (Semi-Direct Visual Odometry)
 SVO je algoritam za monokularnu vizuelnu odometriju koji je prvenstveno razvijen za
