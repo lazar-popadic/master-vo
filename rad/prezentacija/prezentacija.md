@@ -188,18 +188,20 @@ podudaranja sa referentnom putanjom, sto moze da se vidi na slici.
 ovom eksperimentu.
 
 ### IX-A	Zakljucak: primena
-Monokularna vizuelna odometrija je prikazana kao potencijalno resenje problema procene kretanja.
-Kamere predstavljaju relativno jeftine senzore koji obezbedjuju veliku kolicinu podataka velikom
-frekvencijom. Pored procene kretanja, podaci mogu da se koriste i za lokalizaciju i za resavanje
-drugih zadataka masinske vizije. Medjutim, monokularna vizuelna odometrija ima znacajna ogranicenja.
-Procena kretanja je osetljiva na vizuelno okruzenje i na brzinu kretanja. U slucaju gubitka pracenja
-sistem ostaje bez informacija o kretanju. Neodredjenost apsolutne skale omogucava samo relativnu
-procenu kretanja.
-Zbog toga, monokularna vizuelna odometrija je pogodnija kao deo sistema za lokalizaciju nego kao
+- Monokularna vizuelna odometrija je prikazana kao potencijalno resenje problema procene kretanja.
+- Kamere predstavljaju relativno jeftine senzore koji obezbedjuju veliku kolicinu podataka velikom
+frekvencijom.
+- Pored procene kretanja, podaci mogu da se koriste i za lokalizaciju i za resavanje
+drugih zadataka masinske vizije.
+- Medjutim, monokularna vizuelna odometrija ima znacajna ogranicenja.
+- Procena kretanja je osetljiva na vizuelno okruzenje i na brzinu kretanja.
+- U slucaju gubitka pracenja sistem ostaje bez informacija o kretanju.
+- Neodredjenost apsolutne skale omogucava samo relativnu procenu kretanja.
+- Zbog toga, monokularna vizuelna odometrija je pogodnija kao deo sistema za lokalizaciju nego kao
 samostalan izvor procene polozaja.
 
 ### IX-B	Zakljucak: dalja ispitivanja
-Dalja ispitivanja bi mogla da obuhvataju duze sekvence i vec mapirane prostore.
-Zbog ogranicenja konstrukcije robota, nisu ispitane razlicite orijentacije kamere.
-Mogla bi se ispitati i fuzija sa drugim senzorima, narocito inercijalnim sa kojima se
+- Dalja ispitivanja bi mogla da obuhvataju duze sekvence i vec mapirane prostore.
+- Zbog ogranicenja konstrukcije robota, nisu ispitane razlicite orijentacije kamere.
+- Mogla bi se ispitati i fuzija sa drugim senzorima, narocito inercijalnim sa kojima se
 cesto kombinuju algoritmi vizuelne odometrije.
